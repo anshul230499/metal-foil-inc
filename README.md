@@ -1,19 +1,27 @@
-# Metal Foil Inc. corporate website
+# Metal Foil Inc. Website
 
-Responsive static website for **Metal Foil Inc. (MFI)**, the U.S. sales arm of **Jindal Metal & Alloys Ltd. (JMA)**.
+Static GitHub/Vercel website for Metal Foil Inc.
 
-## Run locally
-```bash
-python3 -m http.server 8080
-```
+## Deploy
+1. Create a GitHub repository.
+2. Upload all files in this folder to the repository root.
+3. Import the repository into Vercel.
+4. Framework preset: **Other / Static**. No build command is required.
 
-## Deploy to Vercel
-Import this repository into Vercel as a static project. No build command is required.
+## Current commercial content
+- ASTM Grades: 321, 304, 309
+- Roll lengths: 25', 50', 100', 900', and custom made
+- Thickness: 0.002"
+- Width: 20"
+- Steel origin: U.S. and overseas
+- Baytown stock:
+  - Grade 321: 21 rolls, 100' x 20" x 0.002", DFARS Yes
+  - Grade 304: 7 rolls, 100' x 20" x 0.002", DFARS No
 
-## Production checks
-- Confirm `sales@metalfoilsinc.com` in `script.js` before launch.
-- Confirm current MFI addresses and phone against the latest commercial paperwork.
-- Confirm internal permission to republish the selected JMA-owned images.
-- Review linked JMA certification documents for current validity and scope.
+## RFQ behavior
+The **Prepare an RFQ** button uses a `mailto:` link generated in JavaScript. It opens the visitor's default mail client addressed to `sales@metalfoilinc.us`. No form data is transmitted or stored by the website.
 
-See `SOURCES.md` for provenance.
+Edge condition is optional and is omitted from the email body when left blank.
+
+## Certificates
+Certificate cards use embedded Google document viewer frames so visitors see the actual first-page preview of the linked Jindal Metal & Alloys document. The original document can be opened from each card.

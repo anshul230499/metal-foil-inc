@@ -1,4 +1,56 @@
-const h=document.querySelector('header'),m=document.querySelector('#menu'),n=document.querySelector('#nav');const sh=()=>h.classList.toggle('scrolled',scrollY>16);sh();addEventListener('scroll',sh,{passive:true});m.onclick=()=>{const o=n.classList.toggle('open');m.setAttribute('aria-expanded',o);m.textContent=o?'×':'☰'};n.querySelectorAll('a').forEach(a=>a.onclick=()=>n.classList.remove('open'));document.querySelector('#year').textContent=new Date().getFullYear();
-const gd={321:['GRADE 321','Titanium-stabilized stainless for elevated-temperature service.','Heat & oxidation resistance','Heat shields · gaskets · thermal systems','Foil · precision strip · slit coil','Grade 321 is frequently selected where sensitization resistance and elevated-temperature performance are important.'],304:['GRADES 304 / 304L','Versatile austenitic stainless for broad fabrication requirements.','General corrosion resistance','Gaskets · formed parts · shielding · process components','Foil · precision strip · slit coil','304 and 304L are widely specified where corrosion resistance, formability and broad availability matter.'],316:['GRADES 316 / 316L','Molybdenum-bearing stainless for demanding corrosion exposure.','Enhanced corrosion resistance','Chemical · medical · precision systems','Foil · precision strip · slit coil','316 and 316L are commonly considered where chloride or chemical exposure calls for additional corrosion resistance.'],301:['GRADE 301','Work-hardenable stainless for high-strength thin-gauge components.','Strength & spring response','Clips · springs · precision formed components','Foil · precision strip · slit coil','301 can develop high strength through cold work, useful for thin resilient components.']};
-const p=document.querySelector('#gradepanel');document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');const d=gd[b.dataset.g];p.innerHTML=`<div><small>${d[0]}</small><h3>${d[1]}</h3></div><div><p><span>Typical positioning</span>${d[2]}</p><p><span>Representative uses</span>${d[3]}</p><p><span>Availability</span>${d[4]}</p></div><p class="wide">${d[5]}</p>`});
-document.querySelector('#rfqform').onsubmit=e=>{e.preventDefault();const f=new FormData(e.currentTarget),g=k=>(f.get(k)||'').toString().trim();const s=`RFQ — ${g('grade')} — ${g('thickness')} x ${g('width')} — ${g('company')}`;const body=['Metal Foil Inc. — Request for Quotation','',`Company: ${g('company')}`,`Contact: ${g('name')}`,`Email: ${g('email')}`,`Phone: ${g('phone')}`,'',`Grade: ${g('grade')}`,`Standard: ${g('standard')}`,`Thickness: ${g('thickness')}`,`Width: ${g('width')}`,`Quantity: ${g('quantity')}`,`Surface Finish: ${g('finish')}`,`Edge Condition: ${g('edge')}`,'','End Use / Special Requirements:',g('requirements')||'Not specified'].join('\n');navigator.clipboard.writeText(`${s}\n\n${body}`).then(()=>{document.querySelector('#copied').textContent='RFQ details copied. Send them through your established Metal Foil Inc. sales contact or call +1 713 457 5757.'}).catch(()=>{document.querySelector('#copied').textContent='Copy failed. Please select and copy the form details manually.'})};
+const menuButton = document.querySelector('#menuButton');
+const siteNav = document.querySelector('#siteNav');
+
+menuButton?.addEventListener('click', () => {
+  const isOpen = siteNav.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+});
+
+siteNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  siteNav.classList.remove('open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+}));
+
+document.querySelector('#year').textContent = new Date().getFullYear();
+
+const rfqForm = document.querySelector('#rfqForm');
+rfqForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (!rfqForm.reportValidity()) return;
+
+  const form = new FormData(rfqForm);
+  const get = (key) => String(form.get(key) || '').trim();
+
+  const subject = `RFQ - ASTM ${get('grade')} - ${get('thickness')} x ${get('width')} - ${get('company')}`;
+  const materialLines = [
+    `ASTM Grade: ${get('grade')}`,
+    `Thickness: ${get('thickness')}`,
+    `Width: ${get('width')}`,
+    `Length: ${get('length')}`,
+    `Quantity: ${get('quantity')}`,
+    `Steel Origin Preference: ${get('origin') || 'No preference'}`
+  ];
+
+  if (get('finish')) materialLines.push(`Surface Finish: ${get('finish')}`);
+  if (get('edge')) materialLines.push(`Edge Condition: ${get('edge')}`);
+
+  const body = [
+    'Metal Foil Inc. - Request for Quotation',
+    '',
+    `Company: ${get('company')}`,
+    `Contact: ${get('name')}`,
+    `Email: ${get('email')}`,
+    `Phone: ${get('phone') || 'Not provided'}`,
+    '',
+    'Material Requirements',
+    ...materialLines,
+    '',
+    'End Use / Special Requirements:',
+    get('requirements') || 'Not specified',
+    '',
+    'Please provide pricing, availability and estimated lead time.'
+  ].join('\n');
+
+  const mailto = `mailto:sales@metalfoilinc.us?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+});
