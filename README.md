@@ -21,7 +21,14 @@ Static GitHub/Vercel website for Metal Foil Inc.
 ## RFQ behavior
 The **Prepare an RFQ** button uses a `mailto:` link generated in JavaScript. It opens the visitor's default mail client addressed to `sales@metalfoilinc.us`. No form data is transmitted or stored by the website.
 
-Edge condition is optional and is omitted from the email body when left blank.
+Edge condition is optional and is omitted from the email body when left blank. Surface Finish has been removed. The Origin / Compliance selector offers No Preference, US, and DFARS.
 
 ## Certificates
-Certificate cards use embedded Google document viewer frames so visitors see the actual first-page preview of the linked Jindal Metal & Alloys document. The original document can be opened from each card.
+Certificate cards use embedded Google document viewer frames in full certificate-page proportions so the complete first page is visible rather than cropped. The original document can be opened from each card.
+
+
+## Visual identity / motion
+- Original folded-foil MFI mark in the header and footer
+- MFI-specific hero collage using credited alternate JMA manufacturing banners
+- Scroll-in reveals, floating hero imagery, card lift effects, and animated CTA/certificate buttons
+- Motion respects the visitor's reduced-motion accessibility preference

@@ -11,11 +11,19 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="ambient-glow" id="ambientGlow" aria-hidden="true"></div>
 
 <header class="site-header" id="top">
   <div class="wrap nav-wrap">
     <a class="brand" href="#top" aria-label="Metal Foil Inc. home">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-symbol" aria-hidden="true">
+        <svg viewBox="0 0 64 52" role="img">
+          <path class="foil-a" d="M4 41 17 8h11L17 41Z"/>
+          <path class="foil-b" d="M20 41 33 8h11L33 41Z"/>
+          <path class="foil-c" d="M36 41 49 8h11L49 41Z"/>
+          <path class="foil-cut" d="M15 37h35l-4 9H11Z"/>
+        </svg>
+      </span>
       <span><strong>METAL FOIL INC.</strong><small>Stainless Steel Foil · Texas</small></span>
     </a>
     <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
@@ -28,6 +36,7 @@
       <a class="nav-rfq" href="#rfq">Request a Quote</a>
     </nav>
   </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 </header>
 
 <main id="main">
@@ -48,10 +57,16 @@
           <div><b>321 · 304 · 309</b><span>ASTM grades</span></div>
         </div>
       </div>
-      <figure class="hero-photo">
-        <img src="https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785391005/jindal/banner/1785391003828-banner-slide11.jpg" alt="Stainless steel manufacturing at Jindal Metal & Alloys Ltd.">
-        <figcaption>Manufacturing image courtesy of <a href="https://jindalmetal.com/" target="_blank" rel="noopener">Jindal Metal &amp; Alloys Ltd.</a></figcaption>
-      </figure>
+      <div class="hero-visual" aria-label="Precision stainless steel foil manufacturing imagery">
+        <figure class="hero-frame hero-frame-main">
+          <img src="https://jindalmetal.com/uploads/service_img/1739796510_1719046829_1711620113_740.jpg" alt="Jindal Metal & Alloys stainless steel manufacturing">
+        </figure>
+        <figure class="hero-frame hero-frame-float">
+          <img src="https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785391235/jindal/home-about/1785391233385-homeabout-aboutus.jpg" alt="Precision steel production imagery from Jindal Metal & Alloys">
+        </figure>
+        <div class="hero-foil-card" aria-hidden="true"><span>321</span><span>304</span><span>309</span></div>
+        <p class="hero-credit">Manufacturing imagery courtesy of <a href="https://jindalmetal.com/stainless-steel-ultra-thin-foils" target="_blank" rel="noopener">Jindal Metal &amp; Alloys Ltd. ↗</a></p>
+      </div>
     </div>
   </section>
 
@@ -61,7 +76,7 @@
         <div><p class="kicker">PRODUCT RANGE</p><h2>Simple specifications. Clear availability.</h2></div>
         <p>Customer-facing dimensions are shown in inches and feet. Custom-made roll lengths can be discussed for program requirements.</p>
       </div>
-      <div class="spec-grid">
+      <div class="spec-grid reveal">
         <article><small>ASTM GRADES</small><strong>321, 304, 309</strong></article>
         <article><small>LENGTHS</small><strong>25', 50', 100', 900'</strong><span>and custom made</span></article>
         <article><small>THICKNESS</small><strong>0.002&quot;</strong></article>
@@ -79,7 +94,7 @@
         <p>Our storage facility is in Baytown, TX. The following stainless steel foil rolls are currently listed in stock.</p>
         <a class="text-link" href="#rfq">Build an RFQ from this inventory →</a>
       </div>
-      <div class="inventory-table-wrap">
+      <div class="inventory-table-wrap reveal">
         <table class="inventory-table">
           <thead>
             <tr><th>ASTM Grade</th><th>Length</th><th>Thickness</th><th>Width</th><th>Rolls</th><th>DFARS</th></tr>
@@ -96,11 +111,11 @@
 
   <section class="photo-band" aria-label="Manufacturing imagery">
     <div class="wrap photo-band-grid">
-      <figure class="photo-large">
+      <figure class="photo-large reveal">
         <img src="https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785391235/jindal/home-about/1785391233385-homeabout-aboutus.jpg" alt="Jindal Metal & Alloys Ltd. manufacturing facility">
-        <figcaption>Jindal Metal &amp; Alloys Ltd. manufacturing facility. <a href="https://jindalmetal.com/about-us" target="_blank" rel="noopener">Source / credit ↗</a></figcaption>
+        <figcaption>Jindal Metal &amp; Alloys Ltd. manufacturing facility. <a href="https://jindalmetal.com/stainless-steel-ultra-thin-foils" target="_blank" rel="noopener">Source / credit ↗</a></figcaption>
       </figure>
-      <div class="photo-copy">
+      <div class="photo-copy reveal">
         <p class="kicker">SUPPLY CHAIN</p>
         <h2>Texas customer access backed by established manufacturing.</h2>
         <p>Metal Foil Inc. is the U.S. sales arm of Jindal Metal &amp; Alloys Ltd. The relationship connects U.S. buyers with stainless steel foil supply, technical coordination and published manufacturer quality documentation.</p>
@@ -119,13 +134,13 @@
         <div><p class="kicker">MANUFACTURING</p><h2>From rolling to finished coil.</h2></div>
         <p>Jindal Metal &amp; Alloys publishes capabilities covering precision cold rolling, bright annealing, leveling, slitting and winding. MFI uses this manufacturing base to support U.S. foil requirements.</p>
       </div>
-      <div class="process-grid">
+      <div class="process-grid reveal">
         <article><span>01</span><h3>Precision Cold Rolling</h3><p>Controlled rolling for thin stainless steel strip and foil.</p></article>
         <article><span>02</span><h3>Bright Annealing</h3><p>Heat-treatment routes for controlled metallurgical and surface condition.</p></article>
         <article><span>03</span><h3>Leveling &amp; Finishing</h3><p>Processing focused on flatness, surface quality and downstream handling.</p></article>
         <article><span>04</span><h3>Slitting &amp; Winding</h3><p>Width conversion and coil preparation for customer requirements.</p></article>
       </div>
-      <p class="source-line">Manufacturing description based on JMA's published product and company information. <a href="https://jindalmetal.com/" target="_blank" rel="noopener">Review JMA source ↗</a></p>
+      <p class="source-line">Manufacturing reference: <a href="https://jindalmetal.com/stainless-steel-ultra-thin-foils" target="_blank" rel="noopener">Ultra-Thin Precision Stainless Steel Coils &amp; Foils ↗</a></p>
     </div>
   </section>
 
@@ -136,42 +151,42 @@
         <p>Each tile below previews the linked Jindal Metal &amp; Alloys document itself. Click the document name to open the original viewer.</p>
       </div>
 
-      <div class="cert-grid">
+      <div class="cert-grid reveal">
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="ISSDA Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785474619%2Fjindal%2Fcertifications%2F1785474618631-cert-WhatsApp-Image-2026-07-30-at-6.12.53-PM"></iframe></div>
-          <div class="cert-meta"><small>INDUSTRY</small><h3>ISSDA Certificate</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785474619%2Fjindal%2Fcertifications%2F1785474618631-cert-WhatsApp-Image-2026-07-30-at-6.12.53-PM" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="ISSDA Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785474619%2Fjindal%2Fcertifications%2F1785474618631-cert-WhatsApp-Image-2026-07-30-at-6.12.53-PM"></iframe></div></div>
+          <div class="cert-meta"><small>INDUSTRY</small><h3>ISSDA Certificate</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785474619%2Fjindal%2Fcertifications%2F1785474618631-cert-WhatsApp-Image-2026-07-30-at-6.12.53-PM" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="ISO 14001 Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222356%2Fjindal%2Fcertifications%2F1785222354878-cert-ISO_14001-Certificate_Dakks_Accreditations__638942432494326395_Ver_1"></iframe></div>
-          <div class="cert-meta"><small>ENVIRONMENTAL</small><h3>ISO 14001</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222356%2Fjindal%2Fcertifications%2F1785222354878-cert-ISO_14001-Certificate_Dakks_Accreditations__638942432494326395_Ver_1" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="ISO 14001 Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222356%2Fjindal%2Fcertifications%2F1785222354878-cert-ISO_14001-Certificate_Dakks_Accreditations__638942432494326395_Ver_1"></iframe></div></div>
+          <div class="cert-meta"><small>ENVIRONMENTAL</small><h3>ISO 14001</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222356%2Fjindal%2Fcertifications%2F1785222354878-cert-ISO_14001-Certificate_Dakks_Accreditations__638942432494326395_Ver_1" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="ISO 9001 Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222364%2Fjindal%2Fcertifications%2F1785222362918-cert-ISO_9001-Certificate_Dakks_Accreditations__638942432128914082_Ver_1"></iframe></div>
-          <div class="cert-meta"><small>QUALITY</small><h3>ISO 9001</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222364%2Fjindal%2Fcertifications%2F1785222362918-cert-ISO_9001-Certificate_Dakks_Accreditations__638942432128914082_Ver_1" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="ISO 9001 Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222364%2Fjindal%2Fcertifications%2F1785222362918-cert-ISO_9001-Certificate_Dakks_Accreditations__638942432128914082_Ver_1"></iframe></div></div>
+          <div class="cert-meta"><small>QUALITY</small><h3>ISO 9001</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222364%2Fjindal%2Fcertifications%2F1785222362918-cert-ISO_9001-Certificate_Dakks_Accreditations__638942432128914082_Ver_1" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="ISO 45001 Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222372%2Fjindal%2Fcertifications%2F1785222370803-cert-ISO_45001-Certificate_Dakks_Accreditations__638942432806375645_Ver_1"></iframe></div>
-          <div class="cert-meta"><small>HEALTH &amp; SAFETY</small><h3>ISO 45001</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222372%2Fjindal%2Fcertifications%2F1785222370803-cert-ISO_45001-Certificate_Dakks_Accreditations__638942432806375645_Ver_1" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="ISO 45001 Certificate preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222372%2Fjindal%2Fcertifications%2F1785222370803-cert-ISO_45001-Certificate_Dakks_Accreditations__638942432806375645_Ver_1"></iframe></div></div>
+          <div class="cert-meta"><small>HEALTH &amp; SAFETY</small><h3>ISO 45001</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222372%2Fjindal%2Fcertifications%2F1785222370803-cert-ISO_45001-Certificate_Dakks_Accreditations__638942432806375645_Ver_1" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="IMS Policy preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222380%2Fjindal%2Fcertifications%2F1785222379153-cert-1.1-IMS-POLICY"></iframe></div>
-          <div class="cert-meta"><small>MANAGEMENT SYSTEM</small><h3>IMS Policy</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222380%2Fjindal%2Fcertifications%2F1785222379153-cert-1.1-IMS-POLICY" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="IMS Policy preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222380%2Fjindal%2Fcertifications%2F1785222379153-cert-1.1-IMS-POLICY"></iframe></div></div>
+          <div class="cert-meta"><small>MANAGEMENT SYSTEM</small><h3>IMS Policy</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222380%2Fjindal%2Fcertifications%2F1785222379153-cert-1.1-IMS-POLICY" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="Scope of License 15997 preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222656%2Fjindal%2Fcertifications%2F1785222654960-cert-Scope-of-License-15997-%25281%2529"></iframe></div>
-          <div class="cert-meta"><small>BIS / LICENSE</small><h3>Scope of License 15997</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222656%2Fjindal%2Fcertifications%2F1785222654960-cert-Scope-of-License-15997-%25281%2529" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="Scope of License 15997 preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222656%2Fjindal%2Fcertifications%2F1785222654960-cert-Scope-of-License-15997-%25281%2529"></iframe></div></div>
+          <div class="cert-meta"><small>BIS / LICENSE</small><h3>Scope of License 15997</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222656%2Fjindal%2Fcertifications%2F1785222654960-cert-Scope-of-License-15997-%25281%2529" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="IS 2507 license preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222665%2Fjindal%2Fcertifications%2F1785222663887-cert-Scope-of-License-IS-2507-%25281%2529"></iframe></div>
-          <div class="cert-meta"><small>BIS / STANDARD</small><h3>Scope of License IS 2507</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222665%2Fjindal%2Fcertifications%2F1785222663887-cert-Scope-of-License-IS-2507-%25281%2529" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="IS 2507 license preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222665%2Fjindal%2Fcertifications%2F1785222663887-cert-Scope-of-License-IS-2507-%25281%2529"></iframe></div></div>
+          <div class="cert-meta"><small>BIS / STANDARD</small><h3>Scope of License IS 2507</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222665%2Fjindal%2Fcertifications%2F1785222663887-cert-Scope-of-License-IS-2507-%25281%2529" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="IS 6911 license preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222675%2Fjindal%2Fcertifications%2F1785222673368-cert-Scope-of-License-IS-6911-%25281%2529"></iframe></div>
-          <div class="cert-meta"><small>BIS / STANDARD</small><h3>Scope of License IS 6911</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222675%2Fjindal%2Fcertifications%2F1785222673368-cert-Scope-of-License-IS-6911-%25281%2529" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="IS 6911 license preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222675%2Fjindal%2Fcertifications%2F1785222673368-cert-Scope-of-License-IS-6911-%25281%2529"></iframe></div></div>
+          <div class="cert-meta"><small>BIS / STANDARD</small><h3>Scope of License IS 6911</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222675%2Fjindal%2Fcertifications%2F1785222673368-cert-Scope-of-License-IS-6911-%25281%2529" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
         <article class="cert-card">
-          <div class="doc-preview"><iframe loading="lazy" title="Quality Policy preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222685%2Fjindal%2Fcertifications%2F1785222684036-cert-Quality-Policy_Jindal-Metal-04.02.2026"></iframe></div>
-          <div class="cert-meta"><small>QUALITY SYSTEM</small><h3>Quality Policy</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222685%2Fjindal%2Fcertifications%2F1785222684036-cert-Quality-Policy_Jindal-Metal-04.02.2026" target="_blank" rel="noopener">Open document ↗</a></div>
+          <div class="doc-preview"><div class="doc-sheet"><iframe loading="lazy" title="Quality Policy preview" src="https://docs.google.com/viewer?embedded=true&amp;url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222685%2Fjindal%2Fcertifications%2F1785222684036-cert-Quality-Policy_Jindal-Metal-04.02.2026"></iframe></div></div>
+          <div class="cert-meta"><small>QUALITY SYSTEM</small><h3>Quality Policy</h3><a href="https://docs.google.com/viewer?url=https%3A%2F%2Fres.cloudinary.com%2Fdpvbgv6nw%2Fraw%2Fupload%2Fv1785222685%2Fjindal%2Fcertifications%2F1785222684036-cert-Quality-Policy_Jindal-Metal-04.02.2026" target="_blank" rel="noopener" class="cert-button"><span>View certificate</span><i aria-hidden="true">↗</i></a></div>
         </article>
       </div>
       <div class="cert-note">Certificates and policies shown above are Jindal Metal &amp; Alloys Ltd. documents. Confirm current scope, validity and order applicability before relying on a certificate for procurement or compliance. <a href="https://jindalmetal.com/#certifications" target="_blank" rel="noopener">Verify at JMA ↗</a></div>
@@ -186,7 +201,7 @@
       </div>
       <div class="about-copy">
         <p class="large">Metal Foil Inc. is the U.S. sales arm of Jindal Metal &amp; Alloys Ltd.</p>
-        <p>From Texas, MFI supports quotations, stock discussions, order coordination and customer communication for stainless steel foil programs. Manufacturer information and certificates on this site are attributed to Jindal Metal &amp; Alloys Ltd.</p>
+        <p>From Texas, MFI supports quotations, stock discussions, order coordination and customer communication for stainless steel foil programs.</p>
         <div class="contact-tiles">
           <div><small>STORAGE</small><b>Baytown, TX</b></div>
           <div><small>SALES EMAIL</small><b><a href="mailto:sales@metalfoilinc.us">sales@metalfoilinc.us</a></b></div>
@@ -228,12 +243,11 @@
             <select name="length" required><option value="">Select length</option><option>25'</option><option>50'</option><option>100'</option><option>900'</option><option>Custom made</option></select>
           </label>
           <label>Quantity <input name="quantity" placeholder="e.g. 10 rolls" required></label>
-          <label>Steel Origin
-            <select name="origin"><option value="">No preference</option><option>U.S.</option><option>Overseas</option><option>Either</option></select>
+          <label>Origin / Compliance
+            <select name="origin"><option>No Preference</option><option>US</option><option>DFARS</option></select>
           </label>
         </div>
-        <div class="form-grid two-col">
-          <label>Surface Finish <span class="optional">Optional</span><input name="finish" placeholder="If specified"></label>
+        <div class="form-grid one-col compact-field">
           <label>Edge Condition <span class="optional">Optional</span>
             <select name="edge"><option value="">Not specified</option><option>Slit Edge</option><option>Deburred Edge</option><option>Round Edge</option><option>Mill Edge</option></select>
           </label>
@@ -245,13 +259,13 @@
     </div>
   </section>
 
-  <section class="sources-section" id="sources">
-    <div class="wrap sources-grid">
-      <div><p class="kicker">SOURCES &amp; ATTRIBUTION</p><h2>Manufacturer material is identified.</h2></div>
-      <div class="source-links">
-        <a href="https://jindalmetal.com/" target="_blank" rel="noopener"><b>Jindal Metal &amp; Alloys Ltd.</b><span>Company, manufacturing, product, certificate and image source ↗</span></a>
-        <a href="https://jindalmetal.com/about-us" target="_blank" rel="noopener"><b>JMA About Us</b><span>Company relationship and manufacturing context ↗</span></a>
-        <a href="https://jindalmetal.com/#certifications" target="_blank" rel="noopener"><b>JMA Certification Library</b><span>Original certificate and policy links ↗</span></a>
+  <section class="sources-section" id="sources" aria-label="References and credits">
+    <div class="wrap sources-compact reveal">
+      <span class="source-label">References &amp; image credits</span>
+      <div class="source-links-inline">
+        <a href="https://jindalmetal.com/stainless-steel-ultra-thin-foils" target="_blank" rel="noopener">Ultra-Thin Foils ↗</a>
+        <a href="https://jindalmetal.com/stainless-steel-ultra-thin-foils/grades-it-s-properties-ss" target="_blank" rel="noopener">Technical Specifications ↗</a>
+        <a href="https://jindalmetal.com/#certifications" target="_blank" rel="noopener">Certificates ↗</a>
       </div>
     </div>
   </section>
@@ -259,7 +273,7 @@
 
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div><a class="brand footer-brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i></span><span><strong>METAL FOIL INC.</strong><small>Stainless Steel Foil · Texas</small></span></a><p>U.S. customer support for stainless steel foil, with inventory in Baytown, Texas.</p></div>
+    <div><a class="brand footer-brand" href="#top"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 64 52"><path class="foil-a" d="M4 41 17 8h11L17 41Z"/><path class="foil-b" d="M20 41 33 8h11L33 41Z"/><path class="foil-c" d="M36 41 49 8h11L49 41Z"/><path class="foil-cut" d="M15 37h35l-4 9H11Z"/></svg></span><span><strong>METAL FOIL INC.</strong><small>Stainless Steel Foil · Texas</small></span></a><p>U.S. customer support for stainless steel foil, with inventory in Baytown, Texas.</p></div>
     <nav><a href="#products">Products</a><a href="#inventory">Inventory</a><a href="#certifications">Certificates</a><a href="#rfq">RFQ</a></nav>
     <div class="footer-contact"><a href="mailto:sales@metalfoilinc.us">sales@metalfoilinc.us</a><span>Baytown, Texas</span><span>© <span id="year"></span> Metal Foil Inc.</span></div>
   </div>
