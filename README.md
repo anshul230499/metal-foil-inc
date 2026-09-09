@@ -24,7 +24,7 @@ The **Prepare an RFQ** button uses a `mailto:` link generated in JavaScript. It 
 Edge condition is optional and is omitted from the email body when left blank. Surface Finish has been removed. The Origin / Compliance selector offers No Preference, US, and DFARS.
 
 ## Certificates
-Certificate cards use embedded Google document viewer frames in full certificate-page proportions so the complete first page is visible rather than cropped. The original document can be opened from each card.
+Certificate cards render the complete first page on a white canvas. PDF certificates are drawn with PDF.js so browser PDF chrome and dark viewer backgrounds never appear; the ISSDA image is displayed directly. The original JMA-published document can still be opened from each card.
 
 
 ## Visual identity / motion
@@ -68,3 +68,9 @@ Certificate cards use embedded Google document viewer frames in full certificate
 - Hero imagery now uses the strongest user-supplied facility and coil images, with controlled cropping and no floating animation.
 - North American access gallery was refreshed with distinct JMA imagery to avoid repeating the hero.
 - Added a final Downtown Houston sales-office image section using the public-domain Wikimedia Commons photograph `TotalPlazaHouston.JPG`.
+
+
+## v11 refinements
+- Re-audited the North American supply-chain gallery and assigned three different JMA source images; no non-logo image URL is repeated on the page.
+- Rebuilt certificate thumbnails as full-page previews on a white canvas. PDF pages are rendered with PDF.js and use a clean fallback card if rendering is unavailable.
+- Replaced the final Houston visual with `GiorcesHouston10.JPG`, a stronger upward view of Total Plaza / TotalEnergies Tower from Wikimedia Commons (CC BY 2.5), with attribution shown on the site.

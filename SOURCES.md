@@ -50,10 +50,14 @@ Attribution identifies the source but does not itself grant reuse rights. Metal 
 - The page link requested by the user is included in the sources section of the site. The exact page image was not auto-ingested in this revision because the page asset was not retrievable from the current environment. If the exact desired image is uploaded, it can be inserted directly in the next revision.
 
 
-## v10 Houston office image
-- Total Plaza / TotalEnergies Tower, Houston: `https://commons.wikimedia.org/wiki/File:TotalPlazaHouston.JPG`
-- Author: WhisperToMe. The file page states that the image was released into the public domain.
-- Used as the final Downtown Houston sales-office visual.
+## v11 Houston office image
+- Total Plaza / TotalEnergies Tower, Houston: `https://commons.wikimedia.org/wiki/File:GiorcesHouston10.JPG`
+- Author: Giorces. Licensed CC BY 2.5; attribution is included directly beneath the website image.
+- Used as the final Downtown Houston sales-office visual because it gives a stronger upward architectural view while remaining reusable with attribution.
 
-## v10 certificates
-- Embedded Google document previews were removed. Certificate tiles now use site-generated white document artwork; the buttons preserve links to the original JMA-published certificate files where available.
+## v11 certificates
+- Certificate cards now display full first-page thumbnails from the same JMA-linked Google document previews, on a white canvas with `object-fit: contain` so the entire page remains visible.
+- A clean local HTML fallback is shown if a remote thumbnail cannot load; the Open original buttons continue to point to the JMA-published source files where available.
+
+## v11 supply-chain gallery
+- The three supply-chain images are explicitly different source assets. The third image was changed to a separate JMA banner asset so the gallery does not repeat imagery used elsewhere in the page.
