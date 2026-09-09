@@ -3,7 +3,6 @@ const siteNav = document.querySelector('#siteNav');
 const header = document.querySelector('.site-header');
 const scrollProgress = document.querySelector('#scrollProgress');
 const ambientGlow = document.querySelector('#ambientGlow');
-const heroVisual = document.querySelector('.hero-visual');
 
 menuButton?.addEventListener('click', () => {
   const isOpen = siteNav.classList.toggle('open');
@@ -35,28 +34,7 @@ if (ambientGlow && window.matchMedia('(pointer:fine)').matches && !window.matchM
   }, { passive: true });
 }
 
-// Layered hero depth: the two existing images move at different, restrained rates.
-if (heroVisual && window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  let frameId = 0;
-  const setHeroDepth = (mainX, mainY, floatX, floatY) => {
-    cancelAnimationFrame(frameId);
-    frameId = requestAnimationFrame(() => {
-      heroVisual.style.setProperty('--hero-main-x', `${mainX}px`);
-      heroVisual.style.setProperty('--hero-main-y', `${mainY}px`);
-      heroVisual.style.setProperty('--hero-float-x', `${floatX}px`);
-      heroVisual.style.setProperty('--hero-float-y', `${floatY}px`);
-    });
-  };
-
-  heroVisual.addEventListener('pointermove', (event) => {
-    const rect = heroVisual.getBoundingClientRect();
-    const nx = (event.clientX - rect.left) / rect.width - .5;
-    const ny = (event.clientY - rect.top) / rect.height - .5;
-    setHeroDepth(nx * 5, ny * 4, nx * -9, ny * -7);
-  }, { passive: true });
-
-  heroVisual.addEventListener('pointerleave', () => setHeroDepth(0, 0, 0, 0));
-}
+// Hero motion is CSS-only for a stable, crisp first impression.
 
 const rfqForm = document.querySelector('#rfqForm');
 rfqForm?.addEventListener('submit', (event) => {
