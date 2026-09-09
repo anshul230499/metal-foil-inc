@@ -48,3 +48,12 @@ Attribution identifies the source but does not itself grant reuse rights. Metal 
 
 ## Technical Specifications page image
 - The page link requested by the user is included in the sources section of the site. The exact page image was not auto-ingested in this revision because the page asset was not retrievable from the current environment. If the exact desired image is uploaded, it can be inserted directly in the next revision.
+
+
+## v10 Houston office image
+- Total Plaza / TotalEnergies Tower, Houston: `https://commons.wikimedia.org/wiki/File:TotalPlazaHouston.JPG`
+- Author: WhisperToMe. The file page states that the image was released into the public domain.
+- Used as the final Downtown Houston sales-office visual.
+
+## v10 certificates
+- Embedded Google document previews were removed. Certificate tiles now use site-generated white document artwork; the buttons preserve links to the original JMA-published certificate files where available.

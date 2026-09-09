@@ -60,3 +60,11 @@ Certificate cards use embedded Google document viewer frames in full certificate
 - Removed the floating 321 / 304 / 309 hero badge and stopped the secondary hero image from floating.
 - Clarified that 321, 304 and 309 and the displayed dimensions are popular / commonly requested examples, not the full MFI offering.
 - Replaced the unreliable Scope of License 15997 embedded viewer with a stable on-site certificate cover and a link back to JMA's certification section.
+
+
+## v10 refinements
+- Removed all embedded Google/PDF certificate viewers and replaced them with white, browser-safe certificate document cards.
+- Certificate buttons now open the original JMA-published files directly where available.
+- Hero imagery now uses the strongest user-supplied facility and coil images, with controlled cropping and no floating animation.
+- North American access gallery was refreshed with distinct JMA imagery to avoid repeating the hero.
+- Added a final Downtown Houston sales-office image section using the public-domain Wikimedia Commons photograph `TotalPlazaHouston.JPG`.
