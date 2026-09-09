@@ -399,3 +399,10 @@ body{overflow-x:hidden}
 @media(prefers-reduced-motion:reduce){
   .hero-title-secondary{box-shadow:none!important}
 }
+
+/* v17: hero clarity refinement — remove left-side haze without altering layout or imagery */
+.hero-copy:after{display:none!important}
+.hero-copy>*{position:relative;z-index:1}
+.hero-lead,.hero-actions,.hero-facts{filter:none!important}
+.hero-actions .button{position:relative;z-index:2}
+.hero-facts div{background:#fff}

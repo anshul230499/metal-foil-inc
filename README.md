@@ -28,5 +28,5 @@ Certificate cards display clean first-page previews. Selecting **View Original D
 Manufacturing imagery, JMA references, and third-party image attribution are documented in `SOURCES.md`. The final Houston office image includes its Wikimedia Commons attribution directly on the site.
 
 
-## v16 hero refinement
+## v17 hero refinement
 The hero copy was rebalanced with stronger typographic presence, a restrained vertical accent, a more substantial facts panel, and a dark graphite secondary headline with no underline. Hero entrance animations now begin partially visible to avoid an empty left column during load. The two hero images and their imagery remain unchanged.
