@@ -112,3 +112,17 @@ body{overflow-x:hidden}
 .sources-note{margin:10px 0 0;color:var(--muted);font-size:10px;line-height:1.5;text-align:right}
 @media(max-width:1000px){.photo-band-grid{grid-template-columns:1fr;gap:30px}.factory-gallery{grid-template-columns:1fr 1fr}.factory-card-lg{grid-row:auto;grid-column:1 / -1}.sources-note{text-align:left}}
 @media(max-width:680px){.factory-gallery{grid-template-columns:1fr}.factory-card-lg{grid-column:auto}.factory-card img{min-height:180px}}
+
+
+/* v9 refinements: stable hero, expanded-range note, reliable BIS preview */
+.hero-frame-float{animation:none!important}
+.hero-foil-card{display:none!important;animation:none!important}
+.range-note{margin:18px 0 0;color:#7a8799;font-size:11px;line-height:1.55;max-width:900px}
+.doc-preview-fallback{display:grid;place-items:center;background:linear-gradient(145deg,#f7f9fc,#eef3f8);padding:18px}
+.license-cover{width:88%;height:88%;min-height:220px;background:#fff;border:1px solid #dce3ec;box-shadow:0 10px 28px rgba(16,24,40,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;position:relative;overflow:hidden}
+.license-cover:before{content:"";position:absolute;inset:12px;border:1px solid #e5eaf0;pointer-events:none}
+.license-seal{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#174ea6;color:#fff;font:800 12px "Manrope";letter-spacing:.08em;margin-bottom:18px;box-shadow:0 6px 18px rgba(23,78,166,.18)}
+.license-cover small{font:700 9px "Manrope";letter-spacing:.12em;color:#667085;position:relative}
+.license-cover strong{font:800 24px/1.1 "Manrope";color:#10233e;margin:14px 0 8px;position:relative}
+.license-cover b{font:800 19px "Manrope";color:#174ea6;position:relative}
+.license-cover em{font-style:normal;font-size:10px;color:#98a2b3;margin-top:18px;position:relative}

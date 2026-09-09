@@ -54,3 +54,9 @@ Certificate cards use embedded Google document viewer frames in full certificate
 - Added three customer-supplied production / facility images to the manufacturing band under `assets/process-1.png`, `assets/process-2.png`, and `assets/process-3.png`.
 - Retained the two distinct hero images.
 - Added a note that the exact image from the JMA Technical Specifications page can be inserted once that specific image is uploaded or otherwise provided directly.
+
+
+## v9 refinements
+- Removed the floating 321 / 304 / 309 hero badge and stopped the secondary hero image from floating.
+- Clarified that 321, 304 and 309 and the displayed dimensions are popular / commonly requested examples, not the full MFI offering.
+- Replaced the unreliable Scope of License 15997 embedded viewer with a stable on-site certificate cover and a link back to JMA's certification section.
