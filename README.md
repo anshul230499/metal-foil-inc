@@ -2,79 +2,27 @@
 
 Static GitHub/Vercel website for Metal Foil Inc.
 
-## Deploy
-1. Create a GitHub repository.
-2. Upload all files in this folder to the repository root.
+## Deployment
+1. Create or use a GitHub repository.
+2. Place all files in the repository root.
 3. Import the repository into Vercel.
-4. Framework preset: **Other / Static**. No build command is required.
+4. Use the **Other / Static** framework preset. No build command is required.
 
-## Current commercial content
+## Commercial content
 - ASTM Grades: 321, 304, 309
 - Roll lengths: 25', 50', 100', 900', and custom made
 - Thickness: 0.002"
 - Width: 20"
 - Steel origin: U.S. and overseas
 - Baytown stock:
-  - Grade 321: 21 rolls, 100' x 20" x 0.002", DFARS Yes
-  - Grade 304: 7 rolls, 100' x 20" x 0.002", DFARS No
+  - Grade 321: 21 rolls, 100' × 20" × 0.002", DFARS Yes
+  - Grade 304: 7 rolls, 100' × 20" × 0.002", DFARS No
 
 ## RFQ behavior
-The **Prepare an RFQ** button uses a `mailto:` link generated in JavaScript. It opens the visitor's default mail client addressed to `sales@metalfoilinc.us`. No form data is transmitted or stored by the website.
-
-Edge condition is optional and is omitted from the email body when left blank. Surface Finish has been removed. The Origin / Compliance selector offers No Preference, US, and DFARS.
+The **Prepare an RFQ** button creates a `mailto:` draft addressed to `sales@metalfoilinc.us`. Form data is not transmitted to or stored by the website.
 
 ## Certificates
-Certificate cards render the complete first page on a white canvas. PDF certificates are drawn with PDF.js so browser PDF chrome and dark viewer backgrounds never appear; the ISSDA image is displayed directly. The original JMA-published document can still be opened from each card.
+Certificate cards display clean first-page previews. Selecting **View Original Document** opens the Jindal Metal & Alloys Ltd. document through the original JMA/Google document viewer workflow. The website does not represent those source files as downloadable PDFs.
 
-
-## Visual identity / motion
-- Original folded-foil MFI mark in the header and footer
-- MFI-specific hero collage using credited alternate JMA manufacturing banners
-- Scroll-in reveals, floating hero imagery, card lift effects, and animated CTA/certificate buttons
-- Motion respects the visitor's reduced-motion accessibility preference
-
-## v6 refinement (September 2026)
-- Replaced the earlier inline symbol with a new folded-stainless MFI wordmark asset.
-- Preserved the existing motion/interaction system.
-- Removed Edge Condition from the RFQ form and generated email body.
-- Reworked certificate previews into light, borderless document frames.
-- Replaced repeated manufacturing photography with three unique JMA-sourced images.
-- Differentiated all major section headings and the browser page title.
-- Updated source notes to identify each JMA image used.
-
-
-## v7 adjustments
-- Replaced “U.S.” positioning language with “North American” / “global market” phrasing in the hero, about, manufacturing, and footer copy.
-- Replaced the first two top-of-page images with different JMA images and set the hero images to eager loading.
-- Kept the unique-image rule across the three major editorial image areas.
-
-
-## v8 image refresh
-- Removed the repeated mid-page editorial image.
-- Added three customer-supplied production / facility images to the manufacturing band under `assets/process-1.png`, `assets/process-2.png`, and `assets/process-3.png`.
-- Retained the two distinct hero images.
-- Added a note that the exact image from the JMA Technical Specifications page can be inserted once that specific image is uploaded or otherwise provided directly.
-
-
-## v9 refinements
-- Removed the floating 321 / 304 / 309 hero badge and stopped the secondary hero image from floating.
-- Clarified that 321, 304 and 309 and the displayed dimensions are popular / commonly requested examples, not the full MFI offering.
-- Replaced the unreliable Scope of License 15997 embedded viewer with a stable on-site certificate cover and a link back to JMA's certification section.
-
-
-## v10 refinements
-- Removed all embedded Google/PDF certificate viewers and replaced them with white, browser-safe certificate document cards.
-- Certificate buttons now open the original JMA-published files directly where available.
-- Hero imagery now uses the strongest user-supplied facility and coil images, with controlled cropping and no floating animation.
-- North American access gallery was refreshed with distinct JMA imagery to avoid repeating the hero.
-- Added a final Downtown Houston sales-office image section using the public-domain Wikimedia Commons photograph `TotalPlazaHouston.JPG`.
-
-
-## v11 refinements
-- Re-audited the North American supply-chain gallery and assigned three different JMA source images; no non-logo image URL is repeated on the page.
-- Rebuilt certificate thumbnails as full-page previews on a white canvas. PDF pages are rendered with PDF.js and use a clean fallback card if rendering is unavailable.
-- Replaced the final Houston visual with `GiorcesHouston10.JPG`, a stronger upward view of Total Plaza / TotalEnergies Tower from Wikimedia Commons (CC BY 2.5), with attribution shown on the site.
-
-
-## v12 certificate download behavior
-Certificate image/previews remain visible in the gallery. Certificate action links now attempt to download the original Jindal Metal & Alloys source file, preserving PDF format when the source response is a PDF and preserving the native image format for image-based originals. If a browser/CDN blocks a programmatic download, the source file opens in a new tab as a fallback.
+## Visuals and attribution
+Manufacturing imagery, JMA references, and third-party image attribution are documented in `SOURCES.md`. The final Houston office image includes its Wikimedia Commons attribution directly on the site.
