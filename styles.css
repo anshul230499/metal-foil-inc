@@ -242,3 +242,74 @@ body{overflow-x:hidden}
 
 /* v14 hero and terminology refinement */
 .hero h1 span{color:#344054;box-shadow:inset 0 -.12em 0 rgba(242,106,46,.14);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+
+/* v15: hero-only motion refinement — precise, restrained, layered */
+.hero-copy>*{animation:none;opacity:1}
+.hero .kicker{opacity:0;transform:translate3d(0,9px,0);animation:heroKickerIn .62s cubic-bezier(.22,.8,.2,1) .04s backwards}
+.hero .kicker:before{animation:heroKickerDraw .72s cubic-bezier(.2,.8,.2,1) .08s backwards}
+.hero h1{overflow:visible}
+.hero-title-line{display:block;width:fit-content;opacity:0;clip-path:inset(0 0 100% 0);transform:translate3d(0,24px,0);will-change:transform,clip-path,opacity}
+.hero-title-primary{color:var(--ink)!important;box-shadow:none!important;animation:heroTitleIn .88s cubic-bezier(.16,1,.3,1) .12s forwards}
+.hero-title-secondary{color:#344054!important;box-shadow:inset 0 -.12em 0 rgba(242,106,46,.14)!important;animation:heroTitleIn .96s cubic-bezier(.16,1,.3,1) .28s forwards}
+.hero-lead{opacity:0!important;transform:translate3d(0,15px,0);animation:heroSoftIn .74s cubic-bezier(.2,.8,.2,1) .46s forwards!important}
+.hero-actions{opacity:0!important;transform:translate3d(0,12px,0);animation:heroSoftIn .7s cubic-bezier(.2,.8,.2,1) .58s forwards!important}
+.hero-facts{opacity:0!important;transform:translate3d(0,13px,0);animation:heroFactsIn .82s cubic-bezier(.16,1,.3,1) .68s forwards!important}
+
+@keyframes heroKickerIn{from{opacity:0;transform:translate3d(0,9px,0)}to{opacity:1;transform:none}}
+@keyframes heroKickerDraw{from{transform:scaleX(0);opacity:.2}to{transform:scaleX(1);opacity:1}}
+@keyframes heroTitleIn{0%{opacity:0;clip-path:inset(0 0 100% 0);transform:translate3d(0,24px,0)}100%{opacity:1;clip-path:inset(0 0 0 0);transform:none}}
+@keyframes heroSoftIn{from{opacity:0;transform:translate3d(0,15px,0)}to{opacity:1;transform:none}}
+@keyframes heroFactsIn{from{opacity:0;transform:translate3d(0,13px,0) scale(.985)}to{opacity:1;transform:none}}
+
+.hero-frame{will-change:transform,clip-path,opacity;isolation:isolate}
+.hero-frame-main{
+  transform:translate3d(var(--hero-main-x,0px),var(--hero-main-y,0px),0);
+  transition:transform .62s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;
+  animation:heroMainFrameIn 1.05s cubic-bezier(.16,1,.3,1) .18s backwards;
+}
+.hero-frame-main img{animation:heroMainImageIn 1.18s cubic-bezier(.16,1,.3,1) .18s backwards}
+.hero-frame-float{
+  transform:translate3d(var(--hero-float-x,0px),var(--hero-float-y,0px),0) rotate(-.65deg);
+  transition:transform .7s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;
+  animation:heroFloatFrameIn .92s cubic-bezier(.16,1,.3,1) .54s backwards!important;
+}
+.hero-frame-float img{animation:heroFloatImageIn 1.02s cubic-bezier(.16,1,.3,1) .54s backwards}
+.hero-frame:after{content:"";position:absolute;inset:-35% -75%;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 39%,rgba(255,255,255,.30) 48%,rgba(255,255,255,.08) 53%,transparent 61%);transform:translate3d(-42%,0,0) rotate(7deg);opacity:0}
+.hero-frame-main:after{animation:heroFoilSweep 1.15s cubic-bezier(.2,.8,.2,1) .92s both}
+.hero-frame-float:after{animation:heroFoilSweep 1.05s cubic-bezier(.2,.8,.2,1) 1.14s both}
+.hero-visual:hover .hero-frame-main{box-shadow:0 30px 78px rgba(16,42,74,.19)}
+.hero-visual:hover .hero-frame-float{box-shadow:0 22px 54px rgba(16,42,74,.18)}
+
+@keyframes heroMainFrameIn{
+  from{opacity:0;clip-path:polygon(7% 6%,94% 9%,87% 90%,5% 86%);filter:blur(3px)}
+  to{opacity:1;clip-path:polygon(0 0,100% 4%,92% 100%,0 93%);filter:blur(0)}
+}
+@keyframes heroMainImageIn{from{transform:scale(1.075)}to{transform:scale(1)}}
+@keyframes heroFloatFrameIn{
+  from{opacity:0;transform:translate3d(-18px,24px,0) rotate(-2.2deg);clip-path:inset(12% 10% 8% 10% round 18px)}
+  to{opacity:1;transform:translate3d(var(--hero-float-x,0px),var(--hero-float-y,0px),0) rotate(-.65deg);clip-path:inset(0 round 0)}
+}
+@keyframes heroFloatImageIn{from{transform:scale(1.09)}to{transform:scale(1)}}
+@keyframes heroFoilSweep{
+  0%,12%{opacity:0;transform:translate3d(-42%,0,0) rotate(7deg)}
+  28%{opacity:.7}
+  72%{opacity:.34}
+  100%{opacity:0;transform:translate3d(42%,0,0) rotate(7deg)}
+}
+
+@media(max-width:680px){
+  .hero-title-line{width:auto}
+  .hero-frame-main,.hero-frame-float{transition:none}
+  .hero-frame:after{opacity:0!important;animation:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero .kicker,.hero-title-line,.hero-lead,.hero-actions,.hero-facts,.hero-frame-main,.hero-frame-main img,.hero-frame-float,.hero-frame-float img,.hero-frame:after{animation:none!important;opacity:1!important;clip-path:none!important;filter:none!important;transform:none!important}
+  .hero-title-secondary{box-shadow:inset 0 -.12em 0 rgba(242,106,46,.14)!important}
+}
+
+/* v15 final hero polish: one-time ambient entrance rather than perpetual pulsing */
+.hero .kicker{animation-fill-mode:forwards}
+.hero:after{animation:heroHaloIn 1.25s cubic-bezier(.16,1,.3,1) .28s both}
+@keyframes heroHaloIn{from{opacity:0;transform:scale(.9) rotate(-5deg)}to{opacity:.62;transform:scale(1) rotate(0deg)}}
+@media(prefers-reduced-motion:reduce){.hero:after{animation:none!important;opacity:.55!important;transform:none!important}}

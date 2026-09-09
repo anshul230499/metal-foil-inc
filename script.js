@@ -35,19 +35,27 @@ if (ambientGlow && window.matchMedia('(pointer:fine)').matches && !window.matchM
   }, { passive: true });
 }
 
-// Gentle foil-image parallax in the hero.
+// Layered hero depth: the two existing images move at different, restrained rates.
 if (heroVisual && window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let frameId = 0;
+  const setHeroDepth = (mainX, mainY, floatX, floatY) => {
+    cancelAnimationFrame(frameId);
+    frameId = requestAnimationFrame(() => {
+      heroVisual.style.setProperty('--hero-main-x', `${mainX}px`);
+      heroVisual.style.setProperty('--hero-main-y', `${mainY}px`);
+      heroVisual.style.setProperty('--hero-float-x', `${floatX}px`);
+      heroVisual.style.setProperty('--hero-float-y', `${floatY}px`);
+    });
+  };
+
   heroVisual.addEventListener('pointermove', (event) => {
     const rect = heroVisual.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - .5) * 12;
-    const y = ((event.clientY - rect.top) / rect.height - .5) * 10;
-    heroVisual.style.setProperty('--hero-x', `${x}px`);
-    heroVisual.style.setProperty('--hero-y', `${y}px`);
-  });
-  heroVisual.addEventListener('pointerleave', () => {
-    heroVisual.style.setProperty('--hero-x', '0px');
-    heroVisual.style.setProperty('--hero-y', '0px');
-  });
+    const nx = (event.clientX - rect.left) / rect.width - .5;
+    const ny = (event.clientY - rect.top) / rect.height - .5;
+    setHeroDepth(nx * 5, ny * 4, nx * -9, ny * -7);
+  }, { passive: true });
+
+  heroVisual.addEventListener('pointerleave', () => setHeroDepth(0, 0, 0, 0));
 }
 
 const rfqForm = document.querySelector('#rfqForm');
