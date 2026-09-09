@@ -41,3 +41,9 @@ Certificate cards use embedded Google document viewer frames in full certificate
 - Replaced repeated manufacturing photography with three unique JMA-sourced images.
 - Differentiated all major section headings and the browser page title.
 - Updated source notes to identify each JMA image used.
+
+
+## v7 adjustments
+- Replaced “U.S.” positioning language with “North American” / “global market” phrasing in the hero, about, manufacturing, and footer copy.
+- Replaced the first two top-of-page images with different JMA images and set the hero images to eager loading.
+- Kept the unique-image rule across the three major editorial image areas.
