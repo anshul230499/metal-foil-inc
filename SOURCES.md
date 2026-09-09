@@ -39,3 +39,12 @@ The MFI logo in this package is an original site asset created for Metal Foil In
 
 ## Usage note
 Attribution identifies the source but does not itself grant reuse rights. Metal Foil Inc. should confirm that it has permission to republish manufacturer imagery and document previews in the final public production site.
+
+
+## User-supplied images added in v8
+- `assets/process-1.png` — user-supplied production image added to the factory gallery.
+- `assets/process-2.png` — user-supplied facility overview image added to the factory gallery.
+- `assets/process-3.png` — user-supplied production-line image added to the factory gallery.
+
+## Technical Specifications page image
+- The page link requested by the user is included in the sources section of the site. The exact page image was not auto-ingested in this revision because the page asset was not retrievable from the current environment. If the exact desired image is uploaded, it can be inserted directly in the next revision.
