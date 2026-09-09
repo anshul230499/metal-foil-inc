@@ -68,7 +68,6 @@ rfqForm?.addEventListener('submit', (event) => {
     `Origin / Compliance Preference: ${get('origin') || 'No Preference'}`
   ];
 
-  if (get('edge')) materialLines.push(`Edge Condition: ${get('edge')}`);
 
   const body = [
     'Metal Foil Inc. - Request for Quotation',

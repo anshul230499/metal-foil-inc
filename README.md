@@ -32,3 +32,12 @@ Certificate cards use embedded Google document viewer frames in full certificate
 - MFI-specific hero collage using credited alternate JMA manufacturing banners
 - Scroll-in reveals, floating hero imagery, card lift effects, and animated CTA/certificate buttons
 - Motion respects the visitor's reduced-motion accessibility preference
+
+## v6 refinement (September 2026)
+- Replaced the earlier inline symbol with a new folded-stainless MFI wordmark asset.
+- Preserved the existing motion/interaction system.
+- Removed Edge Condition from the RFQ form and generated email body.
+- Reworked certificate previews into light, borderless document frames.
+- Replaced repeated manufacturing photography with three unique JMA-sourced images.
+- Differentiated all major section headings and the browser page title.
+- Updated source notes to identify each JMA image used.
