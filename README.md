@@ -74,3 +74,7 @@ Certificate cards render the complete first page on a white canvas. PDF certific
 - Re-audited the North American supply-chain gallery and assigned three different JMA source images; no non-logo image URL is repeated on the page.
 - Rebuilt certificate thumbnails as full-page previews on a white canvas. PDF pages are rendered with PDF.js and use a clean fallback card if rendering is unavailable.
 - Replaced the final Houston visual with `GiorcesHouston10.JPG`, a stronger upward view of Total Plaza / TotalEnergies Tower from Wikimedia Commons (CC BY 2.5), with attribution shown on the site.
+
+
+## v12 certificate download behavior
+Certificate image/previews remain visible in the gallery. Certificate action links now attempt to download the original Jindal Metal & Alloys source file, preserving PDF format when the source response is a PDF and preserving the native image format for image-based originals. If a browser/CDN blocks a programmatic download, the source file opens in a new tab as a fallback.

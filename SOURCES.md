@@ -61,3 +61,7 @@ Attribution identifies the source but does not itself grant reuse rights. Metal 
 
 ## v11 supply-chain gallery
 - The three supply-chain images are explicitly different source assets. The third image was changed to a separate JMA banner asset so the gallery does not repeat imagery used elsewhere in the page.
+
+
+### Certificate downloads (v12)
+The displayed certificate previews continue to use the Jindal Metal & Alloys Ltd. Cloudinary source files linked from https://jindalmetal.com/certifications. The download action uses those same original source URLs; no certificate content is altered.

@@ -234,3 +234,7 @@ body{overflow-x:hidden}
 .cert-fallback{display:none!important}
 .cert-load-failed .cert-stage{display:none!important}
 .cert-load-failed .cert-fallback{display:flex!important}
+
+/* v12: certificate display remains image-first; links now download the original source document. */
+.cert-button[aria-busy="true"]{opacity:.72;pointer-events:none}
+.cert-button i{font-style:normal;font-size:15px;line-height:1}
