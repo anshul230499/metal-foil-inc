@@ -46,3 +46,11 @@ The opening hero was rebuilt from a clean base for clarity: shorter copy, fully 
 This package is an **update for the existing GitHub repository**, not a replacement of its entire asset history. The supplied site already referenced `assets/process-1.png` and `assets/process-2.png` but those two files were not included in the latest upload. **Keep those two existing images in your GitHub `assets/` folder.** Upload/replace only the files included here; do not delete other repository assets. If those images are absent from your repository, please supply them before publishing to avoid broken hero imagery.
 
 The floating J graphic is a previously created stylized version of the Jindal mark, not a supplied master file from the brand's official identity system. Replace it with the official transparent emblem if required for brand compliance.
+
+
+## v20 corporate identity refinement
+- The Who We Are section is now **first under the header**, followed by the unchanged original hero.
+- The section uses a new, official Jindal Metals & Alloys Limited-hosted banner (live URL; third-party hosting).
+- The floating icon now crops the **manufacturer's official logo asset** to its J mark; not an AI-generated/stylized letter.
+- Both official assets rely on the manufacturer's CDN: check their current use permission and continued availability before production.
+- Retain existing `assets/process-1.png` and `assets/process-2.png` from your repository: they were not in the uploaded files.

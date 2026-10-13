@@ -46,3 +46,10 @@ Attribution identifies a source but does not itself grant reuse rights. Appropri
 - `assets/jindal-j.png`: previously created metallic-blue stylization inspired by the Jindal SAW J mark (not an official supplied brand master).
 - `assets/who-we-are-precision-foil.jpg`: newly generated illustrative steel-foil coil still life; not a photograph of a real factory or a manufacturer's facility.
 - Manufacturer corporate information: https://www.jindalmetal.com/ and https://jindalsaw.com/business-operations/key-subsidiaries-joint-ventures/jindal-metals-alloys-limited/
+
+
+## v20: new official brand assets
+- Who We Are image (distinct official-site banner): https://res.cloudinary.com/dpvbgv6nw/image/upload/v1789707318/jindal/banner/1789707317026-banner-hero_desktop-1280w.png.webp
+- Official manufacturer logo image (J crop): https://res.cloudinary.com/dpvbgv6nw/image/upload/v1782797426/jindal/settings/1782797425949-logo-logo.png
+- Source website: https://jindalmetal.com/
+- These externally hosted assets are owned by their publisher; confirm permission to reuse them.
