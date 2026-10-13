@@ -1,14 +1,35 @@
-# Metal Foil Inc. — website update (October 2026)
+# Metal Foil Inc. Website
 
-Static website for GitHub → Vercel.
+Static GitHub/Vercel website for Metal Foil Inc.
 
-Changes:
-- New Who We Are section immediately beneath the homepage hero and product trust strip.
-- Explicit links to Jindal Metals & Alloys Limited and its parent Jindal SAW Limited.
-- No abbreviated company name in visible website copy.
-- Subtle fixed Jindal SAW emblem in the lower right, linked to its official website.
-- Updated navigation, About section, and manufacturer references.
+## Deployment
+1. Create or use a GitHub repository.
+2. Place all files in the repository root.
+3. Import the repository into Vercel.
+4. Use the **Other / Static** framework preset. No build command is required.
 
-Upload `index.html` and `vercel.json` to the root of the **existing** GitHub repo on its deployment branch, replacing only matching files; don't create a new Vercel project. Check that Vercel Root Directory is the repository root.
+## Commercial content
+- ASTM Grades: 321, 304, 309
+- Roll lengths: 25', 50', 100', 900', and custom made
+- Thickness: 0.002"
+- Width: 20"
+- Steel origin: U.S. and overseas
+- Baytown stock:
+  - Grade 321: 21 rolls, 100' × 20" × 0.002", DFARS Yes
+  - Grade 304: 7 rolls, 100' × 20" × 0.002", DFARS No
 
-Note: the official Jindal logo loads from `https://www.jindalsaw.com/images/brand.png`, so it requires that URL to remain available. Other site imagery also uses existing remotely hosted assets.
+## RFQ behavior
+The **Prepare an RFQ** button creates a `mailto:` draft addressed to `sales@metalfoilinc.us`. Form data is not transmitted to or stored by the website.
+
+## Certificates
+Certificate cards display clean first-page previews. Selecting **View Original Document** opens the Jindal Metal & Alloys Ltd. document through the original JMA/Google document viewer workflow. The website does not represent those source files as downloadable PDFs.
+
+## Visuals and attribution
+Manufacturing imagery, JMA references, and third-party image attribution are documented in `SOURCES.md`. The final Houston office image includes its Wikimedia Commons attribution directly on the site.
+
+
+## v17 hero refinement
+The hero copy was rebalanced with stronger typographic presence, a restrained vertical accent, a more substantial facts panel, and a dark graphite secondary headline with no underline. Hero entrance animations now begin partially visible to avoid an empty left column during load. The two hero images and their imagery remain unchanged.
+
+## v18 hero rebuild
+The opening hero was rebuilt from a clean base for clarity: shorter copy, fully opaque static text, no glow/blur/mask effects, three compact product facts, and simple one-time image entrance motion. The two existing hero images remain unchanged.
