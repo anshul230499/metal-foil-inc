@@ -64,3 +64,12 @@ Image copyright remains with its rights holder; confirm permitted reuse for comm
 A symbol-only crop from the manufacturer's official published logo asset (not a recreated emblem):
 https://res.cloudinary.com/dpvbgv6nw/image/upload/c_crop,x_0,y_0,w_125,h_153/f_png/v1782797426/jindal/settings/1782797425949-logo-logo.png
 The crop removes adjacent company-name lettering; it is not linked to another website. All rights remain with the logo owner.
+
+
+## v24 Houston sky backdrop
+Real photograph: **Downtown Houston, TX Skyline - 2018.jpg** by **David Daniel Turner**,
+Wikimedia Commons, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Source: https://commons.wikimedia.org/wiki/File:Downtown_Houston,_TX_Skyline_-_2018.jpg
+- Thumbnail hosted by Wikimedia at https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Downtown_Houston%2C_TX_Skyline_-_2018.jpg/1280px-Downtown_Houston%2C_TX_Skyline_-_2018.jpg
+- Changes: decorative layered cropping, lower opacity, grayscale and sepia tonal treatment and masking over a sunset-inspired animated CSS gradient. The original photograph was taken in daylight; the dusk atmosphere is a design effect rather than a claim about capture time.
+- The illustrative skyline fallback (`assets/houston-horizon.svg`) is an original simplified graphic, not a geographically exact skyline.

@@ -74,3 +74,15 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - The symbol is a precise server-side crop of the official manufacturer logo, with the wordmark completely excluded.
 - Source and crop: https://res.cloudinary.com/dpvbgv6nw/image/upload/c_crop,x_0,y_0,w_125,h_153/f_png/v1782797426/jindal/settings/1782797425949-logo-logo.png
 - The ISSDA PDF certificate thumbnail fix remains intact.
+
+
+## v24 Houston Dusk / Satin Steel background trial
+- Keeps the v23 content, real manufacturer photo, branding, logo and complete site functionality intact.
+- Adds an atmospheric, slowly moving sunset-inspired Pearl Silver backdrop to the first "Who We Are" section.
+- Uses a lightly masked photograph of the actual Houston skyline for local identity, plus bundled `assets/houston-horizon.svg` so the sky still has depth if the external photo is unavailable.
+- Gives the existing hero a subtle brushed satin-steel surface, without changing the hero images or copy.
+- All background motion supports `prefers-reduced-motion` and is pointer-event transparent.
+- Adds the required Houston photo credit on the page and in SOURCES.md.
+- The manufacturer-hosted product photograph, official J mark and ISSDA PDF preview remain unchanged.
+- As with earlier versions, **retain `assets/process-1.png` and `assets/process-2.png` from the current GitHub repository.**
+- The Houston photo is remotely loaded; there is an SVG fallback if unavailable.
