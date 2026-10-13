@@ -66,3 +66,11 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - New editorial, asymmetric Who We Are first section using the Jindal Metals & Alloys Limited Technical Specifications product photo, with scroll-safe responsive layout, image reveal, hover motion and accessible reduced-motion fallback.
 - ISSDA certificate retains the v21 PDF preview fix.
 - Preserve process-1.png and process-2.png already in the existing repository.
+
+
+## v23 visual cleanup
+- The opening Who We Are section has no corner tile, numbered kicker or "Material in motion" tagline on the photograph.
+- The floating J is decorative and cannot be clicked; no hover or link behavior.
+- The symbol is a precise server-side crop of the official manufacturer logo, with the wordmark completely excluded.
+- Source and crop: https://res.cloudinary.com/dpvbgv6nw/image/upload/c_crop,x_0,y_0,w_125,h_153/f_png/v1782797426/jindal/settings/1782797425949-logo-logo.png
+- The ISSDA PDF certificate thumbnail fix remains intact.

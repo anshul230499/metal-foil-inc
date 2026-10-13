@@ -58,3 +58,9 @@ Attribution identifies a source but does not itself grant reuse rights. Appropri
 Official manufacturer's Technical Specifications – SS page: https://jindalmetal.com/stainless-steel-ultra-thin-foils/grades-it-s-properties-ss
 Product image used (page OG image): https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785391769/jindal/products/1785391767935-prod-PRODUCT1.jpg
 Image copyright remains with its rights holder; confirm permitted reuse for commercial use.
+
+
+## v23 decorative corporate mark
+A symbol-only crop from the manufacturer's official published logo asset (not a recreated emblem):
+https://res.cloudinary.com/dpvbgv6nw/image/upload/c_crop,x_0,y_0,w_125,h_153/f_png/v1782797426/jindal/settings/1782797425949-logo-logo.png
+The crop removes adjacent company-name lettering; it is not linked to another website. All rights remain with the logo owner.
