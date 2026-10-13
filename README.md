@@ -22,10 +22,10 @@ Static GitHub/Vercel website for Metal Foil Inc.
 The **Prepare an RFQ** button creates a `mailto:` draft addressed to `sales@metalfoilinc.us`. Form data is not transmitted to or stored by the website.
 
 ## Certificates
-Certificate cards display clean first-page previews. Selecting **View Original Document** opens the Jindal Metal & Alloys Ltd. document through the original JMA/Google document viewer workflow. The website does not represent those source files as downloadable PDFs.
+Certificate cards display clean first-page previews. Selecting **View Original Document** opens the Jindal Metals & Alloys Limited document through the original manufacturer/Google document viewer workflow. The website does not represent those source files as downloadable PDFs.
 
 ## Visuals and attribution
-Manufacturing imagery, JMA references, and third-party image attribution are documented in `SOURCES.md`. The final Houston office image includes its Wikimedia Commons attribution directly on the site.
+Manufacturing imagery, Jindal Metals & Alloys Limited references, and third-party image attribution are documented in `SOURCES.md`. The final Houston office image includes its Wikimedia Commons attribution directly on the site.
 
 
 ## v17 hero refinement
@@ -33,3 +33,16 @@ The hero copy was rebalanced with stronger typographic presence, a restrained ve
 
 ## v18 hero rebuild
 The opening hero was rebuilt from a clean base for clarity: shorter copy, fully opaque static text, no glow/blur/mask effects, three compact product facts, and simple one-time image entrance motion. The two existing hero images remain unchanged.
+
+
+## v19 — Who We Are and Jindal emblem
+- Adds a new `Who We Are` section immediately under the hero with a unique, locally stored illustrative precision-foil image.
+- The section identifies Metal Foil Inc. as the U.S.-based selling arm of Jindal Metals & Alloys Limited, a subsidiary of Jindal SAW Limited.
+- Removes the manufacturer-name abbreviation from visible website content and links to the two official websites.
+- Includes `assets/mfi-logo.png` (original MFI logo) for header/footer and `assets/jindal-j.png` (subtle floating branded-style emblem).
+- All RFQ, certificate, inventory, and existing page components are retained.
+
+### Important existing image dependencies
+This package is an **update for the existing GitHub repository**, not a replacement of its entire asset history. The supplied site already referenced `assets/process-1.png` and `assets/process-2.png` but those two files were not included in the latest upload. **Keep those two existing images in your GitHub `assets/` folder.** Upload/replace only the files included here; do not delete other repository assets. If those images are absent from your repository, please supply them before publishing to avoid broken hero imagery.
+
+The floating J graphic is a previously created stylized version of the Jindal mark, not a supplied master file from the brand's official identity system. Replace it with the official transparent emblem if required for brand compliance.

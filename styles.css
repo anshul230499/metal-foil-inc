@@ -676,3 +676,29 @@ body{overflow-x:hidden}
 @media(max-width:1000px){.hero{padding:58px 0 54px}.hero-grid{grid-template-columns:1fr;gap:38px}.hero-copy{max-width:760px}.hero h1{max-width:760px}.hero-lead{max-width:650px}.hero-visual{min-height:470px;max-width:720px}.hero-frame-main{inset:10px 0 46px 8%}}
 @media(max-width:680px){.hero{padding:44px 0 46px}.hero h1{font-size:46px}.hero-lead{font-size:16px;margin:20px 0 22px!important}.hero-actions{flex-direction:column}.hero-actions .button{width:100%}.hero-facts{grid-template-columns:1fr;margin-top:26px!important}.hero-facts div{border-right:0;border-bottom:1px solid #dce3ec;padding:14px 16px!important}.hero-facts div:last-child{border-bottom:0}.hero-visual{min-height:360px}.hero-frame-main{inset:4px 0 36px 7%}.hero-frame-float{width:47%;height:38%;border-width:4px}}
 @media(prefers-reduced-motion:reduce){.hero-frame-main,.hero-frame-float{animation:none!important;opacity:1!important;transform:none!important}.hero-frame img{transition:none!important}}
+
+
+/* v19 — Who We Are. Extends the v18 aesthetic without changing existing sections. */
+.who-section{padding:86px 0 90px;background:#f8fafc;border-top:1px solid #edf1f5;border-bottom:1px solid #e5eaf1;scroll-margin-top:82px}
+.who-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:70px;align-items:center}
+.who-copy{max-width:600px}
+.who-copy .kicker{margin-bottom:18px}
+.who-copy h2{font:800 clamp(36px,3.9vw,53px)/1.08 "Manrope",sans-serif;letter-spacing:-.047em;margin:0 0 22px;color:#14263c}
+.who-copy p:not(.kicker){font-size:15px;line-height:1.78;color:#586477;margin:0 0 16px}
+.who-copy .who-lead{font-size:17px!important;color:#344054!important;line-height:1.68!important}
+.who-copy p a{color:#174ea6;text-decoration:underline;text-decoration-color:rgba(23,78,166,.36);text-underline-offset:3px;font-weight:700}
+.who-copy p a:hover{text-decoration-color:#174ea6}
+.who-links{display:flex;flex-wrap:wrap;column-gap:27px;row-gap:12px;align-items:center;margin-top:27px}
+.who-links .text-link{font-size:12px;line-height:1.5;text-decoration:none;color:#174ea6;font-weight:800}
+.who-links .who-secondary-link{color:#475467}
+.who-links .text-link:hover{text-decoration:underline;text-underline-offset:4px}
+.who-photo{position:relative;margin:0;min-width:0}
+.who-photo img{display:block;width:100%;aspect-ratio:1.17;object-fit:cover;object-position:center;border-radius:18px;box-shadow:0 20px 46px rgba(16,42,74,.13)}
+.who-photo figcaption{font-size:9px;color:#7b8797;margin-top:11px;line-height:1.45}
+/* Persistent linked emblem; intentionally quiet and separate from the primary navigation. */
+.jindal-floating-mark{position:fixed;right:22px;bottom:21px;z-index:95;width:52px;height:59px;display:flex;align-items:center;justify-content:center;opacity:.32;filter:grayscale(.24);transform:translateZ(0);transition:opacity .25s ease,filter .25s ease,transform .25s ease;text-decoration:none;outline-offset:4px}
+.jindal-floating-mark img{width:100%;height:100%;display:block;object-fit:contain;filter:drop-shadow(0 2px 4px rgba(10,42,92,.1))}
+.jindal-floating-mark:hover,.jindal-floating-mark:focus-visible{opacity:.85;filter:none;transform:translateY(-2px)}
+@media(max-width:1000px){.who-grid{grid-template-columns:1fr;gap:31px}.who-copy{max-width:760px}.who-photo{max-width:760px}.who-photo img{aspect-ratio:16/10}}
+@media(max-width:680px){.who-section{padding:62px 0;scroll-margin-top:70px}.who-copy h2{font-size:37px}.who-copy p:not(.kicker){font-size:14px}.who-copy .who-lead{font-size:15px!important}.who-photo img{aspect-ratio:1.2}.jindal-floating-mark{right:13px;bottom:13px;width:39px;height:45px;opacity:.30}}
+@media(prefers-reduced-motion:reduce){.jindal-floating-mark{transition:none}}
