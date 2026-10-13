@@ -53,3 +53,8 @@ Attribution identifies a source but does not itself grant reuse rights. Appropri
 - Official manufacturer logo image (J crop): https://res.cloudinary.com/dpvbgv6nw/image/upload/v1782797426/jindal/settings/1782797425949-logo-logo.png
 - Source website: https://jindalmetal.com/
 - These externally hosted assets are owned by their publisher; confirm permission to reuse them.
+
+## v22 opening section image
+Official manufacturer's Technical Specifications – SS page: https://jindalmetal.com/stainless-steel-ultra-thin-foils/grades-it-s-properties-ss
+Product image used (page OG image): https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785391769/jindal/products/1785391767935-prod-PRODUCT1.jpg
+Image copyright remains with its rights holder; confirm permitted reuse for commercial use.

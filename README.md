@@ -54,3 +54,15 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - The floating icon now crops the **manufacturer's official logo asset** to its J mark; not an AI-generated/stylized letter.
 - Both official assets rely on the manufacturer's CDN: check their current use permission and continued availability before production.
 - Retain existing `assets/process-1.png` and `assets/process-2.png` from your repository: they were not in the uploaded files.
+
+
+## v21 design and certificate fix
+- Who We Are remains the first section, now with a refined editorial headline, two-location trustline, graphic photo label, subtle motion and framing. Existing palette and hero remain unchanged.
+- Manufacturer-hosted Who We Are image unchanged; see SOURCES.md for attribution.
+- ISSDA certificate is a one-page PDF, despite its filename. Replaced the broken <img> preview with the same PDF.js canvas renderer used for the other certificates. The original document link is unchanged.
+- Keep existing hero photos `assets/process-1.png` and `assets/process-2.png` in GitHub.
+
+## v22 editorial update
+- New editorial, asymmetric Who We Are first section using the Jindal Metals & Alloys Limited Technical Specifications product photo, with scroll-safe responsive layout, image reveal, hover motion and accessible reduced-motion fallback.
+- ISSDA certificate retains the v21 PDF preview fix.
+- Preserve process-1.png and process-2.png already in the existing repository.
