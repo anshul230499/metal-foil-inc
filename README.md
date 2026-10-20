@@ -107,9 +107,3 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - Clearer product specification rows without interactive explorer.
 - RFQ mailto workflow preserved, with optional validated copy-to-clipboard fallback. No backend/storage added.
 - Mobile responsiveness and keyboard focus improvements.
-
-## v30 — larger and clearer typography
-Increased the opening company introduction from 16px to up to 20px, the supporting paragraph from 14px to up to 18px, and improved line height, contrast and reading measure. Proportionally enlarged smaller text throughout the website, including technical specifications, process descriptions, navigation, supporting labels, inventory, certifications and RFQ controls. Responsive sizes tuned for phones. All copy, hyperlinks and imagery remain unchanged.
-
-## Version 32 — The Material Standard
-A bespoke, editorial industrial-luxury design with a dark full-height opening, typographic foil identity, copper/limestone palette, locally bundled custom stainless steel ribbon SVG, static technical specification range, enhanced mobile layouts and unchanged corporate references / functional RFQ. The material artwork is editorial illustration, not a manufacturing photograph. Manufacturer image URLs remain in the project, but may require network access.
