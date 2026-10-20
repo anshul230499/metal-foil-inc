@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Abstract brushed stainless steel foil ribbon">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#e6e9e7"/><stop offset=".4" stop-color="#f6f5f1"/><stop offset="1" stop-color="#c9d0d1"/>
+  </linearGradient>
+  <linearGradient id="sheet" x1="0" y1="0" x2=".95" y2=".64">
+    <stop stop-color="#89979d"/><stop offset=".09" stop-color="#f2f5f4"/><stop offset=".24" stop-color="#b4bec0"/><stop offset=".39" stop-color="#fff"/><stop offset=".54" stop-color="#96a3a9"/><stop offset=".7" stop-color="#e8eceb"/><stop offset=".9" stop-color="#9daaad"/><stop offset="1" stop-color="#e3e8e7"/>
+  </linearGradient>
+  <linearGradient id="coil" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#667981"/><stop offset=".2" stop-color="#e0e7e5"/><stop offset=".4" stop-color="#f8faf9"/><stop offset=".68" stop-color="#899aa2"/><stop offset=".88" stop-color="#e7ecea"/><stop offset="1" stop-color="#7c8c94"/>
+  </linearGradient>
+  <radialGradient id="ring" cx="40%" cy="35%" r="75%">
+    <stop stop-color="#e9efed"/><stop offset=".24" stop-color="#b5c1c4"/><stop offset=".47" stop-color="#f6f7f5"/><stop offset=".68" stop-color="#91a1a7"/><stop offset=".89" stop-color="#dce5e5"/><stop offset="1" stop-color="#63757c"/>
+  </radialGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="170%" height="170%"><feGaussianBlur stdDeviation="22"/></filter>
+  <pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 2h9 M0 5h9" stroke="#fff" stroke-opacity=".1" stroke-width=".3"/></pattern>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<path d="M20 760Q400 760 835 380T1260 330" fill="none" stroke="#56636a" stroke-opacity=".22" stroke-width="96" filter="url(#shadow)"/>
+<!-- Wide reflecting foil sheet, sweeping from the foreground to a wound edge -->
+<path d="M-170 785C150 650 260 470 450 430S750 500 870 355C945 262 850 136 754 137L944 101C1053 149 1091 272 1000 393C830 623 662 523 482 583C237 664 127 817 -150 965Z" fill="url(#sheet)" stroke="#788b92" stroke-opacity=".4" stroke-width="2"/>
+<path d="M-125 842C224 678 300 508 494 474S763 532 900 345" fill="none" stroke="#fff" stroke-opacity=".65" stroke-width="7"/>
+<path d="M-145 859C215 705 316 520 513 493S800 541 924 339" fill="none" stroke="#5a6e79" stroke-opacity=".15" stroke-width="2"/>
+<!-- Foil wound into a coil -->
+<g transform="translate(796 302) rotate(-9)">
+ <ellipse cx="10" cy="10" rx="249" ry="223" fill="#4b555a" opacity=".17" filter="url(#shadow)"/>
+ <ellipse rx="240" ry="217" fill="url(#coil)" stroke="#748890" stroke-width="3"/>
+ <ellipse rx="205" ry="185" fill="none" stroke="#fbfdfb" stroke-opacity=".58" stroke-width="8"/>
+ <ellipse rx="182" ry="163" fill="none" stroke="#74848d" stroke-opacity=".5" stroke-width="6"/>
+ <ellipse rx="159" ry="143" fill="none" stroke="#edf1ee" stroke-width="13" opacity=".72"/>
+ <ellipse rx="136" ry="123" fill="none" stroke="#687a84" stroke-width="11" opacity=".43"/>
+ <ellipse rx="111" ry="99" fill="url(#ring)" stroke="#cdd7d8" stroke-width="5"/>
+ <ellipse rx="65" ry="60" fill="#829399" stroke="#eff3f1" stroke-width="9"/>
+ <ellipse rx="40" ry="38" fill="#dfe8e6" stroke="#657981" stroke-width="4"/>
+ <ellipse rx="22" ry="21" fill="#71838d" opacity=".75"/>
+</g>
+<rect width="1200" height="900" fill="url(#grain)" opacity=".7"/>
+<path d="M0 0h1200v900H0z" fill="none" stroke="#fff" stroke-width="4" opacity=".22"/>
+</svg>

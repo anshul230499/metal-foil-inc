@@ -107,3 +107,11 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - Clearer product specification rows without interactive explorer.
 - RFQ mailto workflow preserved, with optional validated copy-to-clipboard fallback. No backend/storage added.
 - Mobile responsiveness and keyboard focus improvements.
+
+## v30 — larger and clearer typography
+Increased the opening company introduction from 16px to up to 20px, the supporting paragraph from 14px to up to 18px, and improved line height, contrast and reading measure. Proportionally enlarged smaller text throughout the website, including technical specifications, process descriptions, navigation, supporting labels, inventory, certifications and RFQ controls. Responsive sizes tuned for phones. All copy, hyperlinks and imagery remain unchanged.
+
+
+## v33 — Original site, elevated (not the v31/v32 redesign)
+
+Based on the v30 light site the user preferred. Original pages, content, product tables, corporate links, certifications, navigation and RFQ are intact. Updates: 1560 px desktop content width, porcelain/stone/slate/brass palette, more confident typography, stronger hierarchy, improved whitespace and multi-device layout, introductory entrance motion, image hover sweeps, improved technical-product typography, and accessible reduced-motion fallback. Removed the distracting global-map backdrop from the first pane without removing the manufacturer's original photograph. Fixed two references to absent `assets/process-*.png` with the already-referenced manufacturer-hosted production images; added silver-toned fallback treatment if those external files cannot load. No new JavaScript frameworks or interactive product explorer.

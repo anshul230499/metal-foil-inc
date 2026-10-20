@@ -172,3 +172,25 @@ copyRfq?.addEventListener('click', async () => {
     if (rfqFeedback) rfqFeedback.textContent = 'Clipboard permission is unavailable. Use Prepare an RFQ to open your email draft.';
   }
 });
+
+
+// V33: External manufacturer imagery retains a branded metal-surface fallback
+// if an image is blocked or unavailable in the visitor's browser.
+document.querySelectorAll('.hero-frame img').forEach(img => {
+  const markUnavailable = () => {
+    img.hidden = true;
+    img.closest('.hero-frame')?.classList.add('image-unavailable');
+  };
+  img.addEventListener('error', markUnavailable);
+  if (img.complete && img.naturalWidth === 0) markUnavailable();
+});
+// v33 visual fallbacks for externally hosted source photographs and emblem.
+document.querySelectorAll('.v33-original-refined .who-v22-image img, .jindal-floating-mark img').forEach(img => {
+  const onMissing = () => {
+    img.hidden = true;
+    img.parentElement?.classList.add('image-unavailable');
+    img.closest('.who-v22-image, .jindal-floating-mark')?.classList.add('image-unavailable');
+  };
+  img.addEventListener('error',onMissing);
+  if (img.complete && img.naturalWidth === 0) onMissing();
+});
