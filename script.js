@@ -194,3 +194,12 @@ document.querySelectorAll('.v33-original-refined .who-v22-image img, .jindal-flo
   img.addEventListener('error',onMissing);
   if (img.complete && img.naturalWidth === 0) onMissing();
 });
+
+// v34: reveal the geographical manufacturing connection only when visible.
+const mapStage = document.querySelector('.v34-map-stage');
+if(mapStage){
+ if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const o = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('is-visible');o.unobserve(e.target)}}) }, {threshold:.15});
+  o.observe(mapStage);
+ } else mapStage.classList.add('is-visible');
+}

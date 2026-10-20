@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 :root{--ink:#101828;--muted:#667085;--blue:#174ea6;--blue2:#0b6bcb;--orange:#f26a2e;--paper:#fff;--soft:#f4f7fb;--warm:#fff7f1;--line:#dce3ec;--green:#117a55;--red:#b42318;--shadow:0 18px 55px rgba(16,24,40,.10)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{color:inherit}.wrap{width:min(1180px,calc(100% - 44px));margin:auto}.skip{position:fixed;left:-999px;top:8px;z-index:1000;background:#fff;padding:10px}.skip:focus{left:10px}.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav-wrap{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none}.brand-mark{display:flex;gap:3px;height:32px;align-items:flex-end}.brand-mark i{display:block;width:6px;background:linear-gradient(180deg,var(--blue2),var(--blue));border-radius:4px 4px 0 0}.brand-mark i:nth-child(1){height:18px}.brand-mark i:nth-child(2){height:27px}.brand-mark i:nth-child(3){height:22px}.brand strong{font:800 15px/1 "Manrope";letter-spacing:.08em}.brand small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.site-nav{display:flex;align-items:center;gap:24px}.site-nav a{font-size:12px;font-weight:700;text-decoration:none}.nav-rfq{background:var(--blue);color:#fff!important;padding:11px 15px;border-radius:6px}.menu-button{display:none;border:1px solid var(--line);background:#fff;padding:9px 12px;border-radius:6px;font-weight:700}
 .kicker{font-size:10px;letter-spacing:.18em;font-weight:800;color:var(--blue);margin:0 0 16px}.hero{padding:66px 0 54px;background:linear-gradient(180deg,#fff,#f7f9fc)}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}.hero h1,.section-intro h2,.inventory-copy h2,.photo-copy h2,.about-grid h2,.rfq-copy h2,.sources-grid h2{font:800 clamp(42px,5vw,74px)/.98 "Manrope";letter-spacing:-.055em;margin:0}.hero h1 span{color:var(--blue)}.hero-lead{font-size:19px;color:#475467;max-width:700px;margin:25px 0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button{min-height:48px;padding:0 19px;border-radius:7px;border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;font-size:12px;cursor:pointer}.primary{background:var(--blue);color:#fff}.primary:hover{background:#123f88}.secondary{border-color:#9fb3cf;background:#fff;color:var(--blue)}.hero-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:38px}.hero-facts div{background:#fff;padding:18px}.hero-facts b{display:block;font:800 20px "Manrope"}.hero-facts span{font-size:11px;color:var(--muted)}.hero-photo{margin:0;position:relative}.hero-photo img{display:block;width:100%;aspect-ratio:4/4.35;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}figure figcaption{font-size:10px;color:var(--muted);margin-top:9px}figure figcaption a{color:var(--blue)}
@@ -1395,4 +1395,138 @@ body{background:#fffefa;color:var(--ink);font-size:17px}
 /* Display typography remains expressive, but avoids a narrow stacked headline. */
 @media(min-width:1151px){
  .v33-original-refined .who-v22-copy h2{font-size:clamp(58px,4.72vw,78px);max-width:100%}
+}
+
+
+/* ==========================================================
+   VERSION 34 — white porcelain, precise industrial motion
+   Preserves V33's original structure, images, three links and RFQ.
+   ========================================================== */
+body.v34-porcelain{--blue:#105aa1;--blue2:#0874cc;--orange:#fa7628;--warm:#fff;--soft:#f8fbfd;--paper:#fff;--line:#e1e8ee;background:#fff;color:#182735}
+.v34-porcelain h1,.v34-porcelain h2,.v34-porcelain h3,.v34-porcelain .who-v22-footnotes b,
+.v34-porcelain .hero-facts b,.v34-porcelain .spec-grid strong,.v34-porcelain .count{
+ font-family:'Plus Jakarta Sans','Manrope',sans-serif!important
+}
+.v34-porcelain .site-header{background:rgba(255,255,255,.88)!important;border-bottom:1px solid rgba(189,203,215,.46)!important;backdrop-filter:blur(22px) saturate(1.3)}
+.v34-porcelain .site-header.scrolled{background:rgba(255,255,255,.96)!important;box-shadow:0 10px 28px rgba(24,50,76,.065)!important}
+.v34-porcelain .who-v22.who-houston-dusk.v33-original-refined.v34-original{
+ background:#fff!important;border-color:#e2eaf1!important;padding-bottom:clamp(42px,4.5vw,75px)!important
+}
+.v34-porcelain .v34-original .houston-atmosphere{background:linear-gradient(130deg,#fff 10%,#f9fcfe 54%,#fff 100%)!important}
+.v34-porcelain .v34-original .houston-atmosphere:before{
+ background:repeating-linear-gradient(120deg,transparent 0px,transparent 179px,rgba(71,126,180,.025) 180px,transparent 181px)!important;
+ animation:v34AmbientMove 22s ease-in-out infinite alternate!important
+}
+@keyframes v34AmbientMove{from{transform:translateX(-1.5%)}to{transform:translateX(1.5%)}}
+.v34-porcelain .v34-original .houston-atmosphere-glow{opacity:.16!important;background:radial-gradient(ellipse at 68% 31%,rgba(101,185,242,.19),transparent 58%)!important}
+.v34-porcelain .who-v22-subline,.v34-porcelain .v34-original .who-v22-subline{color:#526479!important}
+.v34-porcelain .who-orange-dot{color:#f47829!important}
+.v34-porcelain .kicker,.v34-porcelain .who-kicker{color:#1767a6}
+.v34-porcelain .who-v22-copy p a{color:#125f9a!important;text-underline-offset:4px}
+.v34-porcelain .who-v22-copy p a:hover{color:#f17324!important}
+.v34-porcelain .hero,.v34-porcelain .spec-strip,.v34-porcelain .inventory-section,
+.v34-porcelain .photo-band,.v34-porcelain .manufacturing,.v34-porcelain .cert-section,
+.v34-porcelain .about-section,.v34-porcelain .rfq-section,.v34-porcelain .sources-section{
+ background:#fff!important
+}
+.v34-porcelain .spec-strip,.v34-porcelain .photo-band,.v34-porcelain .cert-section,
+.v34-porcelain .sources-section{border-top:1px solid #e5ebf1}
+.v34-porcelain .inventory-section,.v34-porcelain .manufacturing,.v34-porcelain .about-section,
+.v34-porcelain .rfq-section{border-top:1px solid #edf2f6}
+.v34-porcelain .technical-range{background:#fff!important;border:1px solid #dbe5ec!important;box-shadow:0 24px 65px rgba(40,72,104,.048)!important}
+.v34-porcelain .technical-range-row{border-color:#e5edf3!important}
+.v34-porcelain .technical-range-row:hover{background:#f1f8fd!important;border-color:#b6d8ed!important}
+.v34-porcelain .spec-grid article,.v34-porcelain .mini-cards div,.v34-porcelain .process-grid article,.v34-porcelain .contact-tiles div{
+ background:#fff!important;border-color:#dfe8ef!important
+}
+.v34-porcelain .inventory-table th{background:#f4f9fc!important}
+.v34-porcelain .jindal-floating-mark{background:rgba(255,255,255,.91)!important;box-shadow:0 8px 24px rgba(27,66,107,.09)!important}
+.v34-porcelain .site-nav a:not(.nav-rfq):after{background:#ff7925}
+/* White/blue buttons with a memorable corporate orange-blue light sweep. */
+.v34-porcelain .button,.v34-porcelain .nav-rfq,.v34-porcelain .cert-button{position:relative;isolation:isolate;overflow:hidden;transition:transform .3s cubic-bezier(.2,.82,.24,1),border-color .3s,box-shadow .3s,color .3s,background-color .3s!important}
+.v34-porcelain .button:before,.v34-porcelain .nav-rfq:before,.v34-porcelain .cert-button:before{
+ content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(104deg,#0076cc 0%,#1492e2 32%,#ff8a30 78%,#ff6f22 100%);
+ transform:translateX(-102%);transition:transform .56s cubic-bezier(.2,.85,.22,1);opacity:1;pointer-events:none
+}
+.v34-porcelain .button:hover:before,.v34-porcelain .button:focus-visible:before,
+.v34-porcelain .nav-rfq:hover:before,.v34-porcelain .nav-rfq:focus-visible:before,
+.v34-porcelain .cert-button:hover:before,.v34-porcelain .cert-button:focus-visible:before{transform:translateX(0)}
+.v34-porcelain .primary,.v34-porcelain .hero-actions .primary,.v34-porcelain .nav-rfq{background:#0d5d9e!important;border-color:#0d5d9e!important;color:#fff!important}
+.v34-porcelain .secondary,.v34-porcelain .hero-actions .secondary{background:#fff!important;color:#124b79!important;border-color:#accbdc!important}
+.v34-porcelain .button:hover,.v34-porcelain .nav-rfq:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(19,107,183,.20)!important;color:#fff!important;border-color:#f87c2d!important}
+.v34-porcelain .button:focus-visible,.v34-porcelain .nav-rfq:focus-visible{outline:3px solid #ff9a4a;outline-offset:3px}
+.v34-porcelain .cert-button:hover{color:#fff!important}
+.v34-porcelain .button.primary:hover{background:#105e9c!important}
+.v34-porcelain .button.secondary:hover{background:#fff!important}
+.v34-porcelain .who-v22-textlink{color:#105f9e!important}
+.v34-porcelain .who-v22-textlink:hover{color:#ff7422!important}
+/* Elegant flat cartographic inset. Keeps all intro words on bright white. */
+.v34-map-area{position:relative;z-index:2;padding-top:clamp(34px,4vw,65px)}
+.v34-map-heading{display:flex;justify-content:space-between;align-items:end;gap:38px;margin-bottom:22px}
+.v34-overline{display:block;font:800 10px/1.3 'Plus Jakarta Sans',sans-serif;letter-spacing:.20em;color:#2273ac;margin-bottom:9px}
+.v34-map-heading h3{margin:0;font:700 clamp(23px,2.4vw,37px)/1.16 'Plus Jakarta Sans',sans-serif!important;letter-spacing:-.047em;color:#1f3547}
+.v34-map-heading h3 em{font-style:normal;color:#1166a6}
+.v34-map-heading>p{max-width:445px;margin:0;color:#687c8e;font-size:15px;line-height:1.65}
+.v34-map-stage{height:clamp(258px,23vw,342px);border:1px solid #dde8ef;position:relative;overflow:hidden;
+ background:linear-gradient(120deg,#fff,#fbfdff 50%,#fff);box-shadow:0 22px 48px rgba(33,71,107,.045)}
+.v34-map-art{position:absolute;inset:-56% 0 auto 0;height:210%;opacity:.23;mix-blend-mode:multiply;filter:grayscale(.45) contrast(.75) saturate(.45)}
+.v34-map-art img{width:100%;height:100%;object-fit:cover;object-position:center 36%;display:block;transform:scale(1.01);animation:v34MapBreath 22s ease-in-out infinite alternate}
+@keyframes v34MapBreath{from{transform:scale(1.01) translateX(-1%)}to{transform:scale(1.06) translateX(1%)}}
+.v34-map-stage:before{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;
+ background:linear-gradient(90deg,rgba(255,255,255,.45),rgba(255,255,255,.12) 45%,rgba(255,255,255,.44)),linear-gradient(0deg,rgba(255,255,255,.80),transparent 55%)}
+.v34-map-trace{position:absolute;inset:auto 20% 44% 23%;height:1px;background:linear-gradient(90deg,transparent,#167cc6 20%,#ffa059 78%,transparent);opacity:.53;z-index:2;transform:scaleX(.15);transform-origin:left;transition:transform 1.7s ease,opacity 1s}
+.v34-map-stage.is-visible .v34-map-trace{transform:scaleX(1)}
+.v34-map-caption{position:absolute;z-index:3;display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.94);border:1px solid rgba(206,221,232,.9);padding:15px 18px;min-width:218px;
+ box-shadow:0 12px 30px rgba(24,59,92,.085);backdrop-filter:blur(13px);transition:transform .4s ease,box-shadow .4s ease}
+.v34-map-caption:hover{transform:translateY(-4px);box-shadow:0 17px 40px rgba(24,59,92,.14)}
+.v34-map-us{left:7%;bottom:12%}.v34-map-india{right:7%;top:15%}
+.v34-location-dot{height:10px;width:10px;flex:0 0 10px;border-radius:50%;background:#0e7bc6;box-shadow:0 0 0 5px rgba(14,123,198,.12);margin-top:8px}
+.v34-map-india .v34-location-dot{background:#ff7b29;box-shadow:0 0 0 5px rgba(255,123,41,.12)}
+.v34-map-caption small{display:block;font:800 9px/1.5 'Plus Jakarta Sans',sans-serif;letter-spacing:.13em;color:#647e91}
+.v34-map-caption strong{display:block;font:800 14px/1.6 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em;color:#1a405e}
+.v34-map-caption div>span{display:block;font-size:12px;color:#667e90;line-height:1.5}
+/* Resize for smaller viewports. */
+@media(max-width:900px){.v34-map-heading{align-items:flex-start;flex-direction:column;gap:12px}.v34-map-heading>p{max-width:650px}.v34-map-stage{height:310px}}
+@media(max-width:600px){
+ .v34-map-area{padding-top:32px}.v34-map-stage{height:265px}
+ .v34-map-art{inset:-39% -36% auto -36%;width:172%;height:180%;opacity:.22}
+ .v34-map-us{left:12px;bottom:13px}.v34-map-india{right:12px;top:15px}
+ .v34-map-caption{padding:11px 12px;min-width:0;max-width:60%;gap:9px}
+ .v34-map-caption small{font-size:8px;letter-spacing:.05em}
+ .v34-map-caption strong{font-size:12px}
+ .v34-map-caption div>span{font-size:10px}
+ .v34-map-trace{left:24%;right:18%;bottom:50%;transform-origin:left}
+ .v34-porcelain .hero-grid{gap:32px}
+ .v34-porcelain .button:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .v34-map-art img{animation:none!important}
+ .v34-porcelain .v34-original .houston-atmosphere:before{animation:none!important}
+ .v34-map-trace{transform:none!important}
+ .v34-porcelain .button:before,.v34-porcelain .nav-rfq:before,.v34-porcelain .cert-button:before{transition:none!important}
+}
+/* Final map visibility calibration: preserve the vintage detail, especially on phones. */
+.v34-porcelain .v34-map-art {opacity:.34;filter:grayscale(.16) contrast(.89) saturate(.68)}
+@media(max-width:600px){
+ .v34-porcelain .v34-map-art{inset:0;width:100%;height:100%;opacity:.39;filter:grayscale(.12) contrast(.9) saturate(.7)}
+ .v34-porcelain .v34-map-art img{width:100%;height:100%;object-fit:cover;object-position:center center;animation:none}
+ .v34-porcelain .v34-map-stage:before{background:linear-gradient(0deg,rgba(255,255,255,.50),transparent 48%),linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,.04))}
+}
+@media(max-width:600px){
+ .v34-porcelain .v34-map-stage{
+  background:linear-gradient(90deg,rgba(255,255,255,.64),rgba(255,255,255,.57)),url('assets/flat-world-heritage-map.svg') center center /cover no-repeat!important;
+ }
+ .v34-porcelain .v34-map-art{display:none!important}
+}
+
+/* Original flat-map illustration is deliberately light but remains legible. */
+.v34-porcelain .v34-map-art{opacity:.86;filter:none;mix-blend-mode:normal}
+.v34-porcelain .v34-map-art img{object-fit:contain}
+@media(max-width:600px){
+ .v34-porcelain .v34-map-stage{background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,.08)),url('assets/flat-world-heritage-map.svg') center center /cover no-repeat!important}
+}
+@media(min-width:601px){
+ .v34-porcelain .v34-map-art{inset:0;width:100%;height:100%}
+ .v34-porcelain .v34-map-art img{width:100%;height:100%;object-fit:cover;object-position:center 50%}
 }

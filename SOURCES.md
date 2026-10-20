@@ -77,3 +77,8 @@ Wikimedia Commons, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## V33 image reliability note
 The previous package referenced two missing local process images in the second panel. The updated page reuses manufacturer-hosted Cloudinary production imagery already represented in the site's existing visual references. These remain externally hosted and should be checked for permission/availability before publication. If these external images fail to load, the interface provides a non-image brushed-metal fallback rather than exposing a broken image.
+
+
+## v34 vintage map artwork
+The original flat-world-map illustration (`assets/flat-world-heritage-map.svg`) is a new equirectangular map based on the Natural Earth public-domain low-resolution geography. The antique cartographic styling is inspired by a client-supplied visual reference; the client reference image itself is not republished.
+Client-supplied recent mill photographs and videos are intentionally not listed as included site assets in v34; source bytes were unavailable for packaging.

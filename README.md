@@ -115,3 +115,14 @@ Increased the opening company introduction from 16px to up to 20px, the supporti
 ## v33 — Original site, elevated (not the v31/v32 redesign)
 
 Based on the v30 light site the user preferred. Original pages, content, product tables, corporate links, certifications, navigation and RFQ are intact. Updates: 1560 px desktop content width, porcelain/stone/slate/brass palette, more confident typography, stronger hierarchy, improved whitespace and multi-device layout, introductory entrance motion, image hover sweeps, improved technical-product typography, and accessible reduced-motion fallback. Removed the distracting global-map backdrop from the first pane without removing the manufacturer's original photograph. Fixed two references to absent `assets/process-*.png` with the already-referenced manufacturer-hosted production images; added silver-toned fallback treatment if those external files cannot load. No new JavaScript frameworks or interactive product explorer.
+
+
+## Version 34 — Porcelain White & Global Connection
+
+- Built on the original elevated Version 33 (not the experimental Version 32 redesign).
+- Pure white section backgrounds, cool silver dividers, Porsche-*inspired* typography with freely available Plus Jakarta Sans (not proprietary Porsche fonts), and corporate blue/orange animated buttons.
+- Custom-designed flat-world-map illustration inspired by the client reference used as a quiet inset at the bottom of the first pane, with US/India manufacturing-connection labels and reduced-motion support.
+- Original foil photographs, existing hyperlinks, Jindal mark, certifications and RFQ remain intact.
+
+### Mill media / production integration
+The client also supplied five original mill photographs and seven video clips in the conversation. Their raw bytes could not be materialized into this build environment, so they **are not embedded in this ZIP**. Do not claim that these originals are present. Once a ZIP of the media is supplied or made accessible as files in the working directory, optimize them to WebP and MP4/WebM, then integrate selected, accurately labeled photographs into the manufacturing section. A hero video is optional and should be added only after reviewing suitability, optimizing filesize, adding poster/fallback, muted autoplay, and reduced-motion handling.
