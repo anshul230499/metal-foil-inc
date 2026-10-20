@@ -94,3 +94,8 @@ The on-site photo and video assets were color-balanced and compressed solely for
 
 ## v38 selected video
 The manufacturing video is a web-optimized, equipment-only excerpt from the user's `MFI.zip` file `WhatsApp Video 2026-10-20 at 2.42.07 PM (1).mp4`, from 0.00 to 2.72 seconds, slowed for presentation. The portion showing a person near the end of the original source was omitted. The original source clip remains unchanged in the user-supplied ZIP.
+
+
+### v39 additional visual sources
+- Abstract water-contour art: original vector created for Metal Foil Inc. inspired by the motion of water; no external painting reproduced.
+- Manufacturing video: user-provided Jindal Metals & Alloys Limited on-site footage, `WhatsApp Video 2026-10-20 at 2.42.09 PM (2).mp4`, edited to a short, machine-only excerpt.
