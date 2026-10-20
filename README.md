@@ -94,3 +94,6 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - Replaced introductory Houston skyline with an original SVG world map connecting Houston and India.
 - Moved the persistent J mark to the top-right.
 - Added complete product capability matrix to the second pane; kept all other site sections.
+
+## v26 refinements
+Original manufacturing hero photo restored; global map replaces only the first-pane Houston atmospheric backdrop. Jindal emblem moved into reserved header slot. Lower-section Jindal website link is not underlined by default. All Product Range data and three first-pane links remain.
