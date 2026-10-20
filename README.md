@@ -86,3 +86,11 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - The manufacturer-hosted product photograph, official J mark and ISSDA PDF preview remain unchanged.
 - As with earlier versions, **retain `assets/process-1.png` and `assets/process-2.png` from the current GitHub repository.**
 - The Houston photo is remotely loaded; there is an SVG fallback if unavailable.
+
+
+## v25 — World connection and product range
+- Preserved both opening company links; added a separate link on "subsidiary" to Jindal SAW's subsidiary profile.
+- Updated Houston positioning to "from the energy capital of the world, Houston, TX".
+- Replaced introductory Houston skyline with an original SVG world map connecting Houston and India.
+- Moved the persistent J mark to the top-right.
+- Added complete product capability matrix to the second pane; kept all other site sections.

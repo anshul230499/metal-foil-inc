@@ -876,3 +876,22 @@ body{overflow-x:hidden}
  .who-houston-dusk .houston-atmosphere-glow,
  .hero .satin-hero-gleam{animation:none!important;transform:none!important;transition:none!important}
 }
+
+/* v25: global supply-chain map, upper-right J, and complete technical product range */
+.jindal-floating-mark{top:96px;bottom:auto;right:22px}
+@media(max-width:680px){.jindal-floating-mark{top:76px;bottom:auto;right:12px}}
+.who-houston-dusk .houston-atmosphere{background:radial-gradient(ellipse at 75% 35%,rgba(151,181,205,.25),transparent 65%),linear-gradient(172deg,#edf3f9 0%,#fafafa 72%,#f7f8fa 100%)}
+.who-houston-dusk .houston-cloud-light,.who-houston-dusk .houston-skyline-photograph,.who-houston-dusk .houston-skyline-illustration{display:none!important}
+.global-map-frame{min-height:425px;background:#152d46;border-radius:10px 48px 10px 10px}
+.global-map-frame img{height:425px;min-height:425px;object-fit:contain;padding:14px;filter:none;background:#152d46}
+.global-map-frame:hover img{transform:none}
+.global-map-caption{position:absolute;left:26px;bottom:26px;color:#fff;font:800 12px 'Manrope',sans-serif;letter-spacing:.14em}
+.global-map-caption span{color:#ffbf87;margin:0 8px}.global-map-caption small{display:block;color:#b5cadd;margin-top:6px;font-size:9px;letter-spacing:.16em}
+.technical-range{margin-top:56px;padding:31px 34px 34px;border-radius:12px;border:1px solid #dce4ec;background:rgba(255,255,255,.92);box-shadow:0 18px 52px rgba(14,37,63,.055)}
+.technical-range-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:22px}
+.technical-range-heading h2{font:800 clamp(24px,3vw,38px)/1.15 'Manrope',sans-serif;letter-spacing:-.04em;color:#132943;margin:7px 0 0}
+.technical-range-heading>p{color:#65748a;max-width:320px;font-size:12px;margin:0}
+.technical-range-table{margin:0;border-top:1px solid #dce4ed}
+.technical-range-row{display:grid;grid-template-columns:36% 64%;border-bottom:1px solid #dce4ed;padding:15px 7px;gap:0;font-size:13px}
+.technical-range-row dt{font-weight:800;color:#244568;padding-right:18px}.technical-range-row dd{margin:0;color:#33445a}
+@media(max-width:680px){.technical-range{margin-top:32px;padding:22px 17px}.technical-range-heading{display:block}.technical-range-heading>p{margin-top:12px}.technical-range-row{grid-template-columns:1fr;gap:5px}.global-map-frame,.global-map-frame img{min-height:300px;height:300px}.global-map-caption{left:18px;bottom:18px;font-size:10px}}
