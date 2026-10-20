@@ -73,3 +73,6 @@ Wikimedia Commons, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Thumbnail hosted by Wikimedia at https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Downtown_Houston%2C_TX_Skyline_-_2018.jpg/1280px-Downtown_Houston%2C_TX_Skyline_-_2018.jpg
 - Changes: decorative layered cropping, lower opacity, grayscale and sepia tonal treatment and masking over a sunset-inspired animated CSS gradient. The original photograph was taken in daylight; the dusk atmosphere is a design effect rather than a claim about capture time.
 - The illustrative skyline fallback (`assets/houston-horizon.svg`) is an original simplified graphic, not a geographically exact skyline.
+
+## Version 32 graphic
+`assets/metal-ribbon-study.svg` is an original, locally bundled abstract material visualization made for this website. It is an editorial visual representation rather than an actual foil photograph.

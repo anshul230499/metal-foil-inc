@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" role="img" aria-label="Abstract stainless steel foil ribbon study">
+<defs>
+<linearGradient id="ground" x1="0" x2="1" y1="1" y2="0"><stop offset="0" stop-color="#0e181b"/><stop offset=".5" stop-color="#263538"/><stop offset="1" stop-color="#080f12"/></linearGradient>
+<linearGradient id="steelA" x1="0" x2="1" y1=".35" y2=".65"><stop offset="0" stop-color="#0b1519"/><stop offset=".11" stop-color="#53666a"/><stop offset=".23" stop-color="#e5ebdf"/><stop offset=".27" stop-color="#f3f0e3"/><stop offset=".34" stop-color="#879498"/><stop offset=".50" stop-color="#1d2f35"/><stop offset=".60" stop-color="#8e9fa2"/><stop offset=".72" stop-color="#f5f3e9"/><stop offset=".81" stop-color="#5c7479"/><stop offset="1" stop-color="#18282d"/></linearGradient>
+<linearGradient id="steelB" x1="0" x2=".9" y1="0" y2="1"><stop offset="0" stop-color="#192b30"/><stop offset=".22" stop-color="#b7c4c1"/><stop offset=".28" stop-color="#f7f9e9"/><stop offset=".4" stop-color="#9ba9a6"/><stop offset=".65" stop-color="#24393d"/><stop offset=".76" stop-color="#d0d8d0"/><stop offset="1" stop-color="#2f4144"/></linearGradient>
+<linearGradient id="steelC" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#27393d"/><stop offset=".12" stop-color="#e8eae2"/><stop offset=".25" stop-color="#657b7e"/><stop offset=".44" stop-color="#e8eade"/><stop offset=".60" stop-color="#536b70"/><stop offset=".78" stop-color="#e4e8db"/><stop offset="1" stop-color="#2d4044"/></linearGradient>
+<radialGradient id="light" cx=".61" cy=".32" r=".82"><stop offset="0" stop-color="#adbea8" stop-opacity=".23"/><stop offset="1" stop-color="#19272b" stop-opacity="0"/></radialGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+<filter id="noise"><feTurbulence baseFrequency=".25" numOctaves="2" seed="7" type="fractalNoise" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="mono"/><feComponentTransfer in="mono"><feFuncA type="linear" slope=".075"/></feComponentTransfer></filter>
+</defs>
+<rect width="1000" height="1200" fill="url(#ground)"/>
+<rect width="1000" height="1200" fill="url(#light)"/>
+<path d="M-250 930 Q300 1000 650 1240" fill="none" stroke="#030809" stroke-width="240" opacity=".85" filter="url(#blur)"/>
+<path d="M700 -180 C160 210 880 420 390 820 S250 1190 980 1440" fill="none" stroke="#030b0d" stroke-width="270" opacity=".9" filter="url(#blur)"/>
+<path d="M710 -170 C150 255 925 460 440 835 S250 1230 990 1400" fill="none" stroke="url(#steelA)" stroke-width="172" stroke-linecap="butt"/>
+<path d="M930 -100 C460 180 1050 455 615 790 S485 1210 1080 1370" fill="none" stroke="#0a1619" stroke-width="130"/>
+<path d="M930 -100 C460 180 1050 455 615 790 S485 1210 1080 1370" fill="none" stroke="url(#steelB)" stroke-width="92"/>
+<path d="M-220 250 C140 285 380 490 470 730 S750 1110 1140 1110" fill="none" stroke="#030b0d" stroke-width="180" opacity=".8" filter="url(#blur)"/>
+<path d="M-220 250 C140 285 380 490 470 730 S750 1110 1140 1110" fill="none" stroke="url(#steelC)" stroke-width="100"/>
+<path d="M710 -170 C150 255 925 460 440 835 S250 1230 990 1400" fill="none" stroke="#f8f7ee" stroke-width="2.3" opacity=".32"/>
+<path d="M930 -100 C460 180 1050 455 615 790 S485 1210 1080 1370" fill="none" stroke="#d8e6da" stroke-width="1.6" opacity=".25"/>
+<rect width="1000" height="1200" filter="url(#noise)" opacity=".55"/>
+<rect width="1000" height="1200" fill="url(#ground)" opacity=".09"/>
+</svg>
