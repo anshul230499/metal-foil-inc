@@ -95,5 +95,7 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - Moved the persistent J mark to the top-right.
 - Added complete product capability matrix to the second pane; kept all other site sections.
 
-## v26 refinements
-Original manufacturing hero photo restored; global map replaces only the first-pane Houston atmospheric backdrop. Jindal emblem moved into reserved header slot. Lower-section Jindal website link is not underlined by default. All Product Range data and three first-pane links remain.
+## v27 corrections
+- Removed animated pseudo-element underline from the lower about sentence (not just the anchor style).
+- Restored Version 24 foil photograph at the top; retained global map only as the clearly visible atmospheric backdrop replacing the Houston skyline.
+- Restored small floating/hovering J at top right rather than adding it to the navigation.
