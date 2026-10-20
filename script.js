@@ -203,3 +203,39 @@ if(mapStage){
   o.observe(mapStage);
  } else mapStage.classList.add('is-visible');
 }
+
+
+// v36: editorial scroll choreography. Reveal once on entry whether scrolling
+// down or up; no scroll hijacking and no re-hiding of previously read content.
+(() => {
+ const prefersLessMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(prefersLessMotion || !('IntersectionObserver' in window)) return;
+ const groups=[
+   '.v34-map-heading', '.v34-map-stage', '.technical-range-heading',
+   '.technical-range-row', '.spec-strip .section-intro',
+   '.inventory-copy', '.photo-copy h2', '.photo-copy > p:not(.kicker)',
+   '.factory-gallery .factory-card', '.manufacturing .section-intro',
+   '.v35-mill-header', '.v35-mill-media figure',
+   '.cert-section .section-intro', '.about-section .about-copy',
+   '.about-section .contact-tiles', '.rfq-copy', '.rfq-form',
+   '.sources-compact', '.office-figure'
+ ];
+ const nodes = [...new Set(groups.flatMap(sel=>[...document.querySelectorAll(sel)]))];
+ if(!nodes.length) return;
+ nodes.forEach((node,index) => {
+  node.classList.add('v36-reveal');
+  if(node.matches('.factory-gallery .factory-card,.v35-mill-media figure,.office-figure'))node.classList.add('v36-photo-enter');
+  const siblings = node.parentElement ? [...node.parentElement.children].filter(el=>nodes.includes(el)) : [];
+  const order=siblings.indexOf(node);
+  node.style.setProperty('--v36-delay', `${Math.min(Math.max(order,0),3)*85}ms`);
+ });
+ document.body.classList.add('v36-motion-ready');
+ const watcher=new IntersectionObserver((entries,observer)=>{
+   entries.forEach(entry=>{
+     if(!entry.isIntersecting) return;
+     entry.target.classList.add('v36-revealed','is-visible');
+     observer.unobserve(entry.target);
+   });
+ },{threshold:0.07,rootMargin:'0px 0px -5% 0px'});
+ nodes.forEach(el=>watcher.observe(el));
+})();

@@ -134,3 +134,12 @@ The client also supplied five original mill photographs and seven video clips in
 - Three manufacturing-gallery images now use optimized on-site Jindal Metals & Alloys Limited photographs supplied by the user.
 - Added two more on-site mill photographs and an optional, user-controlled short native video below the Manufacturing process overview; the existing hero is unchanged.
 - Five optimized photos + one short compressed video are included under `assets/`, with local fallbacks, no new external asset dependencies.
+
+
+## v36 — Scroll choreography, editorial mill-photo presentation, header polish
+- The original v35 content, corporate hyperlinks, local inventory, email `sales@metalfoil.us`, flat map, and manual-play mill video are unchanged.
+- Header content width is tightened on large screens, and the J emblem floats within the header ribbon with mobile-aware positioning.
+- All five on-site user photos are displayed **uncropped** within aspect-aware frames. The originals are untouched; the visual cleanup is applied only in reversible CSS (gentle desaturation, a cool light overlay, and contrast balancing).
+- Manufacturing photographs are given portrait-aware frames so coils, equipment and packing remain legible.
+- Lightweight IntersectionObserver one-time fade/slide/scale introductions now cover section headings, product information, image galleries and other sections when entering view from above or below. Honors reduced-motion and degrades to visible content when JS is unavailable.
+- Each mill photograph provides a **View full photograph** link opening the uncropped local web image in a new tab.

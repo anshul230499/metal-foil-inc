@@ -1584,3 +1584,255 @@ body.v34-porcelain{--blue:#105aa1;--blue2:#0874cc;--orange:#fa7628;--warm:#fff;-
  .v35-mill-media-video{grid-column:auto}
  .v35-mill-media video,.v35-mill-media img{height:250px}
 }
+
+
+/* ===================================================================
+   VERSION 36 — measured motion, full-photo framing, refined header
+   Based exclusively on the original light v35 site; nothing is removed.
+   =================================================================== */
+/* Make logo and navigation feel like a single organized header. */
+@media (min-width:1001px) {
+  .v34-porcelain .nav-wrap {
+    width:min(1380px,calc(100% - clamp(46px,7.6vw,132px)));
+    gap:clamp(20px,3vw,48px);
+  }
+  .v34-porcelain .site-nav { gap:clamp(12px,1.5vw,25px); }
+}
+/* The hovering J belongs to the top ribbon, never over body copy. */
+.v34-porcelain .jindal-floating-mark {
+  display:flex!important;
+  position:fixed!important;
+  top:16px!important;
+  right:16px!important;
+  bottom:auto!important;
+  width:43px!important;
+  height:49px!important;
+  z-index:120!important;
+  opacity:.54!important;
+  background:rgba(255,255,255,.74)!important;
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(183,204,220,.42)!important;
+  border-radius:7px!important;
+  box-shadow:0 5px 16px rgba(20,61,97,.055)!important;
+  pointer-events:none!important;
+}
+.v34-porcelain .jindal-floating-mark:hover{opacity:.54!important;transform:none!important}
+@media(max-width:1000px) {
+ .v34-porcelain .jindal-floating-mark {top:19px!important;right:92px!important;width:34px!important;height:41px!important}
+}
+@media(max-width:680px) {
+ .v34-porcelain .jindal-floating-mark {top:16px!important;right:84px!important;width:32px!important;height:39px!important;opacity:.42!important}
+}
+@media(max-width:380px) {
+ .v34-porcelain .jindal-floating-mark {right:77px!important;width:27px!important;height:34px!important;top:20px!important}
+}
+
+/* Authentic mill photography: full composition, editorial framing and
+   consistent restrained cool-toned treatment (original files unmodified). */
+.v34-porcelain .v35-authentic-gallery {
+  display:grid!important;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  grid-template-rows:repeat(2,minmax(235px,1fr));
+  gap:16px;
+  align-items:stretch;
+}
+.v34-porcelain .v35-authentic-gallery .factory-card,
+.v34-porcelain .v35-mill-media figure {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  margin:0;
+  overflow:hidden;
+  background:#fff!important;
+  border:1px solid #dbe4ec!important;
+  border-radius:5px!important;
+  padding:9px!important;
+  box-shadow:0 18px 42px rgba(29,61,91,.06)!important;
+  transition:border-color .35s ease, box-shadow .35s ease;
+}
+.v34-porcelain .v35-authentic-gallery .factory-card:hover,
+.v34-porcelain .v35-mill-media figure:hover{
+  border-color:#a9cadf!important;
+  box-shadow:0 22px 52px rgba(29,74,111,.11)!important;
+}
+.v34-porcelain .v35-authentic-gallery .factory-card-lg {grid-row:span 2;}
+.v36-photo-frame {
+  position:relative;
+  isolation:isolate;
+  flex:1 1 auto;
+  height:0;
+  min-height:205px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:2px;
+  background:#ebf0f4;
+}
+.v36-photo-frame::before {
+  content:'';
+  position:absolute;
+  inset:-18px;
+  background-image:var(--photo-url);
+  background-size:cover;
+  background-position:center;
+  filter:blur(22px) saturate(.25) brightness(1.26);
+  opacity:.20;
+  z-index:0;
+}
+.v36-photo-frame::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:2;
+  background:linear-gradient(135deg,rgba(230,242,251,.07),rgba(217,233,244,.10));
+  mix-blend-mode:screen;
+}
+.v34-porcelain .v36-photo-frame img,
+.v34-porcelain .v35-authentic-gallery .factory-card-lg .v36-photo-frame img {
+  display:block!important;
+  position:relative;
+  z-index:1;
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+  max-height:none!important;
+  border-radius:1px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  filter:saturate(.69) contrast(1.055) brightness(1.07) hue-rotate(3deg);
+  transform:none!important;
+  transition:filter .5s ease;
+}
+@media(hover:hover) {
+ .v34-porcelain .v36-photo-frame:hover img {
+   filter:saturate(.82) contrast(1.05) brightness(1.06) hue-rotate(3deg);
+ }
+}
+.v34-porcelain .v35-authentic-gallery .factory-card figcaption,
+.v34-porcelain .v35-mill-media figure figcaption {
+   flex:0 0 auto;
+   margin:0!important;
+   padding:11px 7px 5px;
+   font-size:12px!important;
+   font-weight:600;
+   line-height:1.5;
+   color:#506579!important;
+   letter-spacing:.005em;
+}
+/* Mill photos are mostly portrait. Present the entire machine, coil and packing.
+   Their frames now have a true portrait area instead of a 300px landscape crop. */
+.v34-porcelain .v35-mill-media {
+  display:grid!important;
+  grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,.8fr));
+  align-items:stretch;
+  gap:17px;
+}
+.v34-porcelain .v35-mill-media .v36-photo-frame {
+  min-height:clamp(335px,30vw,460px);
+  height:auto;
+  flex:1 1 auto;
+}
+.v34-porcelain .v35-mill-media .v35-mill-media-video {
+  align-self:stretch;
+}
+.v34-porcelain .v35-mill-media video {
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/10;
+  max-height:none!important;
+  object-fit:contain!important;
+  background:#e8edf2!important;
+  border-radius:2px;
+}
+/* The video does not autoplay; visitors retain complete control. */
+@media(max-width:1120px) {
+ .v34-porcelain .v35-mill-media {grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .v34-porcelain .v35-mill-media-video {grid-column:1/-1}
+ .v34-porcelain .v35-mill-media .v36-photo-frame {min-height:410px}
+}
+@media(max-width:780px) {
+ .v34-porcelain .v35-authentic-gallery {grid-template-rows:repeat(2,215px)!important;gap:10px}
+ .v34-porcelain .v35-authentic-gallery .factory-card {padding:7px!important}
+}
+@media(max-width:600px) {
+ .v34-porcelain .v35-authentic-gallery {
+   grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   grid-template-rows:auto!important;
+   gap:12px;
+ }
+ .v34-porcelain .v35-authentic-gallery .factory-card-lg {grid-column:1/-1;grid-row:auto}
+ .v34-porcelain .v35-authentic-gallery .factory-card-lg .v36-photo-frame {
+   height:auto!important;min-height:0!important;aspect-ratio:4/3;
+ }
+ .v34-porcelain .v35-authentic-gallery .factory-card:not(.factory-card-lg) .v36-photo-frame {
+   min-height:0;height:auto!important;aspect-ratio:3/4;
+ }
+ .v34-porcelain .v35-mill-media {grid-template-columns:1fr!important;gap:16px}
+ .v34-porcelain .v35-mill-media-video {grid-column:auto!important}
+ .v34-porcelain .v35-mill-media .v36-photo-frame {height:auto!important;min-height:0;aspect-ratio:3/4;max-height:520px}
+ .v34-porcelain .v35-mill-media video {max-height:440px!important}
+ .v34-porcelain .v35-authentic-gallery .factory-card figcaption,
+ .v34-porcelain .v35-mill-media figcaption {font-size:11px!important}
+}
+
+/* One-time scroll reveals work entering the viewport from *either* direction.
+   The site stays readable with JS off or prefers-reduced-motion. */
+body.v36-motion-ready .v36-reveal {
+  opacity:0;
+  transform:translate3d(0,26px,0);
+  filter:blur(2px);
+  transition:
+    opacity .78s cubic-bezier(.16,1,.3,1) var(--v36-delay,0ms),
+    transform .85s cubic-bezier(.16,1,.3,1) var(--v36-delay,0ms),
+    filter .76s ease var(--v36-delay,0ms);
+}
+body.v36-motion-ready .v36-reveal.v36-revealed {
+  opacity:1;
+  transform:none;
+  filter:none;
+}
+body.v36-motion-ready .v36-reveal.v36-photo-enter {
+  transform:translate3d(0,32px,0) scale(.975);
+}
+body.v36-motion-ready .v36-reveal.v36-photo-enter.v36-revealed {
+  transform:none;
+}
+@media(prefers-reduced-motion:reduce) {
+ body.v36-motion-ready .v36-reveal,body.v36-motion-ready .v36-photo-enter {opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+}
+
+/* Full-photo access in the gallery: original optimised photo opens uncropped. */
+.v34-porcelain .v36-photo-open {
+ position:absolute;z-index:4;right:11px;bottom:11px;
+ display:inline-flex;align-items:center;justify-content:center;
+ max-width:calc(100% - 22px);min-height:37px;
+ padding:8px 12px;
+ background:rgba(255,255,255,.94);color:#105d95;
+ border:1px solid rgba(187,207,223,.95);
+ box-shadow:0 4px 16px rgba(22,55,80,.08);
+ font:700 11px/1.3 'Plus Jakarta Sans',sans-serif;
+ text-decoration:none;border-radius:3px;
+ transition:background .22s,color .22s,border-color .22s,transform .22s;
+}
+.v34-porcelain .v36-photo-open:hover,
+.v34-porcelain .v36-photo-open:focus-visible{
+ background:#0d6caf;color:white;border-color:#0d6caf;transform:translateY(-2px);
+}
+@media(max-width:780px){.v34-porcelain .v36-photo-open{right:7px;bottom:7px;font-size:10px;min-height:34px;padding:7px 8px}}
+@media(max-width:380px){.v34-porcelain .v36-photo-open{font-size:9px}}
+/* Explicit frame heights prevent tall source images from changing the layout. */
+.v34-porcelain .v35-mill-media .v36-photo-frame {
+ height:clamp(335px,30vw,460px)!important;
+ min-height:0!important;
+ flex:0 0 auto!important;
+}
+@media(max-width:1120px){
+ .v34-porcelain .v35-mill-media .v36-photo-frame {height:clamp(360px,45vw,510px)!important}
+}
+@media(max-width:600px){
+ .v34-porcelain .v35-mill-media .v36-photo-frame {
+  height:clamp(320px,110vw,510px)!important;
+  aspect-ratio:auto!important;
+ }
+}
