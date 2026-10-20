@@ -1836,3 +1836,112 @@ body.v36-motion-ready .v36-reveal.v36-photo-enter.v36-revealed {
   aspect-ratio:auto!important;
  }
 }
+
+
+/* Version 37 — actual colour-graded mill media and edge-to-edge fit. */
+.v34-porcelain .v35-authentic-gallery.v37-gallery {
+ display:grid!important;
+ grid-template-columns:minmax(0,1.777fr) minmax(0,1fr)!important;
+ grid-template-rows:auto!important;
+ align-items:start!important;
+ gap:clamp(11px,1.5vw,20px)!important;
+}
+.v34-porcelain .v37-gallery .factory-card,
+.v34-porcelain .v37-mill-media figure {
+ display:flex!important;flex-direction:column!important;
+ margin:0!important;padding:0!important;
+ overflow:visible!important;
+ border:0!important;background:transparent!important;
+ box-shadow:none!important;border-radius:0!important;
+ min-width:0;
+}
+.v34-porcelain .v37-gallery .factory-card-lg {
+ grid-row:auto!important;grid-column:auto!important;
+}
+.v34-porcelain .v36-photo-frame.v37-media-frame,
+.v34-porcelain .v37-media-frame.v37-video-frame {
+ position:relative!important;display:block!important;
+ flex:0 0 auto!important;
+ min-height:0!important;
+ height:auto!important;max-height:none!important;
+ width:100%!important;
+ overflow:hidden!important;
+ background:#e8edf1!important;
+ border:1px solid #e3e9ee!important;
+ border-radius:3px!important;
+ box-shadow:0 12px 26px rgba(23,47,70,.07);
+}
+.v34-porcelain .v37-landscape {aspect-ratio:4/3!important;}
+.v34-porcelain .v37-portrait {aspect-ratio:3/4!important;}
+.v34-porcelain .v37-video-frame {aspect-ratio:16/9!important;}
+.v34-porcelain .v37-media-frame::before,
+.v34-porcelain .v37-media-frame::after {display:none!important;content:none!important;}
+.v34-porcelain .v37-media-frame img,
+.v34-porcelain .v37-gallery .factory-card-lg .v37-media-frame img,
+.v34-porcelain .v37-mill-media .v37-media-frame img,
+.v34-porcelain .v37-mill-media .v37-video-frame video {
+ display:block!important;position:static!important;
+ width:100%!important;height:100%!important;
+ min-height:0!important;max-height:none!important;
+ aspect-ratio:inherit!important;
+ object-fit:cover!important;object-position:center!important;
+ border:0!important;border-radius:0!important;
+ filter:none!important;opacity:1!important;
+ transform:none!important;
+ transition:transform .8s cubic-bezier(.22,.9,.3,1)!important;
+ background:transparent!important;
+}
+@media(hover:hover) {
+ .v34-porcelain .v37-media-frame:hover img {transform:scale(1.015)!important;}
+}
+.v34-porcelain .v37-gallery .v37-media-caption,
+.v34-porcelain .v37-mill-media .v37-media-caption {
+ display:flex!important;flex-wrap:wrap;align-items:center;justify-content:space-between;
+ gap:4px 16px;margin:0!important;padding:13px 1px 3px!important;
+ font:500 12px/1.5 'Plus Jakarta Sans',Arial,sans-serif!important;
+ color:#516273!important;
+}
+.v34-porcelain .v37-media-caption>span:first-child {font-weight:650;}
+.v34-porcelain .v37-open-photo,
+.v34-porcelain .v37-media-meta {
+ position:static!important;display:inline!important;
+ margin:0!important;padding:0!important;min-height:0!important;
+ font:500 11px/1.5 'Plus Jakarta Sans',Arial,sans-serif!important;
+ letter-spacing:.005em;color:#778797!important;
+ text-decoration:none!important;
+ background:none!important;border:0!important;border-radius:0!important;
+ box-shadow:none!important;transform:none!important;
+}
+.v34-porcelain .v37-open-photo:hover,
+.v34-porcelain .v37-open-photo:focus-visible {color:#156ead!important;text-decoration:underline!important;text-underline-offset:3px;}
+.v34-porcelain .v37-mill-media {
+ display:grid!important;
+ grid-template-columns:minmax(0,2.37fr) minmax(0,1fr)!important;
+ align-items:start!important;gap:clamp(11px,1.5vw,20px)!important;
+}
+.v34-porcelain .v37-mill-media .v35-mill-media-video {grid-column:auto!important;}
+/* The full photograph link is below, never a button covering the machinery. */
+.v34-porcelain .v37-media-frame .v37-photo-hint {display:none!important;}
+@media(max-width:760px) {
+ .v34-porcelain .v37-gallery {grid-template-columns:minmax(0,1fr)!important;gap:24px!important;}
+ .v34-porcelain .v37-gallery .factory-card-lg {grid-column:auto!important;}
+ .v34-porcelain .v37-mill-media {grid-template-columns:minmax(0,1fr)!important;gap:24px!important;}
+ .v34-porcelain .v37-gallery .v37-portrait,
+ .v34-porcelain .v37-mill-media .v37-portrait {max-width:560px;margin-inline:auto;}
+}
+@media(max-width:450px) {
+ .v34-porcelain .v37-gallery .v37-media-caption,
+ .v34-porcelain .v37-mill-media .v37-media-caption {font-size:11px!important;gap:5px;}
+}
+@media(prefers-reduced-motion:reduce){.v34-porcelain .v37-media-frame img {transition:none!important}}
+
+/* v37 mobile specificity: stack intentionally rather than keeping two tiny photos. */
+@media(max-width:760px){
+ .v34-porcelain .v35-authentic-gallery.v37-gallery {
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto!important;
+ }
+ .v34-porcelain .v35-authentic-gallery.v37-gallery .factory-card {
+  grid-column:auto!important;grid-row:auto!important;
+ }
+}

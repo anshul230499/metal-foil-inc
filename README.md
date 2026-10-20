@@ -143,3 +143,12 @@ The client also supplied five original mill photographs and seven video clips in
 - Manufacturing photographs are given portrait-aware frames so coils, equipment and packing remain legible.
 - Lightweight IntersectionObserver one-time fade/slide/scale introductions now cover section headings, product information, image galleries and other sections when entering view from above or below. Honors reduced-motion and degrades to visible content when JS is unavailable.
 - Each mill photograph provides a **View full photograph** link opening the uncropped local web image in a new tab.
+
+
+## v37 — Graded media, full frames, distinct photography
+- Preserve the original bright website, links, navigation, forms, hover J and scroll animations.
+- Physically color-grade three photographic assets and the existing 4-second rolling clip with restrained contrast, clearer details and a reduced yellow cast; the captured scene remains authentic.
+- Exactly three visually distinct still photographs: overall rolling line, packed material, and close-up coil; no alternative angles repeated. The machine gallery has one short motion clip.
+- Native 4:3, 3:4 and 16:9 media frames scale responsively and fill their frames without pillarboxing.
+- "View full photograph" is now a quiet text link in the caption **below** each photo. No floating button covers the mill.
+- Original, unedited source assets remain separately in the uploaded MFI.zip, not overwritten.

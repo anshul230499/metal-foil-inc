@@ -86,3 +86,7 @@ Client-supplied recent mill photographs and videos are intentionally not listed 
 
 ## On-site mill photo and video material — v35
 Five photographs and seven clips were supplied directly by the Metal Foil Inc. user as `MFI.zip` (October 20, 2026), described as photographs and footage recorded by them at the Jindal Metals & Alloys Limited mill. The website uses five photographs and one short four-second rolling-line video. Only web-optimized derivatives are bundled; source originals remain in the user-supplied ZIP. Images are not presented as independent evidence of a specific machine or processing grade. No publication rights from the manufacturer are inferred solely from the submission.
+
+
+## v37 image/video presentation
+The on-site photo and video assets were color-balanced and compressed solely for website display, using authentic supplied images and source video frames. Two near-duplicate still angles were removed from website and package. No synthetic or AI-generated mill scenes were created.
