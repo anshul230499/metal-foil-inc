@@ -72,7 +72,7 @@ rfqForm?.addEventListener('submit', (event) => {
     'Please provide pricing, availability and estimated lead time.'
   ].join('\n');
 
-  const mailto = `mailto:sales@metalfoilinc.us?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const mailto = `mailto:sales@metalfoil.us?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.location.href = mailto;
 });
 
@@ -167,7 +167,7 @@ copyRfq?.addEventListener('click', async () => {
   try {
     if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
     await navigator.clipboard.writeText(details);
-    if (rfqFeedback) rfqFeedback.textContent = 'RFQ details copied. Paste them into an email to sales@metalfoilinc.us.';
+    if (rfqFeedback) rfqFeedback.textContent = 'RFQ details copied. Paste them into an email to sales@metalfoil.us.';
   } catch (_) {
     if (rfqFeedback) rfqFeedback.textContent = 'Clipboard permission is unavailable. Use Prepare an RFQ to open your email draft.';
   }

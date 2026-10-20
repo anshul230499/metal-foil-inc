@@ -1530,3 +1530,57 @@ body.v34-porcelain{--blue:#105aa1;--blue2:#0874cc;--orange:#fa7628;--warm:#fff;-
  .v34-porcelain .v34-map-art{inset:0;width:100%;height:100%}
  .v34-porcelain .v34-map-art img{width:100%;height:100%;object-fit:cover;object-position:center 50%}
 }
+
+
+/* v35: restore the map's correct geographical aspect ratio — no vertically squashed world. */
+.v34-porcelain .v34-map-stage {
+  height: clamp(360px,32vw,475px)!important;
+  background:linear-gradient(120deg,#fff,#f7fafc 55%,#fff)!important;
+}
+.v34-porcelain .v34-map-art {
+  display:block!important;position:absolute!important;
+  inset:12px 10px!important;width:auto!important;height:auto!important;
+  opacity:.84!important;filter:none!important;mix-blend-mode:normal!important;
+}
+.v34-porcelain .v34-map-art img {
+  display:block;width:100%!important;height:100%!important;
+  object-fit:contain!important;object-position:center center!important;
+  animation:none!important;transform:none!important;
+}
+.v34-porcelain .v34-map-stage::before {
+  background:linear-gradient(90deg,rgba(255,255,255,.10),transparent 38%,rgba(255,255,255,.10)),
+    linear-gradient(0deg,rgba(255,255,255,.08),transparent 38%)!important;
+}
+.v34-porcelain .v34-map-us{left:3%;bottom:6%}
+.v34-porcelain .v34-map-india{right:3%;top:8%}
+.v35-authentic-gallery .factory-card{background:#fff;border-color:#e1e9ef}
+.v35-authentic-gallery .factory-card img{object-position:center center}
+.v35-authentic-gallery .factory-card-lg img{object-position:center 50%}
+.v35-authentic-gallery .factory-card figcaption{font-size:11px;line-height:1.45;color:#536778}
+.v35-mill-feature{margin-top:clamp(30px,5vw,60px);padding-top:28px;border-top:1px solid #e1e8ee}
+.v35-mill-header{display:flex;gap:18px;align-items:baseline;justify-content:space-between;margin-bottom:20px}
+.v35-mill-header p{color:#5c6c79;font-size:15px;line-height:1.65;max-width:660px;margin:0}
+.v35-mill-media{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px;align-items:stretch}
+.v35-mill-media figure{min-width:0;margin:0;background:white;border:1px solid #dfe9f0;padding:8px;box-shadow:0 13px 28px rgba(30,66,92,.055)}
+.v35-mill-media video,.v35-mill-media img{width:100%;height:clamp(210px,21vw,300px);display:block;object-fit:cover;background:#e6edf2}
+.v35-mill-media figcaption{font-size:11px;color:#597084;margin:9px 4px 5px;line-height:1.5}
+.v35-mill-media img{transition:transform .45s ease}
+@media(hover:hover){.v35-mill-media figure{overflow:hidden}.v35-mill-media figure:hover img{transform:scale(1.025)}}
+@media(max-width:900px){
+ .v34-porcelain .v34-map-stage{height:clamp(330px,48vw,415px)!important}
+ .v35-mill-media{grid-template-columns:1fr 1fr}
+ .v35-mill-media-video{grid-column:1/-1}
+}
+@media(max-width:600px){
+ .v34-porcelain .v34-map-stage{height:380px!important}
+ .v34-porcelain .v34-map-art{inset:22px 0 38px!important}
+ .v34-porcelain .v34-map-art img{width:150%!important;max-width:none;position:relative;left:-25%;height:100%!important}
+ .v34-porcelain .v34-map-caption{max-width:54%}
+ .v34-porcelain .v34-map-us{left:10px;bottom:10px}
+ .v34-porcelain .v34-map-india{right:10px;top:10px}
+ .v35-mill-header{display:block}
+ .v35-mill-header p{margin-top:8px;font-size:14px}
+ .v35-mill-media{grid-template-columns:1fr}
+ .v35-mill-media-video{grid-column:auto}
+ .v35-mill-media video,.v35-mill-media img{height:250px}
+}

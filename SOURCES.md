@@ -82,3 +82,7 @@ The previous package referenced two missing local process images in the second p
 ## v34 vintage map artwork
 The original flat-world-map illustration (`assets/flat-world-heritage-map.svg`) is a new equirectangular map based on the Natural Earth public-domain low-resolution geography. The antique cartographic styling is inspired by a client-supplied visual reference; the client reference image itself is not republished.
 Client-supplied recent mill photographs and videos are intentionally not listed as included site assets in v34; source bytes were unavailable for packaging.
+
+
+## On-site mill photo and video material — v35
+Five photographs and seven clips were supplied directly by the Metal Foil Inc. user as `MFI.zip` (October 20, 2026), described as photographs and footage recorded by them at the Jindal Metals & Alloys Limited mill. The website uses five photographs and one short four-second rolling-line video. Only web-optimized derivatives are bundled; source originals remain in the user-supplied ZIP. Images are not presented as independent evidence of a specific machine or processing grade. No publication rights from the manufacturer are inferred solely from the submission.

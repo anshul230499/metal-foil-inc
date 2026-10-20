@@ -19,7 +19,7 @@ Static GitHub/Vercel website for Metal Foil Inc.
   - Grade 304: 7 rolls, 100' × 20" × 0.002", DFARS No
 
 ## RFQ behavior
-The **Prepare an RFQ** button creates a `mailto:` draft addressed to `sales@metalfoilinc.us`. Form data is not transmitted to or stored by the website.
+The **Prepare an RFQ** button creates a `mailto:` draft addressed to `sales@metalfoil.us`. Form data is not transmitted to or stored by the website.
 
 ## Certificates
 Certificate cards display clean first-page previews. Selecting **View Original Document** opens the Jindal Metals & Alloys Limited document through the original manufacturer/Google document viewer workflow. The website does not represent those source files as downloadable PDFs.
@@ -126,3 +126,11 @@ Based on the v30 light site the user preferred. Original pages, content, product
 
 ### Mill media / production integration
 The client also supplied five original mill photographs and seven video clips in the conversation. Their raw bytes could not be materialized into this build environment, so they **are not embedded in this ZIP**. Do not claim that these originals are present. Once a ZIP of the media is supplied or made accessible as files in the working directory, optimize them to WebP and MP4/WebM, then integrate selected, accurately labeled photographs into the manufacturing section. A hero video is optional and should be added only after reviewing suitability, optimizing filesize, adding poster/fallback, muted autoplay, and reduced-motion handling.
+
+
+## v35 — Contact, map proportions, and authentic mill visuals
+- Sales email updated throughout markup and RFQ JavaScript to **sales@metalfoil.us**. The RFQ remains a mailto workflow, not a submitted web form.
+- Flat geographic map redrawn at an equal coordinate aspect (rather than the previous vertically compressed artwork). The map stage is taller on desktop and mobile.
+- Three manufacturing-gallery images now use optimized on-site Jindal Metals & Alloys Limited photographs supplied by the user.
+- Added two more on-site mill photographs and an optional, user-controlled short native video below the Manufacturing process overview; the existing hero is unchanged.
+- Five optimized photos + one short compressed video are included under `assets/`, with local fallbacks, no new external asset dependencies.
