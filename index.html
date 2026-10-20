@@ -30,7 +30,7 @@
 <div aria-hidden="true" class="scroll-progress" id="scrollProgress"></div>
 </header>
 <main id="main">
-<section aria-labelledby="whoTitle" class="who-section who-v22 who-houston-dusk" id="who-we-are">
+<section aria-labelledby="whoTitle" class="who-section who-v22 who-houston-dusk v29-global-story" id="who-we-are">
 <div aria-hidden="true" class="houston-atmosphere">
 <div class="houston-atmosphere-glow"></div>
 <div class="houston-cloud-light"></div>
@@ -259,8 +259,10 @@
 </label>
 </div>
 <label>End Use / Special Requirements <span class="optional">Optional</span><textarea name="requirements" placeholder="Application, testing, packaging, delivery timing or other requirements" rows="5"></textarea></label>
-<button class="button primary full-button" type="submit">Prepare an RFQ</button>
-<p class="form-note">This site does not submit or store your form. Your device will open a draft email addressed to sales@metalfoilinc.us.</p>
+<button class="button primary full-button" type="submit">Prepare an RFQ <span aria-hidden="true">↗</span></button>
+<button class="rfq-copy-button" id="copyRfq" type="button">Copy RFQ details <span aria-hidden="true">⧉</span></button>
+<p class="rfq-feedback" id="rfqFeedback" aria-live="polite"></p>
+<p class="form-note">This site does not submit or store your form. Your device will open a draft email addressed to sales@metalfoilinc.us. You can also copy your RFQ details to send them through your preferred email app.</p>
 </form>
 </div>
 </section>

@@ -127,3 +127,48 @@ if (countEls.length && 'IntersectionObserver' in window && !window.matchMedia('(
   const table = document.querySelector('.inventory-table-wrap');
   if (table) countObserver.observe(table);
 }
+
+
+// v29: a single, low-key map reveal; never hide the map if JS is unavailable.
+const geographicStory = document.querySelector('.v29-global-story');
+if (geographicStory) {
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const mapObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('map-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    mapObserver.observe(geographicStory);
+  } else geographicStory.classList.add('map-revealed');
+}
+
+// RFQ alternative: preserve the original mailto workflow, but let buyers copy
+// the full structured inquiry when their browser has no configured mail client.
+const copyRfq = document.querySelector('#copyRfq');
+const rfqFeedback = document.querySelector('#rfqFeedback');
+copyRfq?.addEventListener('click', async () => {
+  if (!rfqForm || !rfqForm.reportValidity()) return;
+  const form = new FormData(rfqForm);
+  const value = key => String(form.get(key) || '').trim();
+  const details = [
+    'Metal Foil Inc. - Request for Quotation',
+    `Company: ${value('company')}`, `Contact: ${value('name')}`,
+    `Email: ${value('email')}`, `Phone: ${value('phone') || 'Not provided'}`,
+    '', 'Material Requirements', `ASTM Grade: ${value('grade')}`,
+    `Thickness: ${value('thickness')}`, `Width: ${value('width')}`,
+    `Length: ${value('length')}`, `Quantity: ${value('quantity')}`,
+    `Origin / Compliance Preference: ${value('origin') || 'No Preference'}`,
+    '', 'End Use / Special Requirements:',value('requirements') || 'Not specified',
+    '', 'Please provide pricing, availability and estimated lead time.'
+  ].join('\n');
+  try {
+    if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+    await navigator.clipboard.writeText(details);
+    if (rfqFeedback) rfqFeedback.textContent = 'RFQ details copied. Paste them into an email to sales@metalfoilinc.us.';
+  } catch (_) {
+    if (rfqFeedback) rfqFeedback.textContent = 'Clipboard permission is unavailable. Use Prepare an RFQ to open your email draft.';
+  }
+});

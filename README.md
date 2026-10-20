@@ -99,3 +99,11 @@ The floating J graphic is a previously created stylized version of the Jindal ma
 - Removed animated pseudo-element underline from the lower about sentence (not just the anchor style).
 - Restored Version 24 foil photograph at the top; retained global map only as the clearly visible atmospheric backdrop replacing the Houston skyline.
 - Restored small floating/hovering J at top right rather than adding it to the navigation.
+
+
+## v29 — experience refinement
+- Restrained hover and entrance animations; accessibility and reduced-motion fallbacks.
+- Flat rustic copper-toned US–India backdrop with subtle scroll reveal; original manufacturer photograph retained.
+- Clearer product specification rows without interactive explorer.
+- RFQ mailto workflow preserved, with optional validated copy-to-clipboard fallback. No backend/storage added.
+- Mobile responsiveness and keyboard focus improvements.
