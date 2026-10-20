@@ -152,3 +152,10 @@ The client also supplied five original mill photographs and seven video clips in
 - Native 4:3, 3:4 and 16:9 media frames scale responsively and fill their frames without pillarboxing.
 - "View full photograph" is now a quiet text link in the caption **below** each photo. No floating button covers the mill.
 - Original, unedited source assets remain separately in the uploaded MFI.zip, not overwritten.
+
+
+## v38 — Equipment-only mill footage
+- Replaced the v37 manufacturing video and poster with a distinct user-supplied clip: `WhatsApp Video 2026-10-20 at 2.42.07 PM (1).mp4`.
+- Selected only the first 2.72 seconds, which show the rolling equipment without any people visible in the reviewed frames, and gently slowed the excerpt to approximately 3.73 seconds. The later portion showing a person was excluded.
+- Kept the original landscape frame, manual-play controls, optimized MP4 and poster, and the rest of the v37 design unchanged.
+- Applied mild contrast and color balancing to match the site's existing industrial treatment.
