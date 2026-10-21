@@ -165,7 +165,6 @@ The client also supplied five original mill photographs and seven video clips in
 - Replaced the previous portrait video with a different landscape clip from the user's original `WhatsApp Video 2026-10-20 at 2.42.07 PM.mp4`, excerpt ~2.35–3.93s, presented at 1024×576 16:9. Only a machinery close-up is included, with right-edge areas of the source excluded to avoid background workers. Playback is user controlled and muted.
 - Improved color and contrast; generated a matching 16:9 poster. No changes to the company copy, links, product range, RFQ, photographs, or layout beyond the video itself.
 
-## Version 41: Navigation and technical brochure
-- Larger, persistent sticky navigation; original small-screen menu retained.
-- Stainless steel brochure link appears immediately below the technical product range.
-- Distinct section labels: Popular Foil Formats and North American Support.
+
+## Version 42 — header symbol
+The Jindal J is now an integral right-hand item of the sticky header, not a floating overlay. It links to the Jindal SAW Limited site and has a restrained hover lift, blue lighting, visible keyboard focus, and reduced-motion support. At mobile widths the J is adjacent to the Menu control. All other website sections remain unchanged.

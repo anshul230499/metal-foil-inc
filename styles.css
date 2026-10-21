@@ -1987,3 +1987,97 @@ body.v34-porcelain .jindal-floating-mark {z-index:210!important;}
  body.v34-porcelain .brand-logo{width:187px;max-width:62vw}
  .technical-brochure-note{font-size:12.5px}
 }
+
+
+/* Version 42 — Jindal emblem integrated into the sticky top ribbon.
+   The old floating emblem has been removed from markup. */
+body.v34-porcelain .nav-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:clamp(12px,1.6vw,25px);
+}
+body.v34-porcelain .site-nav{margin-left:auto;min-width:0;}
+body.v34-porcelain .jindal-header-symbol{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:55px;
+  height:62px;
+  padding:7px;
+  border-radius:10px;
+  border:1px solid transparent;
+  text-decoration:none;
+  background:transparent;
+  position:relative;
+  isolation:isolate;
+  outline-offset:4px;
+  transition:background-color .38s ease,border-color .38s ease,box-shadow .38s ease,transform .38s cubic-bezier(.2,.75,.2,1);
+}
+body.v34-porcelain .jindal-header-symbol-inner{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;height:100%;
+}
+body.v34-porcelain .jindal-header-symbol img{
+  display:block;
+  width:36px;
+  height:44px;
+  object-fit:contain;
+  opacity:.76;
+  filter:saturate(.9) drop-shadow(0 1px 1px rgba(13,60,108,.08));
+  transition:transform .48s cubic-bezier(.2,.75,.2,1),opacity .38s ease,filter .38s ease;
+}
+body.v34-porcelain .jindal-header-symbol-fallback{
+  display:none;
+  font:900 27px/1 'Manrope','DM Sans',Arial,sans-serif;
+  font-style:italic;
+  letter-spacing:-.12em;
+  color:#165b94;
+}
+body.v34-porcelain .jindal-header-symbol.image-unavailable img{display:none;}
+body.v34-porcelain .jindal-header-symbol.image-unavailable .jindal-header-symbol-fallback{display:block;}
+@media(hover:hover) and (pointer:fine){
+  body.v34-porcelain .jindal-header-symbol:hover{
+    background:linear-gradient(135deg,rgba(226,242,252,.68),rgba(255,255,255,.93));
+    border-color:rgba(37,111,170,.22);
+    box-shadow:0 8px 19px rgba(31,92,151,.10),inset 0 1px 0 rgba(255,255,255,.85);
+    transform:translateY(-2px);
+  }
+  body.v34-porcelain .jindal-header-symbol:hover img{
+    opacity:1;
+    filter:saturate(1.15) drop-shadow(0 3px 5px rgba(26,91,145,.18));
+    transform:scale(1.075);
+  }
+}
+body.v34-porcelain .jindal-header-symbol:focus-visible{
+  border-color:#246fac;
+  background:#eef7fe;
+  outline:2px solid #176aa8;
+}
+@media(max-width:1250px) and (min-width:1001px){
+  body.v34-porcelain .jindal-header-symbol{width:47px;height:55px;padding:5px;}
+  body.v34-porcelain .jindal-header-symbol img{width:32px;height:40px;}
+}
+@media(max-width:1000px){
+  body.v34-porcelain .jindal-header-symbol{
+    width:44px;height:50px;padding:4px;
+    order:1;
+    margin-left:auto;
+    margin-right:4px;
+  }
+  body.v34-porcelain .menu-button{order:2;}
+  body.v34-porcelain .jindal-header-symbol img{width:29px;height:36px;}
+}
+@media(max-width:680px){
+  body.v34-porcelain .jindal-header-symbol{width:38px;height:44px;margin-right:0;}
+  body.v34-porcelain .jindal-header-symbol img{width:26px;height:33px;}
+  body.v34-porcelain .brand-logo{max-width:min(187px,48vw);}
+}
+@media(prefers-reduced-motion:reduce){
+  body.v34-porcelain .jindal-header-symbol,
+  body.v34-porcelain .jindal-header-symbol img{transition:none!important;transform:none!important;}
+}

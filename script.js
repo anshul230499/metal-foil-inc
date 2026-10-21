@@ -239,3 +239,12 @@ if(mapStage){
  },{threshold:0.07,rootMargin:'0px 0px -5% 0px'});
  nodes.forEach(el=>watcher.observe(el));
 })();
+
+
+// Show a restrained text fallback only if the official remote emblem is unavailable.
+const officialJ = document.querySelector('.jindal-header-symbol img');
+if (officialJ) {
+  const showJFallback = () => officialJ.closest('.jindal-header-symbol')?.classList.add('image-unavailable');
+  officialJ.addEventListener('error', showJFallback, { once: true });
+  if (officialJ.complete && officialJ.naturalWidth === 0) showJFallback();
+}
