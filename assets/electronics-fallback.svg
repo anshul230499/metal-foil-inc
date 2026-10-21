@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="Stylized precision electronics circuit illustration">
+<defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#163c58"/><stop offset="1" stop-color="#2a7390"/></linearGradient><pattern id="g" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#b8d8e6" stroke-width="1" opacity=".13"/></pattern></defs>
+<rect width="900" height="620" fill="url(#b)"/><rect width="900" height="620" fill="url(#g)"/>
+<g stroke="#96cbd8" stroke-width="8" fill="none" opacity=".65"><path d="M70 90H230V200H350M830 150H650V270H550M68 520H240V400H360M840 500H710V390H550M180 250H350M730 340H555"/></g>
+<g fill="#a5d4e1"><circle cx="70" cy="90" r="15"/><circle cx="830" cy="150" r="15"/><circle cx="68" cy="520" r="15"/><circle cx="840" cy="500" r="15"/><circle cx="180" cy="250" r="12"/><circle cx="730" cy="340" r="12"/></g>
+<rect x="348" y="190" width="210" height="245" rx="18" fill="#122b42" stroke="#cee3ef" stroke-width="10"/><rect x="390" y="229" width="126" height="164" rx="10" fill="#2f7792"/><path d="M410 300L435 326L489 265" fill="none" stroke="#c4e0eb" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#b1dbe8" stroke-width="7"><path d="M365 190V160M365 435V463"/><path d="M395 190V160M395 435V463"/><path d="M425 190V160M425 435V463"/><path d="M455 190V160M455 435V463"/><path d="M485 190V160M485 435V463"/><path d="M515 190V160M515 435V463"/></g></svg>

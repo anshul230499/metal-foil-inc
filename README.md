@@ -214,3 +214,9 @@ Replaced only the crude, bulbous northwest India vector extension with a finer s
 - Cards retain clickable flip-to-read details. Arrow controls and a visible Pause/Play button work with the moving deck.
 - Automatic animation stops when out of view or the browser tab is hidden, and respects reduced-motion preferences.
 - Retains the Version 47 India outline and all previous sections and links.
+
+
+## Version 50 fixes
+- Electronics card: new licensed Pexels electronics manufacturing image, alternative licensed Pexels photo and local SVG fallback if external photos fail to load. The click-to-flip behavior stays in place.
+- Map: newly rendered from Natural Earth geographic boundaries in Robinson projection to avoid disproportionate continental shapes and screen stretching. India and the U.S. retain the original orange/blue treatment. A schematic northwest India extension remains illustrative only.
+- All animations are removed from the map (traveling pulse, location ripples, animated line and hover movement). The flashcard carousel still rotates automatically.

@@ -121,3 +121,8 @@ Images are embedded via Pexels CDN and are credited to their author on the websi
 - Simplified map graphic: adapted from the preexisting custom site illustration. India outline revised with https://surveyofindia.gov.in/pages/outline-maps-of-india used as a visual reference; no government PDF or map artwork is copied into the website. Not for political boundary determination.
 
 - Northern India contour visual reference: Survey of India, [Official Boundary of India](https://surveyofindia.gov.in/pages/public-awareness), accessible JPG [map-of-india-1.jpg](https://surveyofindia.gov.in/documents/map-of-india-1.jpg). The website uses a stylized derivative drawn for the small map and is not an authoritative political map.
+
+
+Version 50 map source: Natural Earth low-resolution country boundaries (public domain) packaged with pyogrio; Robinson world projection calculated using PROJ/pyproj. The India northwest outline remains an illustrative portrayal referencing the Survey of India — it is not a substitute for an official political map.
+
+Version 50 electronics card: Andrey Matveev, “Production Line of Computer Elements”, Pexels — https://www.pexels.com/photo/production-line-of-computer-elements-5554948/ (Pexels License); secondary photograph, Pixabay “Black and Blue Electronic Tools on Green Circuit Board”, Pexels — https://www.pexels.com/photo/black-and-blue-electronic-tools-on-green-circuit-board-39290/ . Local SVG fallback authored for this site.

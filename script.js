@@ -413,3 +413,22 @@ if (officialJ) {
     beginRotation();
   }
 })();
+
+
+// v50: Replace an unavailable Electronics photo with a second licensed image, then the bundled SVG.
+(() => {
+  const img = document.querySelector('.industry-card[data-application="electronics"] .industry-photo img');
+  if (!img) return;
+  const swap = () => {
+    if (img.dataset.fallbackStage === 'local') return;
+    if (img.dataset.fallbackStage !== 'alternate' && img.dataset.alternateSrc) {
+      img.dataset.fallbackStage = 'alternate';
+      img.src = img.dataset.alternateSrc;
+    } else {
+      img.dataset.fallbackStage = 'local';
+      img.src = img.dataset.fallbackSrc || 'assets/electronics-fallback.svg';
+    }
+  };
+  img.addEventListener('error', swap);
+  if (img.complete && img.naturalWidth === 0) swap();
+})();

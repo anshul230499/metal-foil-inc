@@ -2673,44 +2673,58 @@ body.v34-porcelain .industries-section .industry-scroll:hover{
   .industries-section.industry-deck-ready .industry-face-front .industry-photo {margin:7px 0 8px!important;}
 }
 
-/* A single traveling highlight across the established US–India connection line.
-   The original India outline, flat SVG art and map dimensions are untouched. */
-.v34-porcelain .v34-map-trace {height:2px;opacity:.67;}
-.v34-porcelain .v34-map-trace::after {
-  content:"";position:absolute;top:50%;left:0;
-  width:8px;height:8px;border-radius:50%;
-  background:#1888c4;
-  box-shadow:0 0 0 3px rgba(29,132,195,.13),0 0 15px 5px rgba(26,132,199,.17);
-  transform:translate(-50%,-50%);
-  opacity:0;
-  pointer-events:none;
+
+
+/* v50: World boundaries shown in balanced Robinson projection with one unscaled SVG.
+   Remove every map-specific animation, including legacy entrance reveal and hover movement. */
+body.v34-porcelain .v34-map-stage{
+  height:clamp(390px,39vw,585px)!important;
+  background:#fbf8f5!important;
 }
-.v34-porcelain .v34-map-stage.is-visible .v34-map-trace::after {
-  animation:v49MapTransit 8s ease-in-out 1.6s infinite;
+body.v34-porcelain .v34-map-art{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  opacity:1!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
 }
-@keyframes v49MapTransit {
-  0%,8%{left:0;opacity:0;}
-  16%{opacity:1;}
-  84%{opacity:1;}
-  94%,100%{left:100%;opacity:0;}
+body.v34-porcelain .v34-map-art img{
+  position:static!important;
+  display:block!important;
+  left:auto!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  animation:none!important;
+  transition:none!important;
 }
-.v34-porcelain .v34-map-caption .v34-location-dot{position:relative;isolation:isolate;}
-.v34-porcelain .v34-map-caption .v34-location-dot::after {
-  content:"";position:absolute;inset:-2px;border-radius:50%;
-  border:1px solid currentColor;opacity:0;
-  pointer-events:none;
+body.v34-porcelain .v34-map-stage::before{display:none!important;}
+body.v34-porcelain .v34-map-trace{
+  opacity:.32!important;
+  transform:scaleX(1)!important;
+  transition:none!important;
+  animation:none!important;
 }
-.v34-porcelain .v34-map-us .v34-location-dot{color:#0e7bc6;}
-.v34-porcelain .v34-map-india .v34-location-dot{color:#ff7b29;}
-.v34-porcelain .v34-map-stage.is-visible .v34-location-dot::after {
-  animation:v49MapRipple 4.5s ease-out 1.1s infinite;
+body.v34-porcelain .v34-map-trace::after,
+body.v34-porcelain .v34-location-dot::after{content:none!important;animation:none!important;}
+body.v34-porcelain .v34-map-caption,
+body.v34-porcelain .v34-map-caption:hover{
+  transform:none!important;transition:none!important;
+  box-shadow:0 12px 30px rgba(24,59,92,.085)!important;
 }
-.v34-porcelain .v34-map-stage.is-visible .v34-map-india .v34-location-dot::after {animation-delay:2.4s;}
-@keyframes v49MapRipple {
-  0%{opacity:.42;transform:scale(.9);}
-  70%,100%{opacity:0;transform:scale(3.6);}
+@media(max-width:700px){
+ body.v34-porcelain .v34-map-stage{height:340px!important;background:#fbf8f5!important;}
+ body.v34-porcelain .v34-map-art{inset:0!important;}
+ body.v34-porcelain .v34-map-art img{width:100%!important;max-width:100%!important;left:auto!important;height:100%!important;object-fit:contain!important;}
 }
-@media(prefers-reduced-motion:reduce){
-  .v34-porcelain .v34-map-stage .v34-map-trace::after,
-  .v34-porcelain .v34-map-stage .v34-location-dot::after{animation:none!important;opacity:0!important;}
+@media(min-width:701px) and (max-width:1000px){body.v34-porcelain .v34-map-stage{height:420px!important;}}
+/* Electronics image has a visible non-photographic fallback if a stock CDN is inaccessible. */
+.industries-section .industry-card[data-application="electronics"] .industry-photo{
+  background:#dbe9f0 url('assets/electronics-fallback.svg') center / cover no-repeat!important;
 }
