@@ -1947,3 +1947,43 @@ body.v36-motion-ready .v36-reveal.v36-photo-enter.v36-revealed {
 }
 
 /* v40: Back to a white, clean industrial look. All wave and sun overlays removed. */
+
+
+/* Version 41: stronger sticky navigation and a clear brochure reference */
+html { scroll-padding-top: 112px; }
+body.v34-porcelain .site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 200 !important;
+  width:100%;
+  background:rgba(255,255,255,.95)!important;
+  backdrop-filter:blur(22px) saturate(1.25);
+}
+body.v34-porcelain .nav-wrap {height:100px;}
+body.v34-porcelain .brand-logo {width:250px;max-width:30vw;}
+body.v34-porcelain .site-nav {gap:clamp(14px,1.35vw,24px)}
+body.v34-porcelain .site-nav a {font-size:15px;line-height:1.35;}
+body.v34-porcelain .site-nav .nav-rfq {padding:16px 22px;font-size:15px;}
+body.v34-porcelain .jindal-floating-mark {z-index:210!important;}
+.technical-brochure-note{font-size:13px;line-height:1.6;margin:15px 6px 0;color:#657585;letter-spacing:.005em}
+.technical-brochure-note a{color:#155e9b;text-decoration:none;border-bottom:1px solid rgba(21,94,155,.26);transition:color .2s,border-color .2s}
+.technical-brochure-note a:hover{color:#ed7023;border-color:#ed7023}
+@media(max-width:1250px) and (min-width:1001px){
+ body.v34-porcelain .brand-logo{width:210px}
+ body.v34-porcelain .site-nav{gap:11px}
+ body.v34-porcelain .site-nav a{font-size:13px}
+ body.v34-porcelain .site-nav .nav-rfq{padding:14px 15px;font-size:13px}
+}
+@media(max-width:1000px){
+ body.v34-porcelain .nav-wrap{height:82px}
+ body.v34-porcelain .site-nav{top:82px}
+ body.v34-porcelain .brand-logo{width:215px;max-width:50vw}
+ body.v34-porcelain .site-nav a{font-size:15px}
+}
+@media(max-width:680px){
+ html{scroll-padding-top:80px}
+ body.v34-porcelain .nav-wrap{height:74px}
+ body.v34-porcelain .site-nav{top:74px}
+ body.v34-porcelain .brand-logo{width:187px;max-width:62vw}
+ .technical-brochure-note{font-size:12.5px}
+}
