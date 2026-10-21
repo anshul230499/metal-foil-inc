@@ -119,3 +119,5 @@ Images are embedded via Pexels CDN and are credited to their author on the websi
 - precision-fabrication: https://www.pexels.com/photo/industrial-machinery-in-factory-8973680/ — Rolled Alloys Specialty Metal Supplier.
 
 - Simplified map graphic: adapted from the preexisting custom site illustration. India outline revised with https://surveyofindia.gov.in/pages/outline-maps-of-india used as a visual reference; no government PDF or map artwork is copied into the website. Not for political boundary determination.
+
+- Northern India contour visual reference: Survey of India, [Official Boundary of India](https://surveyofindia.gov.in/pages/public-awareness), accessible JPG [map-of-india-1.jpg](https://surveyofindia.gov.in/documents/map-of-india-1.jpg). The website uses a stylized derivative drawn for the small map and is not an authoritative political map.

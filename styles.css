@@ -2491,3 +2491,129 @@ body.v34-porcelain .site-nav .nav-rfq:hover{transform:translateY(-3px);box-shado
 @media(prefers-reduced-motion:reduce){
   .industry-card,.industry-card.is-active,.industry-card.is-prev,.industry-card.is-next{transform:none!important;}
 }
+
+
+/* v48: return the application showcase to white; let photography and motion carry the design. */
+body.v34-porcelain .industries-section{
+  position:relative;
+  background:#fff!important;
+  color:#173a57;
+  isolation:isolate;
+  overflow:hidden;
+  padding:clamp(75px,7vw,112px) 0!important;
+  border-top:1px solid #eef2f5;
+  border-bottom:1px solid #eef2f5;
+}
+body.v34-porcelain .industries-section::before,
+body.v34-porcelain .industries-section::after{content:none!important;display:none!important;}
+body.v34-porcelain .industries-section .industries-head h2{color:#153b5a!important;}
+body.v34-porcelain .industries-section .industries-head>p{color:#5a7184!important;}
+body.v34-porcelain .industries-section .kicker{color:#176ea7!important;}
+body.v34-porcelain .industries-section .industries-count{color:#658196!important;}
+body.v34-porcelain .industries-section .industries-note,
+body.v34-porcelain .industries-section .industries-photo-credits,
+body.v34-porcelain .industries-section .industries-photo-credits a,
+body.v34-porcelain .industries-section .industries-photo-credits summary{color:#667d8c!important;}
+body.v34-porcelain .industries-section .industry-scroll{
+  background:#fff!important;border-color:#dce6ed!important;color:#1a6eaa!important;
+}
+body.v34-porcelain .industries-section .industry-scroll:hover{
+  background:#126da8!important;border-color:#126da8!important;color:#fff!important;
+}
+.industries-controls{display:flex;align-items:center;gap:10px;}
+.industry-autoplay{
+  min-width:93px;height:44px;padding:0 14px;display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:rgba(239,246,251,.75);border:1px solid #dce8f0;border-radius:22px;
+  color:#2e607d;font:700 12px/1 "DM Sans",Arial,sans-serif;
+  cursor:pointer;transition:background .25s ease,border-color .25s ease,transform .25s ease;
+}
+.industry-autoplay:hover{background:#e4f2fc;border-color:#b6d5e9;transform:translateY(-1px);}
+.industry-autoplay:focus-visible{outline:3px solid #f19550;outline-offset:3px;}
+.industry-autoplay-icon{font-size:15px;line-height:1;letter-spacing:-.1em;}
+.industry-autoplay[hidden]{display:none!important;}
+
+/* Without script (and with reduced motion), the original horizontally scrollable layout remains. */
+.industries-section .industry-photo{height:254px!important;border-radius:15px!important;}
+.industries-section .industry-card{height:455px!important;}
+.industries-section .industry-face{padding:16px 17px 18px!important;border-radius:20px!important;}
+.industries-section .industry-face-front{
+  background:rgba(255,255,255,.91)!important;
+  border:1px solid rgba(195,214,227,.86)!important;
+  box-shadow:0 18px 48px rgba(18,73,110,.11);
+  backdrop-filter:blur(12px);
+}
+.industries-section .industry-face-back{
+  background:linear-gradient(150deg,rgba(19,71,113,.92),rgba(27,112,163,.92))!important;
+  border-color:#75aed2!important;
+}
+.industries-section .industry-title{color:#143c5b!important;}
+.industries-section .industry-subtitle{color:#657f92!important;}
+.industries-section .industry-cue{color:#126fab!important;}
+.industries-section .industry-category{color:#68879a!important;}
+.industries-section .industry-number{color:#ec8032!important;}
+.industries-section .industry-back-title{color:#fff!important;}
+.industries-section .industry-description,.industries-section .industry-back-footer{color:#e9f5fc!important;}
+.industries-section .industry-back-eyebrow{color:#afd9f0!important;}
+.industries-section .industry-photo img{filter:saturate(.88) contrast(1.06) brightness(1.025)!important;}
+
+/* Real circular deck: each item has an independent absolute position around the center.
+   New featured cards move from LEFT to CENTER; cards that leave move to the RIGHT. */
+.industries-section.industry-deck-ready .industries-track{
+  --industry-step:clamp(215px,28vw,324px);
+  position:relative!important;
+  display:block!important;
+  width:100%;height:clamp(500px,44vw,550px);
+  padding:0!important;
+  margin:0!important;
+  overflow:hidden!important;
+  scroll-behavior:auto!important;
+  scroll-snap-type:none!important;
+  scrollbar-width:none!important;
+  perspective:1400px;
+}
+.industries-section.industry-deck-ready .industries-track::-webkit-scrollbar{display:none;}
+.industries-section.industry-deck-ready .industry-card{
+  position:absolute!important;top:50%;left:50%;
+  width:clamp(294px,29.5vw,366px)!important;
+  height:clamp(430px,40vw,478px)!important;
+  flex:none!important;
+  margin:0!important;padding:0!important;
+  scroll-snap-align:none!important;
+  opacity:var(--deck-opacity,0)!important;
+  z-index:var(--deck-z,1)!important;
+  transform:translate(-50%,-50%) translateX(calc(var(--industry-step) * var(--deck-offset,0))) rotateY(var(--deck-yaw,0deg)) scale(var(--deck-scale,1))!important;
+  transition:transform 920ms cubic-bezier(.2,.72,.18,1),opacity 800ms ease,filter 800ms ease!important;
+  pointer-events:none;
+}
+.industries-section.industry-deck-ready .industry-card.is-active,
+.industries-section.industry-deck-ready .industry-card.is-prev,
+.industries-section.industry-deck-ready .industry-card.is-next{pointer-events:auto;}
+.industries-section.industry-deck-ready .industry-card.is-active{filter:saturate(1.04);}
+.industries-section.industry-deck-ready .industry-card.is-active .industry-face-front{
+  border-color:rgba(165,199,222,.90)!important;
+  box-shadow:0 27px 66px rgba(16,78,120,.18);
+}
+.industries-section.industry-deck-ready .industry-card.is-prev,
+.industries-section.industry-deck-ready .industry-card.is-next{filter:saturate(.8);}
+.industries-section.industry-deck-ready .industry-photo{height:277px!important;margin:14px 0 16px!important;}
+.industries-section.industry-deck-ready .industry-card-rotator{transition:transform 720ms cubic-bezier(.24,.72,.3,1)!important;}
+.industries-section.industry-deck-ready .industry-card.is-flipped .industry-card-rotator{transform:rotateY(180deg)!important;}
+/* v45 entrance-only overrides must not mask the moving deck. */
+.industries-section.industry-deck-ready .industry-card:not(.is-arrived),
+.industries-section.industry-deck-ready .industry-card.is-arrived{opacity:var(--deck-opacity,0)!important;}
+@media(max-width:900px){
+  .industries-section.industry-deck-ready .industries-track{--industry-step:clamp(180px,43vw,290px);height:505px;}
+  .industries-section.industry-deck-ready .industry-card{width:min(76vw,343px)!important;height:446px!important;}
+  .industries-section.industry-deck-ready .industry-photo{height:248px!important;}
+}
+@media(max-width:560px){
+  .industries-section .industries-toolbar{flex-wrap:wrap;gap:10px;}
+  .industries-section.industry-deck-ready .industries-track{--industry-step:clamp(172px,64vw,265px);height:480px;}
+  .industries-section.industry-deck-ready .industry-card{width:min(79vw,330px)!important;height:425px!important;}
+  .industries-section.industry-deck-ready .industry-photo{height:227px!important;}
+  .industries-section .industry-autoplay{height:40px;min-width:82px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .industries-section .industry-card{transition:none!important;}
+  .industries-section .industry-photo img{transition:none!important;}
+}

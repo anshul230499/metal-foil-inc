@@ -269,161 +269,147 @@ if (officialJ) {
 
 
 
-// v46: rotating industry carousel with centered active card, larger imagery and staggered reveal.
+// v48: a real cyclic showcase, not an auto-scrolling strip. Cards move from left to center.
+// Animation only runs while this section is onscreen and motion is permitted.
 (() => {
-  const track = document.getElementById('industryTrack');
-  if (!track) return;
   const section = document.getElementById('industries');
-  const cards = [...track.querySelectorAll('.industry-card')];
-  const progress = document.getElementById('industryCount');
-  const scrollButtons = [...document.querySelectorAll('.industry-scroll')];
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const track = document.getElementById('industryTrack');
+  if (!section || !track) return;
+  const cards = Array.from(track.querySelectorAll('.industry-card'));
+  if (!cards.length) return;
+  const count = document.getElementById('industryCount');
+  const arrows = Array.from(section.querySelectorAll('.industry-scroll'));
+  const pauseButton = document.getElementById('industryAutoplay');
+  const pauseIcon = pauseButton?.querySelector('.industry-autoplay-icon');
+  const pauseLabel = pauseButton?.querySelector('.industry-autoplay-label');
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   let activeIndex = 0;
-  let autoplay = null;
+  let intervalId = null;
+  let flipTimeout = null;
+  let resumeTimeout = null;
+  let inView = false;
   let userPaused = false;
+  let interactionPaused = false;
+  const intervalMs = 3600;
 
-  const updateProgress = () => {
-    if (progress) {
-      progress.textContent = `${String(activeIndex + 1).padStart(2, '0')} — ${String(cards.length).padStart(2, '0')}  /  APPLICATIONS`;
+  function stopRotation() {
+    if (intervalId !== null) {
+      window.clearInterval(intervalId);
+      intervalId = null;
     }
-  };
-
-  const updateButtonState = () => {
-    if (!scrollButtons.length) return;
-    const max = Math.max(0, track.scrollWidth - track.clientWidth);
-    scrollButtons.forEach((btn) => {
-      btn.disabled = max <= 8;
+  }
+  function beginRotation() {
+    stopRotation();
+    if (!inView || document.hidden || userPaused || interactionPaused || motionQuery.matches) return;
+    intervalId = window.setInterval(() => setActive(activeIndex - 1), intervalMs);
+  }
+  function clearFlip() {
+    if (flipTimeout !== null) window.clearTimeout(flipTimeout);
+    flipTimeout = null;
+    cards.forEach(card => {
+      card.classList.remove('is-flipped');
+      card.setAttribute('aria-pressed', 'false');
     });
-  };
-
-  const setActiveClasses = () => {
+  }
+  function positionCards() {
     cards.forEach((card, index) => {
-      card.classList.toggle('is-active', index === activeIndex);
-      card.classList.toggle('is-prev', index === (activeIndex - 1 + cards.length) % cards.length);
-      card.classList.toggle('is-next', index === (activeIndex + 1) % cards.length);
-      if (index !== activeIndex && !card.classList.contains('is-flipped')) {
-        card.classList.remove('is-flipped');
-        card.setAttribute('aria-pressed', 'false');
-      }
+      const raw = (index - activeIndex + cards.length) % cards.length;
+      const offset = raw > cards.length / 2 ? raw - cards.length : raw;
+      const distance = Math.abs(offset);
+      const clamped = Math.max(-3, Math.min(3, offset));
+      card.style.setProperty('--deck-offset', String(clamped));
+      card.style.setProperty('--deck-scale', distance === 0 ? '1' : distance === 1 ? '.86' : '.70');
+      card.style.setProperty('--deck-yaw', `${offset === 0 ? 0 : offset < 0 ? 12 : -12}deg`);
+      card.style.setProperty('--deck-opacity', distance <= 1 ? '1' : distance === 2 ? '.25' : '0');
+      card.style.setProperty('--deck-z', String(Math.max(1, 10 - distance)));
+      card.classList.toggle('is-active', distance === 0);
+      card.classList.toggle('is-prev', offset === -1);
+      card.classList.toggle('is-next', offset === 1);
+      // Keep only the featured card in keyboard tab order; arrows provide full deck access.
+      card.tabIndex = distance === 0 ? 0 : -1;
+      card.setAttribute('aria-hidden', distance <= 1 ? 'false' : 'true');
+      card.setAttribute('aria-current', distance === 0 ? 'true' : 'false');
     });
-    updateProgress();
-    updateButtonState();
-  };
-
-  const scrollToIndex = (index, behavior = 'smooth') => {
+    if (count) count.textContent = `${String(activeIndex + 1).padStart(2,'0')} — ${String(cards.length).padStart(2,'0')}  /  APPLICATIONS`;
+  }
+  function setActive(index) {
+    clearFlip();
     activeIndex = (index + cards.length) % cards.length;
-    const card = cards[activeIndex];
-    const left = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
-    track.scrollTo({ left: Math.max(0, left), behavior: reducedMotion ? 'auto' : behavior });
-    setActiveClasses();
-  };
-
-  const detectActiveFromScroll = () => {
-    const trackRect = track.getBoundingClientRect();
-    const trackCenter = trackRect.left + trackRect.width / 2;
-    let bestIndex = 0;
-    let bestDistance = Infinity;
-    cards.forEach((card, index) => {
-      const r = card.getBoundingClientRect();
-      const center = r.left + r.width / 2;
-      const d = Math.abs(center - trackCenter);
-      if (d < bestDistance) {
-        bestDistance = d;
-        bestIndex = index;
-      }
-    });
-    if (bestIndex !== activeIndex) {
-      activeIndex = bestIndex;
-      setActiveClasses();
-    }
-  };
-
-  const stopAutoplay = () => {
-    if (autoplay) {
-      window.clearInterval(autoplay);
-      autoplay = null;
-    }
-  };
-
-  const startAutoplay = () => {
-    stopAutoplay();
-    if (reducedMotion || userPaused || cards.length < 2) return;
-    autoplay = window.setInterval(() => {
-      scrollToIndex(activeIndex + 1, 'smooth');
-    }, 3200);
-  };
+    positionCards();
+  }
+  function pauseBriefly(milliseconds = 5500) {
+    interactionPaused = true;
+    stopRotation();
+    if (resumeTimeout !== null) window.clearTimeout(resumeTimeout);
+    resumeTimeout = window.setTimeout(() => {
+      interactionPaused = false;
+      clearFlip();
+      beginRotation();
+      resumeTimeout = null;
+    }, milliseconds);
+  }
 
   cards.forEach((card, index) => {
-    card.addEventListener('click', (event) => {
-      const isActive = index === activeIndex;
-      if (!isActive) {
-        event.preventDefault();
-        userPaused = true;
-        stopAutoplay();
-        scrollToIndex(index, 'smooth');
-        window.setTimeout(() => { userPaused = false; startAutoplay(); }, 4800);
+    card.addEventListener('click', () => {
+      if (index !== activeIndex) {
+        setActive(index);
+        pauseBriefly(3600);
         return;
       }
-      const isFlipped = card.classList.toggle('is-flipped');
-      card.setAttribute('aria-pressed', String(isFlipped));
-      card.setAttribute('aria-label', isFlipped
-        ? 'Application details shown. Activate to return to ' + card.querySelector('.industry-title').textContent + '.'
-        : card.querySelector('.industry-title').textContent + '. Activate for application details.');
-      userPaused = true;
-      stopAutoplay();
-      window.setTimeout(() => { userPaused = false; startAutoplay(); }, isFlipped ? 6400 : 3600);
+      const flipped = card.classList.toggle('is-flipped');
+      card.setAttribute('aria-pressed', String(flipped));
+      pauseBriefly(flipped ? 7200 : 2700);
     });
   });
-
-  scrollButtons.forEach((button) => button.addEventListener('click', (event) => {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    userPaused = true;
-    stopAutoplay();
-    scrollToIndex(activeIndex + (button.dataset.direction === 'next' ? 1 : -1), 'smooth');
-    window.setTimeout(() => { userPaused = false; startAutoplay(); }, 4200);
-  }, true));
-
-  let scrollTimer;
-  track.addEventListener('scroll', () => {
-    detectActiveFromScroll();
-    window.clearTimeout(scrollTimer);
-    scrollTimer = window.setTimeout(() => {
-      scrollToIndex(activeIndex, 'smooth');
-    }, reducedMotion ? 0 : 110);
-  }, { passive: true });
-
-  ['pointerenter', 'focusin', 'touchstart'].forEach(type => section.addEventListener(type, () => {
-    userPaused = true;
-    stopAutoplay();
-  }, { passive: true }));
-  ['pointerleave', 'focusout'].forEach(type => section.addEventListener(type, () => {
-    userPaused = false;
-    startAutoplay();
-  }, { passive: true }));
-
-  const armReveal = () => {
-    if (!('IntersectionObserver' in window) || reducedMotion) {
-      cards.forEach(card => card.classList.add('is-arrived'));
-      section.classList.add('industries-motion-ready');
-      return;
-    }
-    const observer = new IntersectionObserver((entries, obs) => {
-      if (!entries.some(entry => entry.isIntersecting)) return;
-      obs.disconnect();
-      section.classList.add('industries-motion-ready');
-      cards.forEach((card, index) => {
-        window.setTimeout(() => card.classList.add('is-arrived'), index * 140);
-      });
-    }, { threshold: 0.12 });
-    observer.observe(section);
-  };
-
-  armReveal();
-  window.addEventListener('resize', () => scrollToIndex(activeIndex, 'auto'), { passive: true });
-  requestAnimationFrame(() => {
-    scrollToIndex(0, 'auto');
-    startAutoplay();
+  arrows.forEach(arrow => {
+    arrow.addEventListener('click', () => {
+      setActive(activeIndex + (arrow.dataset.direction === 'prev' ? -1 : 1));
+      pauseBriefly(4300);
+    });
   });
+  function updatePauseButton() {
+    if (!pauseButton) return;
+    pauseButton.setAttribute('aria-pressed', String(userPaused));
+    pauseButton.setAttribute('aria-label', userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel');
+    if (pauseLabel) pauseLabel.textContent = userPaused ? 'Play' : 'Pause';
+    if (pauseIcon) pauseIcon.textContent = userPaused ? '▶' : 'Ⅱ';
+  }
+  pauseButton?.addEventListener('click', () => {
+    userPaused = !userPaused;
+    interactionPaused = false;
+    if (resumeTimeout !== null) window.clearTimeout(resumeTimeout);
+    resumeTimeout = null;
+    clearFlip();
+    updatePauseButton();
+    beginRotation();
+  });
+  // Respect both OS motion preferences and page visibility.
+  motionQuery.addEventListener?.('change', () => {
+    const reduce = motionQuery.matches;
+    section.classList.toggle('industry-deck-ready', !reduce);
+    if (pauseButton) pauseButton.hidden = reduce;
+    cards.forEach(card => { card.tabIndex = 0; card.removeAttribute('aria-hidden'); });
+    if (!reduce) positionCards();
+    beginRotation();
+  });
+  document.addEventListener('visibilitychange', beginRotation);
+
+  // If animations are disabled, retain the original horizontally scrolling, fully readable cards.
+  if (motionQuery.matches) {
+    if (pauseButton) pauseButton.hidden = true;
+    return;
+  }
+  // Set positions while cards are still in the offscreen setup state, avoiding layout jumps.
+  positionCards();
+  section.classList.add('industry-deck-ready');
+  if ('IntersectionObserver' in window) {
+    const visibilityObserver = new IntersectionObserver(entries => {
+      inView = entries.some(entry => entry.isIntersecting);
+      beginRotation();
+    }, { threshold: 0.15 });
+    visibilityObserver.observe(section);
+  } else {
+    inView = true;
+    beginRotation();
+  }
 })();
-;

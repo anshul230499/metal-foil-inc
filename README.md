@@ -196,3 +196,16 @@ The Jindal J is now an integral right-hand item of the sticky header, not a floa
 - Positioned **View Inventory** immediately after **Certificates** and before **Request a Quote** in the top ribbon.
 - Increased the map's vertical display area and replaced the former rounded northern India accent with a narrow, more naturally contoured schematic accent. Official geographic reference: https://surveyofindia.gov.in/pages/outline-maps-of-india. Our simplified world map is illustrative and must not be used as official border data.
 - Manufacturing text identifies Jindal Metals & Alloys Limited as the manufacturing mill, not as a separate partner.
+
+
+## Version 47 — northern India map refinement
+
+Replaced only the crude, bulbous northwest India vector extension with a finer single connected outline, using the Survey of India official boundary map as visual reference. All other sections and styles follow Version 46.
+
+
+## Version 48 — White industry carousel
+- Restored a pure white backdrop to Industries & Applications.
+- The eight large photo cards now cycle from left to center with 3D depth, advancing automatically every 3.6 seconds while onscreen.
+- Cards retain clickable flip-to-read details. Arrow controls and a visible Pause/Play button work with the moving deck.
+- Automatic animation stops when out of view or the browser tab is hidden, and respects reduced-motion preferences.
+- Retains the Version 47 India outline and all previous sections and links.
