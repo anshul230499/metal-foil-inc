@@ -330,7 +330,7 @@ if (officialJ) {
       card.setAttribute('aria-hidden', distance <= 1 ? 'false' : 'true');
       card.setAttribute('aria-current', distance === 0 ? 'true' : 'false');
     });
-    if (count) count.textContent = `${String(activeIndex + 1).padStart(2,'0')} — ${String(cards.length).padStart(2,'0')}  /  APPLICATIONS`;
+    if (count) count.textContent = `${activeIndex + 1} — ${cards.length}  /  APPLICATIONS`;
   }
   function setActive(index) {
     clearFlip();

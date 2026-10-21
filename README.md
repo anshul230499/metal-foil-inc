@@ -1,6 +1,11 @@
-# Metal Foil Inc. Website — v44
+# Metal Foil Inc. Website — v49
 
-## Current release (v44)
+## Current release (v49)
+- Display flashcard numbers as plain 1–8 on front, back, and carousel counter.
+- Enlarge the photograph portion of each card by reducing interior margins and typography, while preserving card dimensions and automatic rotation.
+- Animate the established US–India route with a restrained traveling light and gently pulsing location markers. The map illustration and India outline are unchanged.
+- Respect reduced-motion preferences for the map and carousel.
+
 - Removed the supplementary mill image gallery and the short manufacturing video. Opening hero photography and all product details remain.
 - Added eight interactive, keyboard- and touch-accessible applications cards near the bottom of the page, ahead of Request for Quotation. Tap or click each card to reveal its details; arrow controls browse the horizontal row.
 - Changed supply-chain terminology to **Manufacturing mill** for Jindal Metals & Alloys Limited.

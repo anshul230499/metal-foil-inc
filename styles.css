@@ -2617,3 +2617,100 @@ body.v34-porcelain .industries-section .industry-scroll:hover{
   .industries-section .industry-card{transition:none!important;}
   .industries-section .industry-photo img{transition:none!important;}
 }
+
+
+/* VERSION 49 — bigger pictures in the existing-size cards; subtle world-map motion. */
+/* Keep all eight card widths/heights exactly as in v48. Reallocate existing height toward photography. */
+.industries-section .industry-face-front {
+  padding:12px 12px 13px!important;
+  display:flex;
+  flex-direction:column;
+}
+.industries-section .industry-card-top {
+  flex:0 0 auto;
+  font-size:9px;
+  line-height:1.2;
+  letter-spacing:.10em;
+  min-height:16px;
+}
+.industries-section .industry-face-front .industry-photo,
+.industries-section.industry-deck-ready .industry-face-front .industry-photo {
+  height:auto!important;
+  flex:1 1 auto!important;
+  min-height:0;
+  width:100%;
+  margin:8px 0 9px!important;
+  border-radius:14px!important;
+}
+.industries-section .industry-photo img {display:block;width:100%;height:100%;object-fit:cover;object-position:center;}
+.industries-section .industry-face-front .industry-title {
+  font-size:clamp(19px,1.55vw,22px)!important;
+  line-height:1.1;
+  letter-spacing:-.035em;
+  max-width:none;
+  flex:0 0 auto;
+  margin-top:0!important;
+}
+.industries-section .industry-face-front .industry-subtitle {
+  font-size:12px;
+  line-height:1.2;
+  margin-top:4px!important;
+  flex:0 0 auto;
+}
+.industries-section .industry-face-front .industry-cue {
+  font-size:10px;
+  line-height:1.1;
+  padding-top:7px!important;
+  margin-top:7px!important;
+  flex:0 0 auto;
+}
+.industries-section .industry-face-front .industry-photo-label {font-size:8px;bottom:10px;left:11px;}
+@media(max-width:560px){
+  .industries-section .industry-face-front{padding:11px!important;}
+  .industries-section .industry-face-front .industry-title{font-size:19px!important;}
+  .industries-section .industry-face-front .industry-subtitle{font-size:11px;}
+  .industries-section .industry-face-front .industry-photo,
+  .industries-section.industry-deck-ready .industry-face-front .industry-photo {margin:7px 0 8px!important;}
+}
+
+/* A single traveling highlight across the established US–India connection line.
+   The original India outline, flat SVG art and map dimensions are untouched. */
+.v34-porcelain .v34-map-trace {height:2px;opacity:.67;}
+.v34-porcelain .v34-map-trace::after {
+  content:"";position:absolute;top:50%;left:0;
+  width:8px;height:8px;border-radius:50%;
+  background:#1888c4;
+  box-shadow:0 0 0 3px rgba(29,132,195,.13),0 0 15px 5px rgba(26,132,199,.17);
+  transform:translate(-50%,-50%);
+  opacity:0;
+  pointer-events:none;
+}
+.v34-porcelain .v34-map-stage.is-visible .v34-map-trace::after {
+  animation:v49MapTransit 8s ease-in-out 1.6s infinite;
+}
+@keyframes v49MapTransit {
+  0%,8%{left:0;opacity:0;}
+  16%{opacity:1;}
+  84%{opacity:1;}
+  94%,100%{left:100%;opacity:0;}
+}
+.v34-porcelain .v34-map-caption .v34-location-dot{position:relative;isolation:isolate;}
+.v34-porcelain .v34-map-caption .v34-location-dot::after {
+  content:"";position:absolute;inset:-2px;border-radius:50%;
+  border:1px solid currentColor;opacity:0;
+  pointer-events:none;
+}
+.v34-porcelain .v34-map-us .v34-location-dot{color:#0e7bc6;}
+.v34-porcelain .v34-map-india .v34-location-dot{color:#ff7b29;}
+.v34-porcelain .v34-map-stage.is-visible .v34-location-dot::after {
+  animation:v49MapRipple 4.5s ease-out 1.1s infinite;
+}
+.v34-porcelain .v34-map-stage.is-visible .v34-map-india .v34-location-dot::after {animation-delay:2.4s;}
+@keyframes v49MapRipple {
+  0%{opacity:.42;transform:scale(.9);}
+  70%,100%{opacity:0;transform:scale(3.6);}
+}
+@media(prefers-reduced-motion:reduce){
+  .v34-porcelain .v34-map-stage .v34-map-trace::after,
+  .v34-porcelain .v34-map-stage .v34-location-dot::after{animation:none!important;opacity:0!important;}
+}
