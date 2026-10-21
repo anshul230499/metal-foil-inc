@@ -129,3 +129,9 @@ Version 50 electronics card: Andrey Matveev, “Production Line of Computer Elem
 
 
 Version 51 Kashmir/PoK highlight: Simplified, manually drawn illustrative contour for a global commercial map; checked against Natural Earth Afghanistan geometry to prevent the orange highlight entering Afghanistan. Survey of India 1:16m outline references: https://surveyofindia.gov.in/pages/outline-maps-of-india . The highlighted boundary is intentionally not presented as a precise administrative or international boundary.
+
+
+### Version 52 credit links
+Hero main mill image: https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785391005/jindal/banner/1785391003828-banner-slide11.jpg
+Hero smaller foil-processing image: https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785390878/jindal/banner/1785390876744-banner-slide2.jpg
+The manufacturer-hosted product image in the introduction remains linked to its Jindal Metals & Alloys technical specification page. The Houston image remains credited to Giorces/Wikimedia Commons under CC BY 2.5.

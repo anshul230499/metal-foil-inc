@@ -224,3 +224,10 @@ Replaced only the crude, bulbous northwest India vector extension with a finer s
 
 ## Version 51 – narrow Kashmir contour
 Corrected the illustrative India highlight at its northwest edge. The overly broad artificial extension from Version 50 was replaced with a compact, connected PoK-area contour that does not overlap Afghanistan. All other styling, sections, animations (the map stays still), and interactive industry cards remain unchanged. The 1:16m Survey of India outline-map listing was consulted for visual reference only; the drawing is not an official political boundary map.
+
+
+## Version 52 — Image credits and subtle technical animations
+- The hero imagery has two discreet, clickable source links underneath its photo composition, each opening the exact Jindal Metals & Alloys Limited-hosted image.
+- The existing Who We Are and Houston photo credits have been made visually consistent; the Houston photo license remains displayed.
+- Three product-fact tiles receive a once-only staggered entrance and subtle on-hover accent, while the Product Range rows get a faint blue/steel highlight and slim orange/blue edge.
+- Motion respects `prefers-reduced-motion`. No change to map geometry, map animation, inventory, industry carousel, or content.

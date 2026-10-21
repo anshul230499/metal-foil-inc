@@ -432,3 +432,20 @@ if (officialJ) {
   img.addEventListener('error', swap);
   if (img.complete && img.naturalWidth === 0) swap();
 })();
+
+
+// v52: introduce the three product fact tiles gently once they enter view.
+// Content stays visible even if IntersectionObserver or JavaScript is unavailable.
+(() => {
+  const facts = document.querySelector('.hero-facts');
+  if (!facts || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('mfi-facts-visible');
+      currentObserver.unobserve(entry.target);
+    }
+  }, { threshold: 0.18 });
+  observer.observe(facts);
+})();
