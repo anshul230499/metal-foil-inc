@@ -268,69 +268,162 @@ if (officialJ) {
 }
 
 
-// v44: keyboard- and touch-accessible industry flashcard carousel.
-const industryTrack = document.getElementById('industryTrack');
-if (industryTrack) {
-  const industryCards = [...industryTrack.querySelectorAll('.industry-card')];
+
+// v46: rotating industry carousel with centered active card, larger imagery and staggered reveal.
+(() => {
+  const track = document.getElementById('industryTrack');
+  if (!track) return;
+  const section = document.getElementById('industries');
+  const cards = [...track.querySelectorAll('.industry-card')];
   const progress = document.getElementById('industryCount');
   const scrollButtons = [...document.querySelectorAll('.industry-scroll')];
-  industryCards.forEach(card => {
-    card.addEventListener('click', () => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let activeIndex = 0;
+  let autoplay = null;
+  let userPaused = false;
+
+  const updateProgress = () => {
+    if (progress) {
+      progress.textContent = `${String(activeIndex + 1).padStart(2, '0')} — ${String(cards.length).padStart(2, '0')}  /  APPLICATIONS`;
+    }
+  };
+
+  const updateButtonState = () => {
+    if (!scrollButtons.length) return;
+    const max = Math.max(0, track.scrollWidth - track.clientWidth);
+    scrollButtons.forEach((btn) => {
+      btn.disabled = max <= 8;
+    });
+  };
+
+  const setActiveClasses = () => {
+    cards.forEach((card, index) => {
+      card.classList.toggle('is-active', index === activeIndex);
+      card.classList.toggle('is-prev', index === (activeIndex - 1 + cards.length) % cards.length);
+      card.classList.toggle('is-next', index === (activeIndex + 1) % cards.length);
+      if (index !== activeIndex && !card.classList.contains('is-flipped')) {
+        card.classList.remove('is-flipped');
+        card.setAttribute('aria-pressed', 'false');
+      }
+    });
+    updateProgress();
+    updateButtonState();
+  };
+
+  const scrollToIndex = (index, behavior = 'smooth') => {
+    activeIndex = (index + cards.length) % cards.length;
+    const card = cards[activeIndex];
+    const left = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+    track.scrollTo({ left: Math.max(0, left), behavior: reducedMotion ? 'auto' : behavior });
+    setActiveClasses();
+  };
+
+  const detectActiveFromScroll = () => {
+    const trackRect = track.getBoundingClientRect();
+    const trackCenter = trackRect.left + trackRect.width / 2;
+    let bestIndex = 0;
+    let bestDistance = Infinity;
+    cards.forEach((card, index) => {
+      const r = card.getBoundingClientRect();
+      const center = r.left + r.width / 2;
+      const d = Math.abs(center - trackCenter);
+      if (d < bestDistance) {
+        bestDistance = d;
+        bestIndex = index;
+      }
+    });
+    if (bestIndex !== activeIndex) {
+      activeIndex = bestIndex;
+      setActiveClasses();
+    }
+  };
+
+  const stopAutoplay = () => {
+    if (autoplay) {
+      window.clearInterval(autoplay);
+      autoplay = null;
+    }
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    if (reducedMotion || userPaused || cards.length < 2) return;
+    autoplay = window.setInterval(() => {
+      scrollToIndex(activeIndex + 1, 'smooth');
+    }, 3200);
+  };
+
+  cards.forEach((card, index) => {
+    card.addEventListener('click', (event) => {
+      const isActive = index === activeIndex;
+      if (!isActive) {
+        event.preventDefault();
+        userPaused = true;
+        stopAutoplay();
+        scrollToIndex(index, 'smooth');
+        window.setTimeout(() => { userPaused = false; startAutoplay(); }, 4800);
+        return;
+      }
       const isFlipped = card.classList.toggle('is-flipped');
       card.setAttribute('aria-pressed', String(isFlipped));
       card.setAttribute('aria-label', isFlipped
         ? 'Application details shown. Activate to return to ' + card.querySelector('.industry-title').textContent + '.'
         : card.querySelector('.industry-title').textContent + '. Activate for application details.');
+      userPaused = true;
+      stopAutoplay();
+      window.setTimeout(() => { userPaused = false; startAutoplay(); }, isFlipped ? 6400 : 3600);
     });
   });
-  const updateIndustryCount = () => {
-    const box = industryTrack.getBoundingClientRect();
-    let first = industryCards.findIndex(card => card.getBoundingClientRect().right > box.left + 28);
-    if (first < 0) first = industryCards.length - 1;
-    const number = String(first + 1).padStart(2,'0');
-    progress.textContent = `${number} — ${String(industryCards.length).padStart(2,'0')}  /  APPLICATIONS`;
-    const max = industryTrack.scrollWidth - industryTrack.clientWidth;
-    scrollButtons.forEach(btn => {
-      btn.disabled = btn.dataset.direction === 'prev' ? industryTrack.scrollLeft <= 3 : industryTrack.scrollLeft >= max - 3;
-    });
+
+  scrollButtons.forEach((button) => button.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    userPaused = true;
+    stopAutoplay();
+    scrollToIndex(activeIndex + (button.dataset.direction === 'next' ? 1 : -1), 'smooth');
+    window.setTimeout(() => { userPaused = false; startAutoplay(); }, 4200);
+  }, true));
+
+  let scrollTimer;
+  track.addEventListener('scroll', () => {
+    detectActiveFromScroll();
+    window.clearTimeout(scrollTimer);
+    scrollTimer = window.setTimeout(() => {
+      scrollToIndex(activeIndex, 'smooth');
+    }, reducedMotion ? 0 : 110);
+  }, { passive: true });
+
+  ['pointerenter', 'focusin', 'touchstart'].forEach(type => section.addEventListener(type, () => {
+    userPaused = true;
+    stopAutoplay();
+  }, { passive: true }));
+  ['pointerleave', 'focusout'].forEach(type => section.addEventListener(type, () => {
+    userPaused = false;
+    startAutoplay();
+  }, { passive: true }));
+
+  const armReveal = () => {
+    if (!('IntersectionObserver' in window) || reducedMotion) {
+      cards.forEach(card => card.classList.add('is-arrived'));
+      section.classList.add('industries-motion-ready');
+      return;
+    }
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      obs.disconnect();
+      section.classList.add('industries-motion-ready');
+      cards.forEach((card, index) => {
+        window.setTimeout(() => card.classList.add('is-arrived'), index * 140);
+      });
+    }, { threshold: 0.12 });
+    observer.observe(section);
   };
-  scrollButtons.forEach(button => button.addEventListener('click', () => {
-    const card = industryCards[0];
-    const by = (card?.getBoundingClientRect().width || 290) + 22;
-    industryTrack.scrollBy({left:by * (button.dataset.direction === 'next' ? 1 : -1),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
-  }));
-  industryTrack.addEventListener('scroll', updateIndustryCount, {passive:true});
-  window.addEventListener('resize', updateIndustryCount,{passive:true});
-  updateIndustryCount();
-}
 
-
-// v45: individually reveal cards in a gentle sequence, including cards scrolled into view later.
-(() => {
- const track=document.getElementById('industryTrack');
- if(!track || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
- const section=document.getElementById('industries');
- const cards=[...track.querySelectorAll('.industry-card')];
- // Avoid hiding items before they enter the vertical viewport.
- const arm=new IntersectionObserver(entries=>{
-   if(!entries.some(item=>item.isIntersecting)) return;
-   arm.disconnect(); section.classList.add('industries-motion-ready');
-   let nextDelay=0;
-   const revealVisible=()=>{
-     const view=track.getBoundingClientRect();
-     cards.forEach(card=>{
-       if(card.classList.contains('is-arrived') || card.dataset.arriving==='yes') return;
-       const r=card.getBoundingClientRect();
-       if(r.right > view.left+12 && r.left < view.right-12){
-         card.dataset.arriving='yes';
-         window.setTimeout(()=>card.classList.add('is-arrived'),nextDelay);
-         nextDelay+=135;
-       }
-     });
-   };
-   revealVisible();
-   track.addEventListener('scroll',()=>{nextDelay=0;revealVisible()}, {passive:true});
-   window.addEventListener('resize',()=>{nextDelay=0;revealVisible()}, {passive:true});
- },{threshold:.10});
- arm.observe(section);
+  armReveal();
+  window.addEventListener('resize', () => scrollToIndex(activeIndex, 'auto'), { passive: true });
+  requestAnimationFrame(() => {
+    scrollToIndex(0, 'auto');
+    startAutoplay();
+  });
 })();
+;
