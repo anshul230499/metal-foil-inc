@@ -330,7 +330,7 @@ if (officialJ) {
       card.setAttribute('aria-hidden', distance <= 1 ? 'false' : 'true');
       card.setAttribute('aria-current', distance === 0 ? 'true' : 'false');
     });
-    if (count) count.textContent = `${activeIndex + 1} — ${cards.length}  /  APPLICATIONS`;
+    if (count) count.textContent = `${cards[activeIndex].querySelector('.industry-title')?.textContent || 'INDUSTRY'}  /  APPLICATIONS`;
   }
   function setActive(index) {
     clearFlip();
@@ -372,7 +372,7 @@ if (officialJ) {
     pauseButton.setAttribute('aria-pressed', String(userPaused));
     pauseButton.setAttribute('aria-label', userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel');
     if (pauseLabel) pauseLabel.textContent = userPaused ? 'Play' : 'Pause';
-    if (pauseIcon) pauseIcon.textContent = userPaused ? '▶' : 'Ⅱ';
+    if (pauseButton) pauseButton.title = userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel';
   }
   pauseButton?.addEventListener('click', () => {
     userPaused = !userPaused;

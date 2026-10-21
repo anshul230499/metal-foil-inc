@@ -231,3 +231,11 @@ Corrected the illustrative India highlight at its northwest edge. The overly bro
 - The existing Who We Are and Houston photo credits have been made visually consistent; the Houston photo license remains displayed.
 - Three product-fact tiles receive a once-only staggered entrance and subtle on-hover accent, while the Product Range rows get a faint blue/steel highlight and slim orange/blue edge.
 - Motion respects `prefers-reduced-motion`. No change to map geometry, map animation, inventory, industry carousel, or content.
+
+
+## Version 53 — Color accents and photographic cards
+- Hero fact tiles use alternating cobalt-blue and bright orange accented entrance/hover motion.
+- Product Range rows have matching alternating accents and a gentle single-pass highlight.
+- Industry cards no longer show numerical or category banners; photography takes the freed space, without changing card dimensions.
+- Carousel controls use centered vector chevrons and icon-only pause/play controls, with accessible labels.
+- Automatic carousel, image credits, and static world map are preserved.
