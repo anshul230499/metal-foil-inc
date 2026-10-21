@@ -14,6 +14,24 @@ siteNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', ()
   menuButton?.setAttribute('aria-expanded', 'false');
 }));
 
+// A compact menu never lingers after resizing back to full navigation.
+const closeHeaderMenu = () => {
+  siteNav?.classList.remove('open');
+  menuButton?.setAttribute('aria-expanded', 'false');
+};
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1180) closeHeaderMenu();
+}, { passive: true });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && siteNav?.classList.contains('open')) {
+    closeHeaderMenu();
+    menuButton?.focus();
+  }
+});
+document.addEventListener('pointerdown', (event) => {
+  if (siteNav?.classList.contains('open') && !header?.contains(event.target)) closeHeaderMenu();
+});
+
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 // Scroll progress + subtle sticky-header state.

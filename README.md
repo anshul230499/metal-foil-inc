@@ -168,3 +168,11 @@ The client also supplied five original mill photographs and seven video clips in
 
 ## Version 42 — header symbol
 The Jindal J is now an integral right-hand item of the sticky header, not a floating overlay. It links to the Jindal SAW Limited site and has a restrained hover lift, blue lighting, visible keyboard focus, and reduced-motion support. At mobile widths the J is adjacent to the Menu control. All other website sections remain unchanged.
+
+
+## Version 43 — Responsive navigation and opening spacing
+- Fluid logo, navigation spacing, button sizes, and Jindal symbol on large browser windows.
+- At 1180px and below, full navigation switches to a generous dropdown menu to avoid cramped/overlapping links; the emblem remains rightmost.
+- Sticky header height matches each breakpoint (92 / 80 / 72 / 68px), with correct anchor offsets and menu placement.
+- Reduced the top padding above “Who We Are” and the gap underneath that label; existing content, photography and map remain untouched.
+- Menu closes on Escape, on outside pointer clicks, and after returning to a wide display.

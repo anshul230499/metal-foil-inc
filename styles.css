@@ -2081,3 +2081,102 @@ body.v34-porcelain .jindal-header-symbol:focus-visible{
   body.v34-porcelain .jindal-header-symbol,
   body.v34-porcelain .jindal-header-symbol img{transition:none!important;transform:none!important;}
 }
+
+
+/* ============================================================================
+   v43 — Header that responds fluidly to viewport width.
+   When navigation no longer fits comfortably, it becomes a well-spaced menu.
+   Who We Are starts closer to the sticky ribbon without compromising anchors.
+   ============================================================================ */
+:root { --mfi-header-height: 92px; }
+html { scroll-padding-top: calc(var(--mfi-header-height) + 14px); }
+body.v34-porcelain .site-header { position: sticky !important; top: 0 !important; width: 100%; z-index: 200; }
+body.v34-porcelain .nav-wrap {
+  height: var(--mfi-header-height) !important;
+  width: min(1560px, calc(100% - clamp(36px, 6.2vw, 108px))) !important;
+  display:flex; align-items:center; justify-content:space-between;
+  gap: clamp(12px, 1.55vw, 25px) !important;
+}
+body.v34-porcelain .brand {flex: 0 1 auto; min-width: 0;}
+body.v34-porcelain .brand-logo {
+  display:block; width:clamp(184px, 18vw, 250px) !important;
+  max-width:100% !important; height:auto;
+}
+body.v34-porcelain .site-nav {
+  flex:0 1 auto; min-width:0; margin-left:auto;
+  gap:clamp(10px,1.25vw,23px) !important;
+}
+body.v34-porcelain .site-nav>a {font-size:clamp(13px,1.05vw,15px) !important; white-space:nowrap;}
+body.v34-porcelain .site-nav>.nav-rfq {padding:clamp(12px,1.05vw,16px) clamp(13px,1.4vw,22px) !important;}
+body.v34-porcelain .jindal-header-symbol {flex-shrink:0;margin:0!important;order:unset;}
+body.v34-porcelain .menu-button {cursor:pointer; white-space:nowrap;}
+body.v34-porcelain .menu-button:focus-visible {outline:2px solid #146bb6;outline-offset:3px;}
+body.v34-porcelain #who-we-are {scroll-margin-top:var(--mfi-header-height) !important;}
+body.v34-porcelain .who-v22.who-houston-dusk.v33-original-refined.v34-original {
+  padding-top:clamp(22px,2.55vw,40px) !important;
+}
+body.v34-porcelain .v33-original-refined .who-heading-row {
+  margin-bottom:clamp(25px,2.65vw,39px) !important;
+}
+/* Earlier switching point avoids cramped navigation on laptops or zoomed browsers. */
+@media(max-width:1180px) {
+  :root {--mfi-header-height:80px;}
+  body.v34-porcelain .nav-wrap {width:calc(100% - 48px)!important; gap:clamp(10px,2vw,20px)!important;}
+  body.v34-porcelain .brand-logo {width:clamp(165px,24vw,215px)!important;}
+  body.v34-porcelain .site-nav {
+    display:none!important; position:absolute!important;
+    top:100%!important; left:0!important;right:0!important;
+    z-index:210; width:100%; margin:0!important;
+    padding:16px clamp(24px,5vw,55px) 22px !important;
+    background:rgba(255,255,255,.98)!important;
+    border-top:1px solid #e9edf2;
+    border-bottom:1px solid #dfe9ef;
+    box-shadow:0 22px 38px rgba(22,59,92,.09);
+    flex-direction:column;align-items:stretch;gap:0!important;
+    max-height:calc(100dvh - var(--mfi-header-height));overflow-y:auto;
+  }
+  body.v34-porcelain .site-nav.open {display:flex!important;}
+  body.v34-porcelain .site-nav>a:not(.nav-rfq) {
+    display:flex;align-items:center;min-height:48px;
+    padding:12px 5px;border-bottom:1px solid #edf1f6;
+    font-size:15px!important;
+  }
+  body.v34-porcelain .site-nav>a:not(.nav-rfq)::after {display:none;}
+  body.v34-porcelain .site-nav>.nav-rfq {
+    margin-top:15px;text-align:center;align-self:stretch;
+    padding:15px 18px!important;font-size:15px!important;
+  }
+  body.v34-porcelain .menu-button {
+    display:inline-flex!important;align-items:center;justify-content:center;
+    flex:0 0 auto; min-height:44px; padding:9px 15px;
+    font-size:14px;background:#fff;color:#214763;border-color:#d9e5ee;
+    order:1;margin-left:auto;transition:background-color .2s,border-color .2s;
+  }
+  body.v34-porcelain .menu-button[aria-expanded="true"] {background:#edf7ff;border-color:#9dc8e8;}
+  body.v34-porcelain .jindal-header-symbol {
+    order:2!important; flex:0 0 44px; width:44px;height:50px;padding:5px;
+  }
+  body.v34-porcelain .jindal-header-symbol img {width:29px;height:36px;}
+}
+@media(max-width:680px) {
+  :root {--mfi-header-height:72px;}
+  body.v34-porcelain .nav-wrap {width:calc(100% - 30px)!important;gap:10px!important;}
+  body.v34-porcelain .brand-logo {width:clamp(150px,43vw,188px)!important;}
+  body.v34-porcelain .menu-button {min-height:42px;padding:8px 12px;font-size:13px;}
+  body.v34-porcelain .jindal-header-symbol {width:40px;height:45px;flex-basis:40px;padding:3px;}
+  body.v34-porcelain .jindal-header-symbol img {width:27px;height:34px;}
+  body.v34-porcelain .who-v22.who-houston-dusk.v33-original-refined.v34-original {padding-top:22px!important;}
+  body.v34-porcelain .v33-original-refined .who-heading-row {margin-bottom:24px!important;}
+}
+@media(max-width:380px) {
+  :root {--mfi-header-height:68px;}
+  body.v34-porcelain .nav-wrap {width:calc(100% - 24px)!important;gap:7px!important;}
+  body.v34-porcelain .brand-logo {width:clamp(131px,42vw,158px)!important;}
+  body.v34-porcelain .menu-button {padding:8px 10px;font-size:12px;}
+  body.v34-porcelain .jindal-header-symbol {width:36px;height:40px;flex-basis:36px;}
+  body.v34-porcelain .jindal-header-symbol img {width:24px;height:30px;}
+  body.v34-porcelain .who-v22.who-houston-dusk.v33-original-refined.v34-original {padding-top:18px!important;}
+}
+@media(prefers-reduced-motion:reduce) {
+ body.v34-porcelain .menu-button {transition:none!important;}
+}
