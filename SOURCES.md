@@ -105,3 +105,17 @@ The manufacturing video is a web-optimized, equipment-only excerpt from the user
 - Industry and application cards provide illustrative examples; they are not statements of current customer supply, grade-specific certification or suitability for a particular product.
 - The upper-right ribbon uses the previously linked Jindal J emblem crop with the typographic words “JINDAL SAW LTD.” and “TOTAL PIPE SOLUTIONS,” consistent with Jindal SAW's public corporate branding. The exact official horizontal logo artwork was not supplied. See https://jindalsaw.com/ . Confirm trademark usage rights before publication.
 - The illustrative flat map highlights the northwestern Kashmir region along with India. The drawing is not intended as a precise depiction of internationally recognized borders. Source geographical reference: Natural Earth public-domain data.
+
+
+### Version 45 additions — Industry flashcard imagery
+Images are embedded via Pexels CDN and are credited to their author on the website. Licensed for commercial website use under https://www.pexels.com/legal-pages/license/. All are illustrative, not photographs from the Metal Foil Inc. production facility.
+- knife-making: https://www.pexels.com/photo/stainless-steel-knives-12936944/ — Tom.
+- automotive: https://www.pexels.com/photo/close-up-of-car-engine-22880459/ — Vladimir Srajber.
+- precision-shims: https://www.pexels.com/photo/precision-digital-caliper-measuring-metal-object-36003970/ — Michael Orshan.
+- gaskets-seals: https://www.pexels.com/photo/close-up-of-metal-coupling-rings-12951633/ — Alex Urezkov.
+- springs-clips: https://www.pexels.com/photo/wound-up-metal-spring-7221094/ — cottonbro studio.
+- electronics: https://www.pexels.com/photo/green-computer-circuit-board-159220/ — Pixabay.
+- industrial-equipment: https://www.pexels.com/photo/an-industrial-machine-in-a-factory-5953723/ — Anna Shvets.
+- precision-fabrication: https://www.pexels.com/photo/industrial-machinery-in-factory-8973680/ — Rolled Alloys Specialty Metal Supplier.
+
+- Simplified map graphic: adapted from the preexisting custom site illustration. India outline revised with https://surveyofindia.gov.in/pages/outline-maps-of-india used as a visual reference; no government PDF or map artwork is copied into the website. Not for political boundary determination.

@@ -303,3 +303,34 @@ if (industryTrack) {
   window.addEventListener('resize', updateIndustryCount,{passive:true});
   updateIndustryCount();
 }
+
+
+// v45: individually reveal cards in a gentle sequence, including cards scrolled into view later.
+(() => {
+ const track=document.getElementById('industryTrack');
+ if(!track || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const section=document.getElementById('industries');
+ const cards=[...track.querySelectorAll('.industry-card')];
+ // Avoid hiding items before they enter the vertical viewport.
+ const arm=new IntersectionObserver(entries=>{
+   if(!entries.some(item=>item.isIntersecting)) return;
+   arm.disconnect(); section.classList.add('industries-motion-ready');
+   let nextDelay=0;
+   const revealVisible=()=>{
+     const view=track.getBoundingClientRect();
+     cards.forEach(card=>{
+       if(card.classList.contains('is-arrived') || card.dataset.arriving==='yes') return;
+       const r=card.getBoundingClientRect();
+       if(r.right > view.left+12 && r.left < view.right-12){
+         card.dataset.arriving='yes';
+         window.setTimeout(()=>card.classList.add('is-arrived'),nextDelay);
+         nextDelay+=135;
+       }
+     });
+   };
+   revealVisible();
+   track.addEventListener('scroll',()=>{nextDelay=0;revealVisible()}, {passive:true});
+   window.addEventListener('resize',()=>{nextDelay=0;revealVisible()}, {passive:true});
+ },{threshold:.10});
+ arm.observe(section);
+})();

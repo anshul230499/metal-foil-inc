@@ -2324,3 +2324,50 @@ body.v34-porcelain .photo-band{padding-top:clamp(60px,6vw,95px);padding-bottom:c
 @media(prefers-reduced-motion:reduce){
  .industry-card-rotator,.industries-track,.industry-scroll{transition:none!important;scroll-behavior:auto!important;}
 }
+
+
+/* ==================================================================
+   VERSION 45 — industry application photography and flowing card reveals
+   ================================================================== */
+/* Keep nav informational links together, with Inventory immediately after Certificates. */
+body.v34-porcelain .site-nav .nav-inventory{margin-left:clamp(4px,.8vw,14px)!important}
+/* Preserve historic map styling, but provide proportionate vertical height to show the entire India region. */
+body.v34-porcelain .v34-map-stage{height:clamp(440px,41vw,580px)!important}
+body.v34-porcelain .v34-map-art{inset:7px 8px 10px!important}
+body.v34-porcelain .v34-map-art img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important}
+body.v34-porcelain .v34-map-area{padding-bottom:8px}
+body.v34-porcelain .v45-map-attribution{font-size:10px;line-height:1.5;color:#7d8b93;margin:8px 1px 2px;letter-spacing:.012em}
+body.v34-porcelain .v45-map-attribution a{color:#597b91;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:900px){body.v34-porcelain .v34-map-stage{height:clamp(380px,62vw,510px)!important}}
+@media(max-width:600px){
+  body.v34-porcelain .v34-map-stage{height:385px!important}
+  body.v34-porcelain .v34-map-art{inset:20px -5% 66px!important}
+  body.v34-porcelain .v34-map-art img{width:130%!important;max-width:none!important;left:-15%!important;height:100%!important;object-fit:contain!important}
+}
+/* Mobile photograph-led flipping cards, all eight unique licensed subjects. */
+.industries-section{background:linear-gradient(180deg,#fff 0%,#f7fafc 100%);padding:clamp(76px,7.5vw,115px) 0}
+.industry-card{height:410px}
+.industry-face{padding:22px 19px 19px}
+.industry-face-front{background:#fff}
+.industry-face-front::after{display:none!important}
+.industry-photo{display:block;position:relative;z-index:1;flex:0 0 auto;height:189px;margin:15px 0 17px;overflow:hidden;border-radius:7px;background:#e7edf1}
+.industry-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:saturate(.75) contrast(1.075) brightness(1.04);transition:transform .75s cubic-bezier(.2,.6,.25,1),filter .55s}
+.industry-photo::after{content:"";inset:0;position:absolute;pointer-events:none;background:linear-gradient(0deg,rgba(10,29,41,.42),transparent 43%)}
+.industry-photo-label{position:absolute;bottom:9px;left:11px;z-index:2;font-size:8px;font-weight:780;letter-spacing:.105em;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+@media(hover:hover) and (pointer:fine){.industry-card:hover .industry-photo img{transform:scale(1.07);filter:saturate(.89) contrast(1.08) brightness(1.03)}}
+.industry-title{font-size:clamp(21px,1.8vw,24px);max-width:none;margin-top:auto}
+.industry-subtitle{margin-top:7px}
+.industry-cue{margin-top:13px!important}
+.industry-face-back{background:#e9f3fa}
+.industries-photo-credits{margin-top:17px;color:#708494;font-size:11px;line-height:1.75}
+.industries-photo-credits summary{cursor:pointer;display:inline-block;color:#55738b;text-decoration:underline;text-decoration-color:#bdcdd9;text-underline-offset:3px}
+.industries-photo-credits p{max-width:970px;margin:9px 0 0}
+.industries-photo-credits a{color:#38658d}
+/* Animate entry per flashcard; document stays visible without JS or for reduced motion. */
+@media(prefers-reduced-motion:no-preference){
+  .industries-motion-ready .industry-card:not(.is-arrived){opacity:0;transform:translateY(38px) rotateX(7deg) scale(.965)}
+  .industries-motion-ready .industry-card{transition:opacity .73s ease,transform .82s cubic-bezier(.16,.75,.25,1)}
+  .industries-motion-ready .industry-card.is-arrived{opacity:1;transform:translateY(0) rotateX(0) scale(1)}
+}
+@media(max-width:600px){.industry-card{height:385px}.industry-face{padding:18px}.industry-photo{height:170px;margin:12px 0 14px}.industry-title{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.industry-card{opacity:1!important;transform:none!important}.industry-photo img{transition:none!important}}

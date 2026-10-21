@@ -187,3 +187,12 @@ The Jindal J is now an integral right-hand item of the sticky header, not a floa
 - Sticky header height matches each breakpoint (92 / 80 / 72 / 68px), with correct anchor offsets and menu placement.
 - Reduced the top padding above “Who We Are” and the gap underneath that label; existing content, photography and map remain untouched.
 - Menu closes on Escape, on outside pointer clicks, and after returning to a wide display.
+
+
+## Version 45 — 21 October 2026
+- Moved **Industries & Applications** into the position of the former Supply Chain section and deleted Supply Chain entirely.
+- Added eight distinct Pexels-licensed image links (hosted by Pexels) to interactive industry cards; visual content is illustrative, not MFI manufacturer photography. Photo credits are disclosed in the collapsible source list. Images require an internet connection to display.
+- Cards now appear in a calm staggered sequence upon reaching the section, with further cards animating as they scroll into view. Flip remains keyboard/touch accessible, with reduced-motion fallback.
+- Positioned **View Inventory** immediately after **Certificates** and before **Request a Quote** in the top ribbon.
+- Increased the map's vertical display area and replaced the former rounded northern India accent with a narrow, more naturally contoured schematic accent. Official geographic reference: https://surveyofindia.gov.in/pages/outline-maps-of-india. Our simplified world map is illustrative and must not be used as official border data.
+- Manufacturing text identifies Jindal Metals & Alloys Limited as the manufacturing mill, not as a separate partner.
