@@ -160,9 +160,7 @@ The client also supplied five original mill photographs and seven video clips in
 - Kept the original landscape frame, manual-play controls, optimized MP4 and poster, and the rest of the v37 design unchanged.
 - Applied mild contrast and color balancing to match the site's existing industrial treatment.
 
-
-## v39 — Original site / quiet nature background
-- Preserves the v38 bright white website and all links, contents, RFQ, still-photo grades, and scrolling motion.
-- Original SVG contour illustration (`assets/nature-wave-lines.svg`) adds extremely faint flowing water/sky/sunlight layers to the introduction and existing hero with reduced-motion support. Not an image reproduction of Hokusai’s *The Great Wave*.
-- Mill video replaced with the user's `WhatsApp Video 2026-10-20 at 2.42.09 PM (2).mp4`, using approximately 12.85–17.25 seconds: machinery and stainless strip only in reviewed frames. The alternative is portrait footage; the manufacturing area is now portrait-aware rather than cropping the work scene to landscape. User-controlled playback is retained, without audio.
-- New optimized poster from the selected excerpt, preserving the proper aspect ratio.
+## v40 — Clean white + landscape rolling-line footage
+- Removed all v39 water-contour, sun-glow and sky-gradient styling, divider markup and `nature-wave-lines.svg`; the original white/light website and its separate flat world map remain intact.
+- Replaced the previous portrait video with a different landscape clip from the user's original `WhatsApp Video 2026-10-20 at 2.42.07 PM.mp4`, excerpt ~2.35–3.93s, presented at 1024×576 16:9. Only a machinery close-up is included, with right-edge areas of the source excluded to avoid background workers. Playback is user controlled and muted.
+- Improved color and contrast; generated a matching 16:9 poster. No changes to the company copy, links, product range, RFQ, photographs, or layout beyond the video itself.
