@@ -126,3 +126,6 @@ Images are embedded via Pexels CDN and are credited to their author on the websi
 Version 50 map source: Natural Earth low-resolution country boundaries (public domain) packaged with pyogrio; Robinson world projection calculated using PROJ/pyproj. The India northwest outline remains an illustrative portrayal referencing the Survey of India — it is not a substitute for an official political map.
 
 Version 50 electronics card: Andrey Matveev, “Production Line of Computer Elements”, Pexels — https://www.pexels.com/photo/production-line-of-computer-elements-5554948/ (Pexels License); secondary photograph, Pixabay “Black and Blue Electronic Tools on Green Circuit Board”, Pexels — https://www.pexels.com/photo/black-and-blue-electronic-tools-on-green-circuit-board-39290/ . Local SVG fallback authored for this site.
+
+
+Version 51 Kashmir/PoK highlight: Simplified, manually drawn illustrative contour for a global commercial map; checked against Natural Earth Afghanistan geometry to prevent the orange highlight entering Afghanistan. Survey of India 1:16m outline references: https://surveyofindia.gov.in/pages/outline-maps-of-india . The highlighted boundary is intentionally not presented as a precise administrative or international boundary.

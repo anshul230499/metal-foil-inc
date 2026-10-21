@@ -220,3 +220,7 @@ Replaced only the crude, bulbous northwest India vector extension with a finer s
 - Electronics card: new licensed Pexels electronics manufacturing image, alternative licensed Pexels photo and local SVG fallback if external photos fail to load. The click-to-flip behavior stays in place.
 - Map: newly rendered from Natural Earth geographic boundaries in Robinson projection to avoid disproportionate continental shapes and screen stretching. India and the U.S. retain the original orange/blue treatment. A schematic northwest India extension remains illustrative only.
 - All animations are removed from the map (traveling pulse, location ripples, animated line and hover movement). The flashcard carousel still rotates automatically.
+
+
+## Version 51 – narrow Kashmir contour
+Corrected the illustrative India highlight at its northwest edge. The overly broad artificial extension from Version 50 was replaced with a compact, connected PoK-area contour that does not overlap Afghanistan. All other styling, sections, animations (the map stays still), and interactive industry cards remain unchanged. The 1:16m Survey of India outline-map listing was consulted for visual reference only; the drawing is not an official political boundary map.
