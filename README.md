@@ -1,3 +1,14 @@
+# Metal Foil Inc. Website — v44
+
+## Current release (v44)
+- Removed the supplementary mill image gallery and the short manufacturing video. Opening hero photography and all product details remain.
+- Added eight interactive, keyboard- and touch-accessible applications cards near the bottom of the page, ahead of Request for Quotation. Tap or click each card to reveal its details; arrow controls browse the horizontal row.
+- Changed supply-chain terminology to **Manufacturing mill** for Jindal Metals & Alloys Limited.
+- Updated the decorative world-map India highlight to include the northwest Kashmir region; the map is illustrative, not an official boundary reference.
+- Replaced the small floating-style J icon with a header lockup reading **JINDAL SAW LTD. / TOTAL PIPE SOLUTIONS**, using the previously linked J graphic and a light hover effect. It links to jindalsaw.com.
+- Styled **View Inventory** as an orange ribbon button, immediately to the left of the blue **Request a Quote** button. The navigation automatically collapses at narrower window sizes.
+- Deployment: replace the contents of your existing GitHub project and deploy commit `main` to Vercel.
+
 # Metal Foil Inc. Website
 
 Static GitHub/Vercel website for Metal Foil Inc.

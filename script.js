@@ -20,7 +20,7 @@ const closeHeaderMenu = () => {
   menuButton?.setAttribute('aria-expanded', 'false');
 };
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 1180) closeHeaderMenu();
+  if (window.innerWidth > 1390) closeHeaderMenu();
 }, { passive: true });
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && siteNav?.classList.contains('open')) {
@@ -265,4 +265,41 @@ if (officialJ) {
   const showJFallback = () => officialJ.closest('.jindal-header-symbol')?.classList.add('image-unavailable');
   officialJ.addEventListener('error', showJFallback, { once: true });
   if (officialJ.complete && officialJ.naturalWidth === 0) showJFallback();
+}
+
+
+// v44: keyboard- and touch-accessible industry flashcard carousel.
+const industryTrack = document.getElementById('industryTrack');
+if (industryTrack) {
+  const industryCards = [...industryTrack.querySelectorAll('.industry-card')];
+  const progress = document.getElementById('industryCount');
+  const scrollButtons = [...document.querySelectorAll('.industry-scroll')];
+  industryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const isFlipped = card.classList.toggle('is-flipped');
+      card.setAttribute('aria-pressed', String(isFlipped));
+      card.setAttribute('aria-label', isFlipped
+        ? 'Application details shown. Activate to return to ' + card.querySelector('.industry-title').textContent + '.'
+        : card.querySelector('.industry-title').textContent + '. Activate for application details.');
+    });
+  });
+  const updateIndustryCount = () => {
+    const box = industryTrack.getBoundingClientRect();
+    let first = industryCards.findIndex(card => card.getBoundingClientRect().right > box.left + 28);
+    if (first < 0) first = industryCards.length - 1;
+    const number = String(first + 1).padStart(2,'0');
+    progress.textContent = `${number} — ${String(industryCards.length).padStart(2,'0')}  /  APPLICATIONS`;
+    const max = industryTrack.scrollWidth - industryTrack.clientWidth;
+    scrollButtons.forEach(btn => {
+      btn.disabled = btn.dataset.direction === 'prev' ? industryTrack.scrollLeft <= 3 : industryTrack.scrollLeft >= max - 3;
+    });
+  };
+  scrollButtons.forEach(button => button.addEventListener('click', () => {
+    const card = industryCards[0];
+    const by = (card?.getBoundingClientRect().width || 290) + 22;
+    industryTrack.scrollBy({left:by * (button.dataset.direction === 'next' ? 1 : -1),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  }));
+  industryTrack.addEventListener('scroll', updateIndustryCount, {passive:true});
+  window.addEventListener('resize', updateIndustryCount,{passive:true});
+  updateIndustryCount();
 }

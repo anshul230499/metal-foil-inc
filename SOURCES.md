@@ -13,7 +13,7 @@ Primary references:
 - https://jindalmetal.com/stainless-steel-ultra-thin-foils/grades-it-s-properties-ss
 
 ### Jindal Metals & Alloys Limited imagery
-The supply-chain section uses distinct Jindal Metals & Alloys Limited image assets to avoid repetition. Jindal Metals & Alloys Limited source/credit links are displayed with the relevant images on the page.
+The website retains two manufacturer-hosted hero photographs and one Who We Are product photograph. The supplementary mill photo gallery and video have been removed in v44; these files are not packaged.
 
 ### Certifications
 The site previews the following Jindal Metals & Alloys Limited-published documents:
@@ -98,3 +98,10 @@ The manufacturing video is a web-optimized, equipment-only excerpt from the user
 ### v40 replacement rolling-line video
 - Source: user-provided Jindal Metals & Alloys Limited onsite clip, `WhatsApp Video 2026-10-20 at 2.42.07 PM.mp4`. Exported landscape excerpt approximately 2.35–3.93 seconds into the source, retimed to approximately 2.6 seconds with light color adjustments.
 - v39 nature overlay asset was removed and is not used by the website.
+
+
+## v44 website changes
+- The lower mill photographs and film clip were removed from the site and package. All original user-supplied source media remain unchanged outside this website package.
+- Industry and application cards provide illustrative examples; they are not statements of current customer supply, grade-specific certification or suitability for a particular product.
+- The upper-right ribbon uses the previously linked Jindal J emblem crop with the typographic words “JINDAL SAW LTD.” and “TOTAL PIPE SOLUTIONS,” consistent with Jindal SAW's public corporate branding. The exact official horizontal logo artwork was not supplied. See https://jindalsaw.com/ . Confirm trademark usage rights before publication.
+- The illustrative flat map highlights the northwestern Kashmir region along with India. The drawing is not intended as a precise depiction of internationally recognized borders. Source geographical reference: Natural Earth public-domain data.
