@@ -280,8 +280,8 @@ if (officialJ) {
   const count = document.getElementById('industryCount');
   const arrows = Array.from(section.querySelectorAll('.industry-scroll'));
   const pauseButton = document.getElementById('industryAutoplay');
-  const pauseIcon = pauseButton?.querySelector('.industry-autoplay-icon');
-  const pauseLabel = pauseButton?.querySelector('.industry-autoplay-label');
+  const stateSvg = pauseButton?.querySelector('.industry-state-symbol');
+  const statePath = stateSvg?.querySelector('.industry-state-path');
   const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   let activeIndex = 0;
   let intervalId = null;
@@ -370,16 +370,17 @@ if (officialJ) {
   function updatePauseButton() {
     if (!pauseButton) return;
     pauseButton.setAttribute('aria-pressed', String(userPaused));
-    pauseButton.setAttribute('aria-label', userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel');
-    if (pauseLabel) pauseLabel.textContent = userPaused ? 'Play' : 'Pause';
-    pauseButton.title = userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel';
-    // Toggle actual hidden state, not merely opacity or overlapping SVGs.
-    // This prevents both symbols appearing if browser CSS specificity changes.
-    const pauseGraphic = pauseIcon?.querySelector('.industry-icon-pause');
-    const playGraphic = pauseIcon?.querySelector('.industry-icon-play');
-    if (pauseGraphic) pauseGraphic.hidden = userPaused;
-    if (playGraphic) playGraphic.hidden = !userPaused;
+    const label = userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel';
+    pauseButton.setAttribute('aria-label', label);
+    pauseButton.title = label;
+    // One SVG path changes shape — no duplicated play/pause graphics.
+    if (statePath) statePath.setAttribute('d', userPaused ? 'M8 5.5 L18.5 12 L8 18.5 Z' : 'M9 5v14 M15 5v14');
+    if (stateSvg) {
+      stateSvg.setAttribute('fill', userPaused ? 'currentColor' : 'none');
+      stateSvg.setAttribute('stroke', userPaused ? 'none' : 'currentColor');
+    }
   }
+
   updatePauseButton();
   pauseButton?.addEventListener('click', () => {
     userPaused = !userPaused;

@@ -3004,168 +3004,142 @@ body.v34-porcelain .industries-section .industry-autoplay[hidden]{display:none!i
  }
 }
 
-/* Version 54 — restrained product facts, single Play/Pause icon, 1.5x larger showcase. */
 
-/* Keep only one centrally aligned SVG visible at a time.
-   The exact same `hidden` state is maintained by the carousel JavaScript. */
-body.v34-porcelain .industries-section .industry-autoplay .industry-icon-play[hidden],
-body.v34-porcelain .industries-section .industry-autoplay .industry-icon-pause[hidden] {
-  display:none!important;
-}
-body.v34-porcelain .industries-section .industry-autoplay .industry-icon-play:not([hidden]),
-body.v34-porcelain .industries-section .industry-autoplay .industry-icon-pause:not([hidden]) {
-  display:block!important;
-}
-body.v34-porcelain .industries-section .industry-autoplay .industry-autoplay-icon {
-  display:grid!important;
-  place-items:center!important;
-  width:20px!important;
-  height:20px!important;
-  line-height:0!important;
-}
 
-/* Settle the fact tiles back to a nearly white treatment.
-   Keep an understated blue/orange accent and a modest lift on hover. */
-body.v34-porcelain .hero-facts > div,
-body.v34-porcelain .hero-facts > div:nth-child(2),
-body.v34-porcelain .hero-facts > div:nth-child(3) {
-  --mfi-accent:#2b759c!important;
-  --mfi-wash:rgba(20,92,143,.025)!important;
-  --mfi-glint:rgba(32,120,170,.085)!important;
-  background:#fff!important;
-  border-top:2px solid #bcd3e2!important;
-  box-shadow:none!important;
-  transition:background .28s ease, box-shadow .28s ease, transform .32s cubic-bezier(.2,.8,.25,1)!important;
+/* VERSION 55 — exact 125%-scale showcase, single-icon playback, precision-dial facts. */
+
+/* The control only has one SVG. Keep it properly centered, and do not inherit
+   earlier rules for two separate SVG icons. */
+body.v34-porcelain .industries-section .industry-autoplay {
+ display:inline-grid!important;place-items:center!important;
+ width:44px!important;height:44px!important;min-width:44px!important;
+ padding:0!important;
 }
-body.v34-porcelain .hero-facts > div:nth-child(2) {
-  --mfi-accent:#b97545!important;
-  border-top-color:#e7c5ae!important;
+body.v34-porcelain .industries-section .industry-autoplay-icon {
+ display:grid!important;place-items:center!important;
+ width:20px!important;height:20px!important;
+ line-height:0!important;
 }
-body.v34-porcelain .hero-facts > div b,
-body.v34-porcelain .hero-facts > div:nth-child(2) b,
-body.v34-porcelain .hero-facts > div:nth-child(3) b {
-  color:#264862!important;
-}
-body.v34-porcelain .hero-facts > div::before {
-  display:none!important;
-  content:none!important;
-  animation:none!important;
-}
-body.v34-porcelain .hero-facts > div::after {
-  height:2px!important;
-  background:var(--mfi-accent)!important;
-  opacity:.52;
-}
-@media(hover:hover) and (pointer:fine) {
-  body.v34-porcelain .hero-facts > div:hover {
-    background:#f8fbfd!important;
-    box-shadow:0 6px 17px rgba(27,86,133,.075)!important;
-    transform:translateY(-2px)!important;
-  }
-  body.v34-porcelain .hero-facts > div:hover b{
-    transform:none!important;
-  }
+body.v34-porcelain .industries-section .industry-state-symbol {
+ display:block!important;width:19px!important;height:19px!important;margin:0!important;
+ transition:color .22s ease;
 }
 
-/* Make the desktop photo cards about 1.5x their Version 53 dimensions
-   (366×478 → 549×717 px), retaining the carousel's circular choreography. */
+/* Original 366 × 478 px card, multiplied by 1.25 -> 458 × 598 px.
+   Deck remains 3D, and photos occupy the majority of each face. */
 .industries-section.industry-deck-ready .industries-track {
-  --industry-step:clamp(340px,35vw,460px)!important;
-  height:790px!important;
-  perspective:1900px!important;
+ --industry-step:clamp(275px,25vw,355px)!important;
+ height:670px!important;
+ perspective:1580px!important;
 }
 .industries-section.industry-deck-ready .industry-card {
-  width:clamp(460px,38.2vw,549px)!important;
-  height:clamp(624px,50vw,717px)!important;
+ width:458px!important;
+ height:598px!important;
 }
 .industries-section .industry-face-front,
-.industries-section .industry-face-back {
-  border-radius:25px!important;
-}
-.industries-section .industry-face-front {
-  padding:17px!important;
-}
-.industries-section .industry-face-front .industry-photo,
+.industries-section .industry-face-back{border-radius:22px!important;}
+.industries-section .industry-face-front{padding:13px!important;}
 .industries-section.industry-deck-ready .industry-face-front .industry-photo {
-  flex:1 1 auto!important;
-  min-height:0!important;
-  width:100%!important;
-  height:auto!important;
-  margin:0 0 15px!important;
-  border-radius:18px!important;
+ flex:1 1 auto!important;min-height:0!important;
+ width:100%!important;height:auto!important;
+ margin:0 0 12px!important;border-radius:16px!important;
 }
-.industries-section.industry-deck-ready .industry-face-front .industry-title {
-  font-size:clamp(22px,1.8vw,27px)!important;
-  line-height:1.14!important;
+.industries-section.industry-deck-ready .industry-face-front .industry-title{
+ font-size:clamp(20px,1.75vw,25px)!important;
+ line-height:1.12!important;
 }
-.industries-section.industry-deck-ready .industry-face-front .industry-subtitle {
-  font-size:14px!important;
-  line-height:1.35!important;
-  margin-top:7px!important;
+.industries-section.industry-deck-ready .industry-face-front .industry-subtitle{
+ font-size:13px!important;line-height:1.28!important;margin-top:5px!important;
 }
-.industries-section.industry-deck-ready .industry-face-front .industry-cue {
-  font-size:11px!important;
-  margin-top:10px!important;
-  padding-top:7px!important;
+.industries-section.industry-deck-ready .industry-face-front .industry-cue{
+ font-size:10.5px!important;margin-top:9px!important;padding-top:6px!important;
 }
-.industries-section.industry-deck-ready .industry-face-back {
-  padding:clamp(26px,3vw,40px)!important;
+.industries-section.industry-deck-ready .industry-face-back{padding:clamp(22px,2.8vw,34px)!important;}
+.industries-section.industry-deck-ready .industry-back-title{font-size:29px!important;}
+.industries-section.industry-deck-ready .industry-description{font-size:17px!important;max-width:375px!important;}
+@media(max-width:1000px){
+ .industries-section.industry-deck-ready .industries-track{
+  --industry-step:clamp(245px,31vw,310px)!important;height:630px!important;
+ }
+ .industries-section.industry-deck-ready .industry-card{
+  width:min(74vw,425px)!important;height:557px!important;
+ }
 }
-.industries-section.industry-deck-ready .industry-back-title {
-  font-size:clamp(25px,2.4vw,34px)!important;
-  line-height:1.18!important;
+@media(max-width:600px){
+ .industries-section.industry-deck-ready .industries-track{
+  --industry-step:clamp(188px,60vw,267px)!important;height:550px!important;
+ }
+ .industries-section.industry-deck-ready .industry-card{
+  width:min(86vw,355px)!important;height:485px!important;
+ }
+ .industries-section.industry-deck-ready .industry-face-front{padding:11px!important;}
+ .industries-section.industry-deck-ready .industry-face-front .industry-title{font-size:20px!important;}
+ .industries-section.industry-deck-ready .industry-face-front .industry-subtitle{font-size:12px!important;}
 }
-.industries-section.industry-deck-ready .industry-description {
-  font-size:clamp(17px,1.5vw,21px)!important;
-  line-height:1.6!important;
-  max-width:420px!important;
+@media(max-width:375px){
+ .industries-section.industry-deck-ready .industries-track{height:520px!important;}
+ .industries-section.industry-deck-ready .industry-card{width:88vw!important;height:463px!important;}
 }
-/* Larger cards fit tablets and phones without forcing horizontal page overflow. */
-@media(max-width:1199px) {
-  .industries-section.industry-deck-ready .industries-track {
-    --industry-step:clamp(290px,39vw,425px)!important;
-    height:730px!important;
-  }
-  .industries-section.industry-deck-ready .industry-card {
-    width:clamp(400px,48vw,505px)!important;
-    height:clamp(580px,62vw,665px)!important;
-  }
+
+/* New effect for the 0.002", 20", Baytown TX metrics.
+   Numbers settle into focus on entry. On hover, a single fine vertical
+   precision rail draws down. No loud gradients, flashing or bright blocks. */
+body.v34-porcelain .hero-facts > div,
+body.v34-porcelain .hero-facts > div:nth-child(2),
+body.v34-porcelain .hero-facts > div:nth-child(3){
+ --fact-rail:#2375a7!important;
+ background:#fff!important;
+ box-shadow:none!important;
+ border-top:1px solid #dce6ef!important;
+ position:relative!important;overflow:hidden!important;
+ transform:none!important;
+ transition:border-color .3s ease, background-color .3s ease!important;
 }
-@media(max-width:900px) {
-  .industries-section.industry-deck-ready .industries-track {
-    --industry-step:clamp(270px,43vw,340px)!important;
-    height:680px!important;
-  }
-  .industries-section.industry-deck-ready .industry-card {
-    width:min(82vw,455px)!important;
-    height:610px!important;
-  }
+body.v34-porcelain .hero-facts > div:nth-child(2){--fact-rail:#ce895c!important;}
+body.v34-porcelain .hero-facts > div b,
+body.v34-porcelain .hero-facts > div:nth-child(2) b,
+body.v34-porcelain .hero-facts > div:nth-child(3) b{
+ color:#264862!important;
+ transition:color .25s ease!important;
 }
-@media(max-width:600px) {
-  .industries-section.industry-deck-ready .industries-track {
-    --industry-step:clamp(205px,67vw,280px)!important;
-    height:620px!important;
-  }
-  .industries-section.industry-deck-ready .industry-card {
-    width:min(88vw,390px)!important;
-    height:550px!important;
-  }
-  .industries-section .industry-face-front{padding:13px!important;}
-  .industries-section.industry-deck-ready .industry-face-front .industry-title {
-    font-size:21px!important;
-  }
-  .industries-section.industry-deck-ready .industry-face-front .industry-subtitle {
-    font-size:12px!important;
-  }
+body.v34-porcelain .hero-facts > div::before,
+body.v34-porcelain .hero-facts > div:nth-child(2)::before,
+body.v34-porcelain .hero-facts > div:nth-child(3)::before{
+ content:""!important;display:block!important;
+ position:absolute!important;left:0!important;top:0!important;bottom:0!important;
+ right:auto!important;width:3px!important;z-index:0!important;
+ border-radius:0!important;
+ background:var(--fact-rail)!important;
+ opacity:.75!important;
+ transform:scaleY(0)!important;
+ transform-origin:top center!important;
+ animation:none!important;
+ transition:transform .44s cubic-bezier(.16,.82,.24,1)!important;
 }
-@media(max-width:375px) {
-  .industries-section.industry-deck-ready .industries-track{height:585px!important;}
-  .industries-section.industry-deck-ready .industry-card{
-    width:89vw!important;
-    height:525px!important;
-  }
+body.v34-porcelain .hero-facts > div::after{display:none!important;content:none!important;}
+@media (hover:hover) and (pointer:fine){
+ body.v34-porcelain .hero-facts > div:hover{
+  transform:none!important;
+  background:#fafdff!important;
+  box-shadow:none!important;
+  border-top-color:#b7d0e2!important;
+ }
+ body.v34-porcelain .hero-facts > div:hover::before{transform:scaleY(1)!important;}
+ body.v34-porcelain .hero-facts > div:hover b{transform:none!important;color:#1b5f91!important;animation:none!important;}
 }
-@media(prefers-reduced-motion:reduce) {
-  .industries-section .industry-card{transition:none!important;}
-  body.v34-porcelain .hero-facts > div{transition:none!important;}
+@keyframes mfi55-precision-focus {
+ 0% {opacity:.2;filter:blur(4px);transform:translateY(12px) scale(.97);}
+ 60% {opacity:1;filter:blur(0);transform:translateY(-2px) scale(1.015);}
+ 100%{opacity:1;filter:none;transform:translateY(0) scale(1);}
+}
+@media(prefers-reduced-motion:no-preference){
+ body.v34-porcelain .hero-facts.mfi-facts-visible > div b{
+  animation:mfi55-precision-focus .85s cubic-bezier(.19,.76,.25,1) both!important;
+ }
+ body.v34-porcelain .hero-facts.mfi-facts-visible > div:nth-child(2) b{animation-delay:.17s!important;}
+ body.v34-porcelain .hero-facts.mfi-facts-visible > div:nth-child(3) b{animation-delay:.34s!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ body.v34-porcelain .hero-facts > div b,
+ body.v34-porcelain .hero-facts > div::before{animation:none!important;transition:none!important;}
 }

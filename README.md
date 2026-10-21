@@ -1,3 +1,10 @@
+# Version 55 — 1.25× Flashcards, Playback Fix & Hero Fact Animation
+
+- Flashcard dimensions reduced from the 1.5× revision to **458 × 598 px on desktop** (125% of the original 366 × 478 px). Responsive sizes scale down on tablets and phones.
+- Carousel Play/Pause uses **one SVG**, whose path changes between Pause and Play, eliminating the possibility of both icons appearing at once. It still controls automatic rotation.
+- Three hero facts use a restrained **precision-focus text reveal** and a slim animated left-edge rail on hover. White backgrounds and muted blue/orange tones remain.
+- All other content, imagery, links, the static India map, and carousel behavior are unchanged.
+
 # Version 54 — Carousel Controls and Proportions
 
 - Play/Pause now shows exactly one icon at a time. The Play graphic is initially hidden in HTML and both graphics are explicitly toggled in JavaScript.
