@@ -1,3 +1,10 @@
+# Version 54 — Carousel Controls and Proportions
+
+- Play/Pause now shows exactly one icon at a time. The Play graphic is initially hidden in HTML and both graphics are explicitly toggled in JavaScript.
+- 0.002″, 20″, and Baytown, TX facts return to clean white with muted accent lines; movement remains subtle.
+- Industries photo cards grow to approximately 1.5× Version 53 on desktop. Tablet and mobile use smaller screen-aware sizes. Automatic carousel rotation, tap-to-flip, and manual controls are preserved.
+- All other imagery, credits, product details, links, and the static map are unchanged.
+
 # Metal Foil Inc. Website — v49
 
 ## Current release (v49)

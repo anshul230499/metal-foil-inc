@@ -372,8 +372,15 @@ if (officialJ) {
     pauseButton.setAttribute('aria-pressed', String(userPaused));
     pauseButton.setAttribute('aria-label', userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel');
     if (pauseLabel) pauseLabel.textContent = userPaused ? 'Play' : 'Pause';
-    if (pauseButton) pauseButton.title = userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel';
+    pauseButton.title = userPaused ? 'Resume automatic carousel' : 'Pause automatic carousel';
+    // Toggle actual hidden state, not merely opacity or overlapping SVGs.
+    // This prevents both symbols appearing if browser CSS specificity changes.
+    const pauseGraphic = pauseIcon?.querySelector('.industry-icon-pause');
+    const playGraphic = pauseIcon?.querySelector('.industry-icon-play');
+    if (pauseGraphic) pauseGraphic.hidden = userPaused;
+    if (playGraphic) playGraphic.hidden = !userPaused;
   }
+  updatePauseButton();
   pauseButton?.addEventListener('click', () => {
     userPaused = !userPaused;
     interactionPaused = false;
