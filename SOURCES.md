@@ -135,3 +135,18 @@ Version 51 Kashmir/PoK highlight: Simplified, manually drawn illustrative contou
 Hero main mill image: https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785391005/jindal/banner/1785391003828-banner-slide11.jpg
 Hero smaller foil-processing image: https://res.cloudinary.com/dpvbgv6nw/image/upload/v1785390878/jindal/banner/1785390876744-banner-slide2.jpg
 The manufacturer-hosted product image in the introduction remains linked to its Jindal Metals & Alloys technical specification page. The Houston image remains credited to Giorces/Wikimedia Commons under CC BY 2.5.
+
+
+## Version 56 — Flat map, geographic locations and editorial references
+
+- Map land data: Natural Earth (public-domain, equirectangular/plate carrée projection). Source: https://www.naturalearthdata.com/ . Map is illustrative and does not display political boundaries.
+- Bahadurgarh manufacturing mill location: Jindal Metals & Alloys Limited official contacts: https://jindalmetal.com/contact and strip capability: https://www.jindalmetal.com/stainlesssteel/stainless-steel-strip .
+- Baytown, Texas: Metal Foil Inc. stock location, from the supplied site content.
+- Editorial reference websites (original company copy was drafted rather than copied):
+  - Hunting (industrial operations and geolocation): https://huntingplc.com/about/our-locations/
+  - Metal One (steel distribution and customer-service language): https://www.mtlo.co.jp/en/business/
+  - Sumitomo Corporation (steel group, customer supply): https://www.sumitomocorp.com/en/jp/business/business01
+  - Mitsui Steel (customer service, logistics and trading): https://www.mitsui-steel.com/en/business/
+  - Marubeni-Itochu Steel (distribution and supply chains): https://www.benichu.com/en/business_en/
+  - Hanwa (customer-industry sourcing): https://www.hanwa.co.jp/en/business/steel/
+- Logo: MFI original PNG retained intact, displayed within a new transparent PNG lockup with the tagline updated to 'STAINLESS STEEL FOIL & STRIP'. All original MFI symbol and lettering remain unchanged.

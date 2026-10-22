@@ -3143,3 +3143,51 @@ body.v34-porcelain .hero-facts > div::after{display:none!important;content:none!
  body.v34-porcelain .hero-facts > div b,
  body.v34-porcelain .hero-facts > div::before{animation:none!important;transition:none!important;}
 }
+
+
+/* Version 56 — calm flat map, accessible locations and refreshed Foil & Strip logo. */
+body.v34-porcelain .v34-map-stage {
+  height:auto!important; aspect-ratio:1600 / 655!important;
+  min-height:0!important; padding:0!important; background:#fafafa!important;
+  overflow:hidden!important; border:1px solid #e0e6e9!important; border-radius:12px!important;
+}
+body.v34-porcelain .v34-map-stage::before,
+body.v34-porcelain .v34-map-stage::after,
+body.v34-porcelain .v34-map-trace,
+body.v34-porcelain .v34-map-caption {display:none!important;animation:none!important;}
+body.v34-porcelain .v34-map-art {
+  position:absolute!important; display:block!important; inset:0!important;
+  width:100%!important; height:100%!important; opacity:1!important;
+  filter:none!important; mix-blend-mode:normal!important;
+}
+body.v34-porcelain .v34-map-art img {
+  display:block!important; position:static!important;
+  width:100%!important; height:100%!important; max-width:100%!important;
+  transform:none!important; object-fit:contain!important; object-position:center!important;
+  animation:none!important; filter:none!important;
+}
+body.v34-porcelain .v56-map-locations {
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px;
+  margin:16px 0 4px;
+}
+body.v34-porcelain .v56-map-locations p {
+  margin:0;display:grid;grid-template-columns:12px 1fr;align-content:start;
+  column-gap:11px;row-gap:3px;padding:15px 18px;
+  border:1px solid #e9edef;border-radius:8px;background:#fff;
+}
+body.v34-porcelain .v56-map-locations .v56-pin {
+  grid-row:1 / 3; margin-top:5px;width:9px;height:9px;border-radius:50%;background:#ed7930;
+}
+body.v34-porcelain .v56-map-locations strong {
+  color:#1c435e;font-family:'Plus Jakarta Sans',Arial,sans-serif;font-size:13px;
+}
+body.v34-porcelain .v56-map-locations small {color:#6d7f8c;font-size:12px;line-height:1.45;}
+body.v34-porcelain .brand-logo {object-fit:contain;}
+@media(max-width:700px){
+  body.v34-porcelain .v34-map-stage {aspect-ratio:auto!important;height:auto!important;min-height:0!important;overflow-x:auto!important;}
+  body.v34-porcelain .v34-map-art {position:relative!important;width:max(860px,100%)!important;height:auto!important;}
+  body.v34-porcelain .v34-map-art img {width:100%!important;height:auto!important;min-width:860px!important;}
+  body.v34-porcelain .v56-map-locations {grid-template-columns:1fr;gap:9px;}
+  body.v34-porcelain .v56-map-locations p {padding:12px 13px;}
+}
+@media(prefers-reduced-motion:reduce){body.v34-porcelain .v34-map-art img{animation:none!important}}

@@ -1,3 +1,13 @@
+# Version 56 — Flat Global Map, Company Language & Foil/Strip Lockup
+
+- Replaced the skewed world map with an equirectangular (flat) map. Same neutral land color for every country, no country highlights, and no animation.
+- Two simple map pins: Baytown, Texas, USA (inventory); Bahadurgarh, Haryana, India (Jindal manufacturing mill). Both captions are visible and labels repeat below for mobile clarity.
+- Replaced 'We connect' and overgeneralized B2B copy with direct 'We serve' language aligned to the tone of established steel traders; no unverified capabilities added.
+- Updated the MFI logo tagline to 'STAINLESS STEEL FOIL & STRIP' using a new transparent PNG lockup that faithfully retains the original MFI emblem and main lettering.
+- Other website content, dynamic flashcards, header, Jindal emblem, quotes, certificates and media preserved.
+
+Unzip the files and upload the root contents to GitHub. This version has not been deployed.
+
 # Version 55 — 1.25× Flashcards, Playback Fix & Hero Fact Animation
 
 - Flashcard dimensions reduced from the 1.5× revision to **458 × 598 px on desktop** (125% of the original 366 × 478 px). Responsive sizes scale down on tablets and phones.
