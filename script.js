@@ -214,7 +214,7 @@ document.querySelectorAll('.v33-original-refined .who-v22-image img, .jindal-flo
 });
 
 // v34: reveal the geographical manufacturing connection only when visible.
-const mapStage = document.querySelector('.v58-map-stage');
+const mapStage = document.querySelector('.v59-map-stage');
 if(mapStage){
  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   const o = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('is-visible');o.unobserve(e.target)}}) }, {threshold:.15});
@@ -229,7 +229,7 @@ if(mapStage){
  const prefersLessMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  if(prefersLessMotion || !('IntersectionObserver' in window)) return;
  const groups=[
-   '.v58-map-copy', '.v58-map-stage', '.technical-range-heading',
+   '.v59-map-stage', '.technical-range-heading',
    '.technical-range-row', '.spec-strip .section-intro',
    '.inventory-copy', '.photo-copy h2', '.photo-copy > p:not(.kicker)',
    '.factory-gallery .factory-card', '.manufacturing .section-intro',

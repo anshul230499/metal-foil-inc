@@ -1,3 +1,11 @@
+# Metal Foil Inc. — Version 59
+
+- Entire map section reconstructed as one full-width cartographic canvas; no left sidebar, no long descriptive copy, no redundant legend.
+- Topographic-inspired flat world map with natural coastlines, understated ocean depth, subdued meridians, precise mill and inventory locations and a static route. No political boundary polygons or altered national border claims.
+- The classic MFI logo artwork is preserved exactly; only the secondary words “STAINLESS STEEL FOIL AND STRIP” are enlarged to fill the available right-hand space beneath “INC.”
+- Mobile map can be scrolled horizontally to protect proportions and label legibility.
+- All other Version 58 website sections and interactions preserved.
+
 # Version 58 — Signature map section
 
 - Rebuilt the global map section as a flagship visual with a premium flat-map panel, refined copy, clearer Bahadurgarh/Baytown positioning, and elegant location cards.
