@@ -1,3 +1,15 @@
+# Metal Foil Inc. — Version 57 (Original Logo Restoration)
+
+- Kept the **original** MFI mark, the distinctive M, metallic texture, bright orange accent, and original METAL FOIL INC. lettering pixel-for-pixel.
+- The **only visual change** to the site is the logo tagline: `STAINLESS STEEL FOIL AND STRIP` instead of using `&`.
+- The updated image is `assets/mfi-foil-strip-logo.png`, used in the sticky header and footer.
+- All Version 56 flat-map styling, text, carousel, links and product details are unchanged.
+- Changed the stylesheet cache-busting version number from 56 to 57.
+
+Upload the extracted files to the existing GitHub repository root to deploy through Vercel. No deployment has been performed.
+
+---
+
 # Version 56 — Flat Global Map, Company Language & Foil/Strip Lockup
 
 - Replaced the skewed world map with an equirectangular (flat) map. Same neutral land color for every country, no country highlights, and no animation.

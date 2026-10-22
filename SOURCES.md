@@ -150,3 +150,6 @@ The manufacturer-hosted product image in the introduction remains linked to its 
   - Marubeni-Itochu Steel (distribution and supply chains): https://www.benichu.com/en/business_en/
   - Hanwa (customer-industry sourcing): https://www.hanwa.co.jp/en/business/steel/
 - Logo: MFI original PNG retained intact, displayed within a new transparent PNG lockup with the tagline updated to 'STAINLESS STEEL FOIL & STRIP'. All original MFI symbol and lettering remain unchanged.
+
+## Version 57 brand logo wording
+The original MFI logo artwork supplied in previous versions is reused without altering its MFI emblem, metallic treatment, or orange signature. The bottom tagline now says **STAINLESS STEEL FOIL AND STRIP**, with **AND** spelled out.
