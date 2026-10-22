@@ -1,3 +1,15 @@
+# Metal Foil Inc. — Version 61: NASA Blue Marble Map
+
+- Replaced the version 60 illustrated terrain graphic with a genuine NASA Blue Marble: Next Generation satellite basemap (August 2004, with topography and bathymetry).
+- Kept the entire map full-width, with no side copy, route line, legend or extra callouts.
+- Added two location pins and labels as an **independent HTML layer** precisely located over the equirectangular basemap: Baytown TX (inventory) and Bahadurgarh Haryana (manufacturing mill).
+- No national borders or political claims are drawn over the satellite image. The India outline is the satellite geography, not a manually modified border.
+- Kept a minimal NASA credit below the map, per NASA Earth Observatory's republishing guidance.
+- NASA imagery loads directly from NASA hosts, so the map requires an internet connection; the rest of the static site is packaged locally and otherwise unchanged.
+- Existing header and footer MFI logo (including larger FOIL AND STRIP tagline), flashcard carousel, navigation, catalog, and page copy remain unchanged.
+
+To deploy: extract the ZIP directly into the GitHub repository root (index.html beside styles.css and assets/); commit to the main branch.
+
 # Metal Foil Inc. — Version 59
 
 - Entire map section reconstructed as one full-width cartographic canvas; no left sidebar, no long descriptive copy, no redundant legend.

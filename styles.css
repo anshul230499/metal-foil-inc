@@ -3352,3 +3352,82 @@ body.v34-porcelain .v59-map-credit a:hover{text-decoration:underline; text-under
   body.v34-porcelain .v59-map-credit{justify-content:flex-end}
 }
 @media(prefers-reduced-motion:reduce){body.v34-porcelain .v59-map-art{animation:none!important;transform:none!important}}
+
+
+/* ============================================================================
+   Version 61 · Real NASA Blue Marble map, with separate geolocated HTML labels.
+   Image is NASA's native 2:1 plate carrée/equirectangular map.
+   Crop covers latitudes +80° to −65° with no projection distortion.
+   Mapping from lon/lat: x=(longitude+180)/360 ; y=(80-latitude)/145.
+   ============================================================================ */
+body.v34-porcelain .v61-map-section{
+ width:min(1560px,calc(100% - clamp(28px,4.4vw,84px)));
+ padding:clamp(18px,2.9vw,45px) 0 10px;
+ position:relative;z-index:2;
+}
+body.v34-porcelain .v61-map-figure{margin:0}
+body.v34-porcelain .v61-world-canvas{
+ width:100%;aspect-ratio:360/145;position:relative;isolation:isolate;
+ overflow:hidden;border-radius:15px;
+ border:1px solid #c7d4df;background:#0a2443;
+ box-shadow:0 20px 52px rgba(18,54,88,.14),0 3px 12px rgba(18,54,88,.08);
+}
+body.v34-porcelain .v61-world-imagery{
+ display:block;position:absolute;left:0;top:-6.896551724%!important;
+ width:100%!important;height:124.137931034%!important;max-width:none!important;
+ object-fit:fill!important;object-position:center!important;
+ border:0!important;filter:brightness(1.10) saturate(.94)!important;
+ transform:none!important;animation:none!important;
+}
+body.v34-porcelain .v61-world-canvas::after{
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+ background:linear-gradient(180deg,rgba(2,16,36,.05),transparent 23%,transparent 76%,rgba(2,16,36,.11));
+}
+body.v34-porcelain .v61-location{position:absolute;z-index:2;width:0;height:0}
+body.v34-porcelain .v61-location-us{left:23.617389%;top:34.665172%}
+body.v34-porcelain .v61-location-india{left:71.370167%;top:35.384138%}
+body.v34-porcelain .v61-location-dot{
+ position:absolute;left:-6px;top:-6px;display:block;width:12px;height:12px;
+ border-radius:50%;background:#ff8b38;border:2.5px solid #fff;
+ box-shadow:0 0 0 5px rgba(255,139,56,.18),0 2px 9px rgba(0,0,0,.35);
+}
+body.v34-porcelain .v61-location-name{
+ position:absolute;left:19px;top:-20px;white-space:nowrap;
+ padding:10px 15px 11px;border-radius:10px;
+ background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.95);
+ box-shadow:0 11px 28px rgba(0,19,39,.21),0 0 0 1px rgba(66,101,124,.09);
+ backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
+}
+body.v34-porcelain .v61-location-name small{
+ display:block;margin-bottom:3px;color:#697e8e;
+ font:800 9px/1.35 'Plus Jakarta Sans',Arial,sans-serif;letter-spacing:.13em;
+}
+body.v34-porcelain .v61-location-name strong{
+ display:block;color:#1d3d54;font:750 clamp(12px,1.06vw,16px)/1.35 'Plus Jakarta Sans',Arial,sans-serif;
+ letter-spacing:-.012em;
+}
+body.v34-porcelain .v61-map-credit{
+ display:flex;align-items:center;justify-content:flex-end;gap:5px;flex-wrap:wrap;
+ margin:10px 3px 0;text-align:right;color:#7c8f9d;
+ font:500 10px/1.5 'Plus Jakarta Sans',Arial,sans-serif;
+}
+body.v34-porcelain .v61-map-credit a{color:#55788c;text-decoration:none}
+body.v34-porcelain .v61-map-credit a:hover{text-decoration:underline;text-underline-offset:3px}
+body.v34-porcelain .v61-map-image-error[hidden]{display:none!important}
+body.v34-porcelain .v61-map-image-error:not([hidden]){
+ position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;gap:8px;
+ color:#f1f6fa;background:#122d49;font-size:14px;
+}
+body.v34-porcelain .v61-map-image-error a{color:#ffb77f}
+@media(max-width:1040px){
+ body.v34-porcelain .v61-map-figure{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#9fb9c9 transparent}
+ body.v34-porcelain .v61-world-canvas{min-width:970px}
+}
+@media(max-width:600px){
+ body.v34-porcelain .v61-map-section{width:calc(100% - 22px);padding-top:21px}
+ body.v34-porcelain .v61-world-canvas{border-radius:10px}
+ body.v34-porcelain .v61-location-name{padding:9px 11px 10px;top:-19px}
+ body.v34-porcelain .v61-location-name strong{font-size:13px}
+ body.v34-porcelain .v61-map-credit{text-align:left;justify-content:flex-start;font-size:9px;margin-top:9px}
+}
+@media(prefers-reduced-motion:reduce){body.v34-porcelain .v61-world-imagery,body.v34-porcelain .v61-location{animation:none!important;transition:none!important}}

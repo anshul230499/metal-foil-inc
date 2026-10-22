@@ -457,3 +457,19 @@ if (officialJ) {
   }, { threshold: 0.18 });
   observer.observe(facts);
 })();
+
+
+// Version 61: NASA image fallback between official NASA hosts only.
+// The two location names are independent HTML, never painted into the image.
+(() => {
+ const image = document.querySelector('.v61-world-imagery');
+ const notice = document.querySelector('.v61-map-image-error');
+ if (!image) return;
+ const otherNASAHost = 'https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography-bathymetry/august/world.topo.bathy.200408.3x5400x2700.jpg';
+ let triedBackup = false;
+ image.addEventListener('error', () => {
+   if (!triedBackup) { triedBackup = true; image.src = otherNASAHost; return; }
+   if (notice) notice.hidden = false;
+ });
+ if (image.complete && image.naturalWidth === 0) image.dispatchEvent(new Event('error'));
+})();

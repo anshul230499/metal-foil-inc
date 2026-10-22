@@ -1,3 +1,17 @@
+## Version 61 — NASA Blue Marble global map
+
+The Who We Are map uses the official NASA Earth Observatory *Blue Marble: Next Generation*, August 2004 global 5,400 × 2,700 JPEG, with topography and bathymetry. It is hosted by NASA and loaded from their servers; the image is not repackaged in the ZIP. The rendering clips latitudes +80° to −65° but does not stretch the geography. The two location dots and captions are independent HTML/CSS, not part of NASA imagery.
+
+- Image: https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73776/world.topo.bathy.200408.3x5400x2700.jpg
+- Alternate official NASA host: https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography-bathymetry/august/world.topo.bathy.200408.3x5400x2700.jpg
+- Source and citation: https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-topography-bathymetry/
+- Official image use guidance: https://www.nasa.gov/nasa-brand-center/images-and-media/
+- NASA's requested credit (printed below the map): **NASA Earth Observatory**. NASA does not endorse Metal Foil Inc.
+- Country borders are not drawn, and none have been altered or represented as official national boundaries. The physical land image is not a political-border reference.
+- Marker locations (approximate city coordinates): Baytown TX (29.7355°N, 94.9774°W); Bahadurgarh HR (28.6930°N, 76.9326°E).
+
+---
+
 # Sources, Images & Attribution
 
 ## Metal Foil Inc.
