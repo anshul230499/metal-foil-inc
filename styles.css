@@ -3314,68 +3314,41 @@ body.v34-porcelain .v58-map-attribution a{color:#5a7990;text-decoration:underlin
 }
 
 
-/* Version 59: full-width editorial world map. No prose sidebar or distracting legend. */
+/* Version 60: physical-relief world map section inspired by atlas cartography. */
 body.v34-porcelain .v59-map-section{
-  position:relative; z-index:2; padding:clamp(24px,3.6vw,54px) 0 4px;
+  position:relative; z-index:2; padding:clamp(18px,3vw,42px) 0 6px;
   width:min(1560px,calc(100% - clamp(28px,4.4vw,84px)));
 }
 body.v34-porcelain .v59-map-stage{
-  position:relative;overflow:hidden;border-radius:22px;
-  border:1px solid #dae8ef;background:#e8f2f6;
-  box-shadow:0 31px 68px rgba(21,64,92,.10), 0 2px 9px rgba(33,70,92,.05);
+  position:relative; overflow:hidden; border-radius:24px;
+  border:1px solid rgba(181,211,226,.95); background:#7dbad8;
+  box-shadow:0 26px 62px rgba(22,58,84,.14), 0 2px 9px rgba(22,58,84,.05);
 }
 body.v34-porcelain .v59-map-main{
-  position:relative;width:100%;aspect-ratio:1600/690;
-  min-height:0;isolation:isolate;
+  position:relative; width:100%; aspect-ratio:1600/690; min-height:0;
 }
 body.v34-porcelain .v59-map-art{
-  position:absolute;inset:0;display:block;width:100%;height:100%;
-  object-fit:fill;max-width:none!important;filter:none!important;
-  transform:none!important;animation:none!important;
+  position:absolute; inset:0; display:block; width:100%; height:100%;
+  object-fit:fill; max-width:none!important; filter:none!important;
+  transform:none!important; animation:none!important;
 }
-body.v34-porcelain .v59-marker-note{
-  position:absolute;z-index:2;display:flex;flex-direction:column;
-  min-width:0;padding:clamp(12px,1.5vw,20px) clamp(14px,1.8vw,25px);
-  border-radius:13px;background:rgba(255,255,255,.92);
-  border:1px solid rgba(255,255,255,.9);
-  box-shadow:0 13px 35px rgba(23,61,82,.14), 0 0 0 1px rgba(138,180,200,.25);
-  backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px);
-  transition:transform .28s cubic-bezier(.2,.82,.2,1),box-shadow .28s ease;
-}
-body.v34-porcelain .v59-marker-note:hover{
-  transform:translateY(-3px);box-shadow:0 17px 37px rgba(23,61,82,.19), 0 0 0 1px rgba(138,180,200,.3);
-}
-body.v34-porcelain .v59-marker-note strong{
-  color:#143b54;font:750 clamp(13px,1.3vw,19px)/1.25 'Plus Jakarta Sans',Arial,sans-serif;
-  letter-spacing:-.02em;margin:4px 0 5px;
-}
-body.v34-porcelain .v59-marker-note small{font:500 clamp(10px,.84vw,12px)/1.4 'Plus Jakarta Sans',Arial,sans-serif;color:#607889}
-body.v34-porcelain .v59-mark-kicker{
-  font:800 clamp(8px,.68vw,10px)/1.4 'Plus Jakarta Sans',Arial,sans-serif;letter-spacing:.17em;color:#0e6da7;
-}
-body.v34-porcelain .v59-marker-india .v59-mark-kicker{color:#bd6d3e}
-body.v34-porcelain .v59-marker-us{left:26.9%;top:42.7%}
-body.v34-porcelain .v59-marker-india{left:71.4%;top:42.7%}
+body.v34-porcelain .v59-marker-note{display:none!important}
 body.v34-porcelain .v59-map-credit{
-  display:flex;align-items:center;justify-content:flex-end;gap:15px;
-  color:#7c909c;margin:13px 3px 0;font:650 10px/1.45 'Plus Jakarta Sans',Arial,sans-serif;letter-spacing:.08em;
+  display:flex; align-items:center; justify-content:flex-end; gap:15px;
+  color:#7892a3; margin:12px 2px 0;
+  font:650 10px/1.45 'Plus Jakarta Sans',Arial,sans-serif; letter-spacing:.08em;
 }
-body.v34-porcelain .v59-map-credit a{font-weight:500;letter-spacing:0;color:#607f93;text-decoration:none}
-body.v34-porcelain .v59-map-credit a:hover{text-decoration:underline;text-underline-offset:3px}
+body.v34-porcelain .v59-map-credit a{font-weight:500; letter-spacing:0; color:#5f8094; text-decoration:none}
+body.v34-porcelain .v59-map-credit a:hover{text-decoration:underline; text-underline-offset:3px}
 @media(max-width:990px){
   body.v34-porcelain .v59-map-main{width:980px;aspect-ratio:1600/690}
-  body.v34-porcelain .v59-map-stage{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b7cad4 #e8f2f6}
+  body.v34-porcelain .v59-map-stage{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#9ec4d8 #edf6fa}
   body.v34-porcelain .v59-map-credit{font-size:9px}
-  body.v34-porcelain .v59-marker-note strong{font-size:14px}
-  body.v34-porcelain .v59-marker-note small{font-size:10px}
-  body.v34-porcelain .v59-mark-kicker{font-size:8px}
 }
 @media(max-width:560px){
- body.v34-porcelain .v59-map-section{width:calc(100% - 22px);padding-top:24px}
- body.v34-porcelain .v59-map-stage{border-radius:15px}
- body.v34-porcelain .v59-map-main{width:960px}
- body.v34-porcelain .v59-marker-note{padding:12px 14px}
- body.v34-porcelain .v59-map-credit>span{display:none}
- body.v34-porcelain .v59-map-credit{justify-content:flex-end}
+  body.v34-porcelain .v59-map-section{width:calc(100% - 22px);padding-top:20px}
+  body.v34-porcelain .v59-map-stage{border-radius:16px}
+  body.v34-porcelain .v59-map-main{width:960px}
+  body.v34-porcelain .v59-map-credit{justify-content:flex-end}
 }
-@media(prefers-reduced-motion:reduce){body.v34-porcelain .v59-marker-note{transition:none!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){body.v34-porcelain .v59-map-art{animation:none!important;transform:none!important}}
