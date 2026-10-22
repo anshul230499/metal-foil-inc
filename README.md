@@ -1,3 +1,10 @@
+# Version 58 — Signature map section
+
+- Rebuilt the global map section as a flagship visual with a premium flat-map panel, refined copy, clearer Bahadurgarh/Baytown positioning, and elegant location cards.
+- Kept a plain world map treatment with no country fill differences; India is not recolored or distorted. Locations are shown with dots and labels only.
+- Improved the section language to use stronger commercial phrasing such as connecting the mill to the market and serving industrial buyers.
+- Preserved the rest of the site from Version 57.
+
 # Metal Foil Inc. — Version 57 (Original Logo Restoration)
 
 - Kept the **original** MFI mark, the distinctive M, metallic texture, bright orange accent, and original METAL FOIL INC. lettering pixel-for-pixel.
