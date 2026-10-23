@@ -3496,3 +3496,67 @@ body.v34-porcelain .office-overlay .office-phone:focus-visible {outline:2px soli
   body.v34-porcelain .site-nav .nav-contact,
   body.v34-porcelain .office-overlay .office-phone {transition:none!important;transform:none!important;}
 }
+
+
+/* v63 — simplified opening hierarchy and clean card typography. */
+/* One explicit orange rule for Who We Are; no automatic accent rule on other section labels. */
+body.v34-porcelain .kicker::before,
+body.v34-porcelain .kicker::after { content:none!important; display:none!important; animation:none!important; }
+body.v34-porcelain .who-heading-row .who-kicker {
+  font:800 clamp(15px,1.35vw,18px)/1.35 'Plus Jakarta Sans',Arial,sans-serif!important;
+  letter-spacing:.13em!important;
+  color:#135d93!important;
+  gap:14px!important;
+}
+body.v34-porcelain .who-heading-row .who-kicker-line {
+  display:inline-block!important;flex:0 0 30px!important;
+  width:30px!important;height:3px!important;border-radius:1px;
+  background:#ed7830!important;
+}
+/* Both introductory links are identical buttons, with their separate destinations intact. */
+body.v34-porcelain .who-v22-actions {
+  display:flex; flex-wrap:wrap; align-items:stretch; gap:12px!important;
+}
+body.v34-porcelain .who-v22-actions>.button {
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  gap:12px!important;min-height:54px!important;padding:12px 21px!important;
+  font:750 13px/1.35 'Plus Jakarta Sans',Arial,sans-serif!important;
+  text-align:center!important;text-decoration:none!important;
+  background:#126ca8!important;color:white!important;border:1px solid #126ca8!important;
+  border-radius:8px!important;box-shadow:none!important;
+  transition:background-color .25s ease,border-color .25s ease,transform .25s ease!important;
+}
+body.v34-porcelain .who-v22-actions>.button::before,
+body.v34-porcelain .who-v22-actions>.button::after{content:none!important;display:none!important}
+@media(hover:hover) and (pointer:fine){
+  body.v34-porcelain .who-v22-actions>.button:hover {
+    background:#0a568c!important;border-color:#0a568c!important;
+    transform:translateY(-2px)!important;
+  }
+}
+body.v34-porcelain .who-v22-actions>.button:focus-visible {outline:3px solid #ffb078;outline-offset:3px}
+/* All cards' visible captions and reverse-side content use centered alignment. */
+body.v34-porcelain .industries-section .industry-face-front,
+body.v34-porcelain .industries-section .industry-face-back {
+  text-align:center!important;align-items:center!important;
+}
+body.v34-porcelain .industries-section .industry-face-front .industry-title,
+body.v34-porcelain .industries-section .industry-face-front .industry-subtitle,
+body.v34-porcelain .industries-section .industry-face-front .industry-cue,
+body.v34-porcelain .industries-section .industry-face-back .industry-back-eyebrow,
+body.v34-porcelain .industries-section .industry-face-back .industry-back-title,
+body.v34-porcelain .industries-section .industry-face-back .industry-description,
+body.v34-porcelain .industries-section .industry-face-back .industry-back-footer {
+  text-align:center!important;align-self:stretch!important;
+}
+body.v34-porcelain .industries-section .industry-face-back .industry-description {
+  max-width:100%!important;
+  overflow-wrap:break-word;
+}
+@media(max-width:680px){
+  body.v34-porcelain .who-heading-row .who-kicker {font-size:15px!important}
+  body.v34-porcelain .who-v22-actions>.button {width:100%!important}
+}
+@media(prefers-reduced-motion:reduce){
+  body.v34-porcelain .who-v22-actions>.button {transition:none!important;transform:none!important}
+}

@@ -1,3 +1,14 @@
+# Version 63 — Editorial & RFQ Simplification
+
+- Converted "Explore our products" and "Manufacturing specifications" into visually matching primary buttons; they still open their original, different destinations.
+- Enlarged the "Who We Are" eyebrow label with a single orange line and removed automatic lines beside the other section labels.
+- Removed repeated light-gray "Metal Foil Inc. · Baytown, Texas" introduction labels.
+- Center-aligned the front and back text in all eight Industries & Applications flashcards.
+- Updated the Knife Making card to cover stainless steel foil wrapping during blade/tool heat treatment and oxidation/decarburization protection, as well as precision strip cutlery uses.
+- Removed the redundant North American Support section; Houston sales-office section with clickable +1 713 457 5757, stock and contact/RFQ sections remain.
+- Simplified RFQ guidance; removed only the Grade / Thickness / Width / Length / Quantity / End use hint chips, not the RFQ input fields.
+- Preserved NASA Blue Marble map, navigation, automatic carousel, product specifications, certificates, logo and photography.
+
 # Version 62 — Houston Contact Link
 
 - Added **Contact Us** in the top ribbon immediately before **View Inventory**, linking to the existing Houston sales-office photo section.
