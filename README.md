@@ -1,3 +1,11 @@
+# Version 64 — Unified Product Animation & Blue Headline
+
+- Removed the last orange dash to the left of “WHO WE ARE” while keeping the larger label.
+- Changed “Ready to supply.” from medium gray to the site's deep blue.
+- Replaced brownish text in the Popular Foil Formats cards with charcoal / near-black, including hover states.
+- Matched the existing Popular Foil Formats interaction across the three hero fact tiles (0.002", 20", Baytown TX) and the five Product Range rows: orange top-edge reveal, subtle passing light, and modest hover lift.
+- Retained Version 63's design, NASA world map, logo, Contact Us navigation, Houston office phone number, RFQ fields, and rotating application cards.
+
 # Version 63 — Editorial & RFQ Simplification
 
 - Converted "Explore our products" and "Manufacturing specifications" into visually matching primary buttons; they still open their original, different destinations.
