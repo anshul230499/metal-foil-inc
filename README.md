@@ -1,3 +1,10 @@
+# Version 62 — Houston Contact Link
+
+- Added **Contact Us** in the top ribbon immediately before **View Inventory**, linking to the existing Houston sales-office photo section.
+- Added the subtly styled telephone link **+1 713 457 5757** (`tel:+17134575757`) to that office photo.
+- Moved the compact-navigation breakpoint slightly wider to avoid crowding.
+- Preserved all Version 61 content, NASA map, logo, and other functionality.
+
 # Metal Foil Inc. — Version 61: NASA Blue Marble Map
 
 - Replaced the version 60 illustrated terrain graphic with a genuine NASA Blue Marble: Next Generation satellite basemap (August 2004, with topography and bathymetry).

@@ -2233,7 +2233,7 @@ body.v34-porcelain .jindal-wordmark small{
 body.v34-porcelain .nav-wrap{gap:clamp(9px,1.1vw,19px)!important;}
 body.v34-porcelain .site-nav{gap:clamp(8px,1.05vw,17px)!important;}
 body.v34-porcelain .site-nav>a:not(.nav-inventory):not(.nav-rfq){font-size:clamp(12px,.94vw,14px)!important;}
-@media(max-width:1390px){
+@media(max-width:1530px){
  body.v34-porcelain .site-nav{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;
   margin:0!important;width:100%;padding:14px clamp(20px,5vw,55px) 20px!important; z-index:210;
   border-top:1px solid #e6edf4;border-bottom:1px solid #dce6ef;background:rgba(255,255,255,.985)!important;
@@ -3431,3 +3431,68 @@ body.v34-porcelain .v61-map-image-error a{color:#ffb77f}
  body.v34-porcelain .v61-map-credit{text-align:left;justify-content:flex-start;font-size:9px;margin-top:9px}
 }
 @media(prefers-reduced-motion:reduce){body.v34-porcelain .v61-world-imagery,body.v34-porcelain .v61-location{animation:none!important;transition:none!important}}
+
+
+/* v62 — Contact Us navigation and downtown Houston sales-office telephone. */
+body.v34-porcelain .site-nav .nav-contact {
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:12px 15px!important;white-space:nowrap;
+  font:700 clamp(12px,.9vw,14px)/1.35 'Plus Jakarta Sans',Arial,sans-serif!important;
+  letter-spacing:0;color:#1a5b89!important;
+  background:rgba(14,104,166,.045)!important;
+  border:1px solid #cbdfe9!important;border-radius:8px!important;
+  box-shadow:none!important;text-decoration:none!important;
+  transition:background-color .25s ease,border-color .25s ease,color .25s ease,transform .25s ease!important;
+}
+body.v34-porcelain .site-nav .nav-contact::before,
+body.v34-porcelain .site-nav .nav-contact::after {content:none!important;display:none!important;}
+@media(hover:hover) and (pointer:fine) {
+  body.v34-porcelain .site-nav .nav-contact:hover {
+    background:#eaf4fa!important;border-color:#94c5df!important;color:#095f9f!important;
+    box-shadow:0 6px 14px rgba(22,94,143,.075)!important;transform:translateY(-1px);
+  }
+}
+body.v34-porcelain .site-nav .nav-contact:focus-visible {outline:3px solid #ffad6f;outline-offset:3px;}
+/* Accommodate three actions on intermediate desktop widths. */
+@media(min-width:1531px) and (max-width:1750px) {
+  body.v34-porcelain .site-nav {gap:clamp(7px,.65vw,12px)!important;}
+  body.v34-porcelain .site-nav .nav-inventory,
+  body.v34-porcelain .site-nav .nav-rfq {padding:12px clamp(12px,1vw,17px)!important;font-size:clamp(12px,.88vw,14px)!important;}
+  body.v34-porcelain .site-nav>a:not(.nav-contact):not(.nav-inventory):not(.nav-rfq) {font-size:clamp(12px,.86vw,14px)!important;}
+  body.v34-porcelain .brand-logo {width:clamp(188px,14.7vw,246px)!important;}
+  body.v34-porcelain .jindal-header-symbol {width:clamp(179px,12.4vw,215px)!important;}
+}
+@media(max-width:1530px) {
+  body.v34-porcelain .site-nav .nav-contact {
+    width:100%;align-self:stretch;justify-content:flex-start;
+    margin:9px 0 2px!important;padding:13px 16px!important;
+    font-size:14px!important;min-height:46px;
+  }
+}
+body.v34-porcelain #houston-sales-office {scroll-margin-top:calc(var(--mfi-header-height,92px) + 12px);}
+body.v34-porcelain .office-overlay>p:not(.kicker) {
+  margin:0;font-size:15px;color:rgba(255,255,255,.82);
+}
+body.v34-porcelain .office-overlay .office-phone {
+  display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:13px;
+  margin-top:22px;padding:10px 0;border-top:1px solid rgba(255,255,255,.33);
+  text-decoration:none;color:rgba(255,255,255,.94);
+  transition:border-color .25s ease,color .25s ease;
+}
+body.v34-porcelain .office-overlay .office-phone-label {
+  font:700 10px/1.4 'Plus Jakarta Sans',Arial,sans-serif;letter-spacing:.14em;
+  color:rgba(255,255,255,.72);
+}
+body.v34-porcelain .office-overlay .office-phone-number {
+  font:600 clamp(15px,1.2vw,18px)/1.4 'Plus Jakarta Sans',Arial,sans-serif;
+  letter-spacing:.016em;font-variant-numeric:tabular-nums;
+}
+body.v34-porcelain .office-overlay .office-phone:hover {color:#fff;border-top-color:#ff944f;}
+body.v34-porcelain .office-overlay .office-phone:focus-visible {outline:2px solid #ffb785;outline-offset:5px;}
+@media(max-width:680px) {
+  body.v34-porcelain .office-overlay .office-phone {margin-top:17px;gap:10px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  body.v34-porcelain .site-nav .nav-contact,
+  body.v34-porcelain .office-overlay .office-phone {transition:none!important;transform:none!important;}
+}

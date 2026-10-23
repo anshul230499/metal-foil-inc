@@ -20,7 +20,7 @@ const closeHeaderMenu = () => {
   menuButton?.setAttribute('aria-expanded', 'false');
 };
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 1390) closeHeaderMenu();
+  if (window.innerWidth > 1530) closeHeaderMenu();
 }, { passive: true });
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && siteNav?.classList.contains('open')) {
