@@ -3696,3 +3696,33 @@ body.v34-porcelain .spec-grid article:focus-within::before {width:100%!important
   body.v34-porcelain .technical-range-row:hover,
   body.v34-porcelain .spec-grid article:hover {transform:none!important;}
 }
+
+
+/* VERSION 66 — Editorial card typography: regular weight, no bold.
+   This change is limited to text placed inside the rounded content cards.
+   Section headings, CTAs, table headings outside the cards, and branding
+   retain their established visual hierarchy and weights. */
+body.v34-porcelain .hero-facts > div b,
+body.v34-porcelain .hero-facts > div span,
+body.v34-porcelain .technical-range-row dt,
+body.v34-porcelain .technical-range-row dd,
+body.v34-porcelain .spec-grid article small,
+body.v34-porcelain .spec-grid article strong,
+body.v34-porcelain .spec-grid article span,
+body.v34-porcelain .spec-grid article:hover strong,
+body.v34-porcelain .process-grid article > span,
+body.v34-porcelain .process-grid article h3,
+body.v34-porcelain .process-grid article p,
+body.v34-porcelain .cert-card .cert-meta h3,
+body.v34-porcelain .cert-card .cert-meta small,
+body.v34-porcelain .cert-card .cert-fallback small,
+body.v34-porcelain .cert-card .cert-fallback strong,
+body.v34-porcelain .industries-section .industry-face-front .industry-title,
+body.v34-porcelain .industries-section .industry-face-front .industry-subtitle,
+body.v34-porcelain .industries-section .industry-face-front .industry-cue,
+body.v34-porcelain .industries-section .industry-face-back .industry-back-eyebrow,
+body.v34-porcelain .industries-section .industry-face-back .industry-back-title,
+body.v34-porcelain .industries-section .industry-face-back .industry-description,
+body.v34-porcelain .industries-section .industry-face-back .industry-back-footer {
+  font-weight:400!important;
+}

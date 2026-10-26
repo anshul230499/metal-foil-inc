@@ -1,3 +1,12 @@
+# Version 66 — Regular-Weight Card Typography
+
+Removed bold type from text inside the site's rounded content cards: the hero facts, technical product-range rows, popular foil formats, industry flashcards (front and back), manufacturing process cards, and certificate cards. Font sizes, colors, borders, hover animations, layout and card content are unchanged. Section headings, buttons, navigation and branding retain their original weights.
+
+# Version 65 — Matching Blue Hero CTAs
+
+- Changed only the hero-section **Request a Quote** button from `secondary` to `primary`, matching the **View Inventory** button's blue background, white lettering, and hover animation.
+- Updated the stylesheet cache parameter to Version 65. All prior page content, layout, links, images, behavior and colors remain unchanged.
+
 # Version 64 — Unified Product Animation & Blue Headline
 
 - Removed the last orange dash to the left of “WHO WE ARE” while keeping the larger label.
