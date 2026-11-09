@@ -1,3 +1,8 @@
+# Version 67 — Inventory update (November 9, 2026)
+
+- Updated Grade 321 Baytown foil rolls from **21** to **19**, reflecting the sale of two rolls.
+- Grade 304 remains at 7 rolls. No other site content or behavior was changed.
+
 # Version 66 — Regular-Weight Card Typography
 
 Removed bold type from text inside the site's rounded content cards: the hero facts, technical product-range rows, popular foil formats, industry flashcards (front and back), manufacturing process cards, and certificate cards. Font sizes, colors, borders, hover animations, layout and card content are unchanged. Section headings, buttons, navigation and branding retain their original weights.
